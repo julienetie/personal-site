@@ -1,13 +1,9 @@
 var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     selenium = require('selenium-standalone'),
-    Mocha = require('gulp-mocha');
+    mocha = require('gulp-mocha'),
+    concat = require('gulp-concat');
 
-
-var mocha = new Mocha({
-    ui: 'bdd',
-    reporter: 'list'
-});
 
 
 gulp.task('serve:test', function (done) {
@@ -43,14 +39,18 @@ gulp.task('integration', ['serve:test', 'selenium'], function() {
   return gulp.src('test/spec/**/*.js', {
       read: false
     })
-    .pipe(Mocha());
+    .pipe(mocha());
 });
 
 
-gulp.task('test', ['integration'], function() {
+  gulp.task('build-body-script', ['integration'], function () {
+    return gulp.src('./src/body/**/*.js')
+   .pipe(concat('body.js'))
+     .pipe(gulp.dest('./public/development/scripts/'));
+ });
+
+
+gulp.task('test', ['build-body-script'], function() {
   selenium.child.kill();
   browserSync.exit();
 });
-
-
-

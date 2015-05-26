@@ -1,32 +1,38 @@
-var
-  expect = require('chai').expect,
-  client = require('webdriverio');
+var chai        = require('chai'),
+    assert      = chai.assert,
+    expect      = chai.expect,
+    webdriverio = require('webdriverio');
 
-var options = {
-    desiredCapabilities: {
-      browserName:   'chromedriver'         //'phantomjs'     //'firefox'
-    }
-  },
+describe('my webdriverio tests', function(){
 
-  url = 'http://localhost/julienetienne.com/public/development/index.html';
+    this.timeout(99999999);
+    var client = {};
 
+    before(function(done){
+            client = webdriverio.remote({ desiredCapabilities: {browserName: 'phantomjs'} });
+            client.init(done);
+    });
 
-// TEST
-describe('example', function() {
+    it('Github test',function(done) {
+        client
+            .url('http://localhost/julienetienne.com/public/development/index.html')
+  //          .getElementSize('.heading', function(err, result) {
+//                assert.equal(undefheadingined, err);
+ //               assert.strictEqual(result.height , 26);
+ //               assert.strictEqual(result.width, 37);
+ //           })
+            .getTitle(function(err, title) {
+                assert.equal(undefined, err);
+                assert.strictEqual(title,'Julien Etienne Front-End Engineer');
+            })
+//            .getCssProperty('a[href="/plans"]', 'color', function(err, result){
+//                assert.equal(undefined, err);
+ //               assert.strictEqual(result.value, 'rgba(65,131,196,1)');
+  //          })
+            .call(done);
+    });
 
-  it('tests a feature', function(done) {
-    client
-      .remote(options)
-      .init()
-      .url(url)
-      .getTitle(function(err, title) {
-        expect(title).to.equal('Julien Etienne');
-      })
-      .end();
-    done();
-  });
-
-
-  // Close browser
-
+    after(function(done) {
+        client.end(done);
+    });
 });

@@ -1,3 +1,0 @@
-///ergwsrh
-
-alert('whatever');
