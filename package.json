@@ -1,0 +1,26 @@
+{
+  "name": "julien-etienne",
+  "private": true,
+  "directories": {
+    "test": "test"
+  },
+  "version": "0.0.1",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "dependencies": {
+    "chai": "1.10.0",
+    "chai-as-promised": "4.1.1",
+    "mocha": "2.1.0",
+    "phantom-wd-runner": "0.0.2",
+    "q": "1.1.2",
+    "wd": "0.3.11",
+    "jshint": "2.5.11",
+    "xunit-file": "0.0.6"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "gulp": "^3.8.11",
+    "gulp-mocha": "^2.1.0"
+  }
+}

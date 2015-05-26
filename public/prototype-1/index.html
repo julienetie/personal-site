@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Julien Etienne Prototype-1</title>
+  <link rel="stylesheet" href="/server/julienetienne.com/node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- SVG LAYER | SVG LAYER | SVG LAYER | SVG LAYER -->
+<svg id="svg-view-port" currentScale="1" >
+
+  
+   <linearGradient id="Gradient1">
+      <stop offset="5%" stop-color="white"/>
+      <stop offset="95%" stop-color="blue"/>
+    </linearGradient>
+    <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="5%" stop-color="red"/>
+      <stop offset="95%" stop-color="orange"/>
+    </linearGradient>
+    
+ <pattern id="Pattern" x="0" y="0" width="0.1" height=".1">
+      <rect x="0" y="0" width="50" height="50" fill="skyblue"/>
+      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/>
+      <circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5"/>
+    </pattern>
+
+
+
+<rect class='page' fill="url(#Pattern)"  x="0" y="0" width="1024" height="600"/>
+
+</svg><!-- /SVG LAYER 
+-->
+
+
+<!-- CANVAS LAYER | CANVAS LAYER | CANVAS LAYER | CANVAS LAYER -->
+
+<!-- /CANVAS END
+-->
+
+
+<!-- WEBGL LAYER | WEBGL LAYER | WEBGL LAYER | WEBGL LAYER -->
+
+<!-- /WEBGL END 
+-->
+<script src="script.js"></script>
+</body>
+</html>

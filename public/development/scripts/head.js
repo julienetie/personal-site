@@ -1,0 +1,3 @@
+///ergwsrh
+
+alert('whatever');
