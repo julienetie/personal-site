@@ -1,10 +1,15 @@
 var chai        = require('chai'),
     assert      = chai.assert,
     expect      = chai.expect,
-    webdriverio = require('webdriverio');
+    webdriverio = require('webdriverio'),
 
+//    jsdom = require('mocha-jsdom'),
+    featureFirstProbe = require('../../src/body/feature-first-probe.js');
+ 
+
+    
 describe('my webdriverio tests', function(){
-
+  //jsdom();
     this.timeout(99999999);
     var client = {};
 
@@ -13,7 +18,7 @@ describe('my webdriverio tests', function(){
             client.init(done);
     });
 
-    it('Github test',function(done) {
+    it('Locla julienetienne test',function(done) {
         client
             .url('http://localhost/julienetienne.com/public/development/index.html')
   //          .getElementSize('.heading', function(err, result) {
