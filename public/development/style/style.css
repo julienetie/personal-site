@@ -1,0 +1,25 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: yellowgreen;
+}
+
+p,
+text {
+    font-size: 1em;
+    font-family: times;
+    line-height: 0;
+}
+
+svg {
+    background: yellow;
+    display: block;
+}
+
+#restore {
+    font-size: 1px;
+    fill: blue;
+    cursor: pointer;
+    display: none;
+}

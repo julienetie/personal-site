@@ -2,12 +2,9 @@ var chai        = require('chai'),
     assert      = chai.assert,
     expect      = chai.expect,
     webdriverio = require('webdriverio'),
-
-//    jsdom = require('mocha-jsdom'),
     featureFirstProbe = require('../../src/body/feature-first-probe.js');
- 
 
-    
+
 describe('my webdriverio tests', function(){
   //jsdom();
     this.timeout(99999999);
