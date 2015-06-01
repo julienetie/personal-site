@@ -259,6 +259,3 @@ Detects support for foreignObject tag in SVG.
 ;
 
 })(window, document);
-
-
-
