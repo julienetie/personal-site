@@ -17,12 +17,16 @@ if ((Modernizr.svgfilters & Modernizr.svgforeignobject)) {
 }
 
 
+var restoreNotification = document.getElementById('restore-view');
+
+var viewWidth = window.innerWidth;
+
 function setViewBox() {
 
   var viewWidth = window.innerWidth,
     veiwHeight = window.innerHeight;
   svg.style.width = viewWidth;
-  svg.style.height = '100vh';
+  svg.style.height = veiwHeight;
 
   var viewBoxInitialVals = svg.getAttribute('viewBox');
   var viewBoxArr = viewBoxInitialVals.split(' ');
@@ -32,8 +36,24 @@ function setViewBox() {
   var viewBoxNewVals = viewBoxArr.join(' ');
 
   svg.setAttribute('viewBox', viewBoxNewVals);
-  console.log(viewWidth);
+
+  restoreNotification.classList.remove('fade-in-restore-notification');
 }
+
+
 setViewBox();
 
-window.addEventListener('resize', setViewBox, false);
+function resizeFun(){
+    if(viewWidth !== window.innerWidth){
+    restoreNotification.classList.add('fade-in-restore-notification');
+
+}
+}
+
+
+
+window.addEventListener('resize', resizeFun, false);
+restoreNotification.addEventListener('click', setViewBox, false);
+
+
+// Need to make fonts have min size or not zoom.

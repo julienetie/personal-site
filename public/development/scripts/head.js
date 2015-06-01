@@ -259,3 +259,5 @@ Detects support for foreignObject tag in SVG.
 ;
 
 })(window, document);
+
+var restoreNotification = document.getElementsByTagName('div');

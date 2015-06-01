@@ -2,10 +2,26 @@ html,
 body {
     margin: 0;
     padding: 0;
-    background: yellowgreen;
-    height: 100%;
+    background: #222;
+
 }
 
+
+html div:nth-child(2){
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(200,230,255,0.7);
+  font-family: sans-serif;
+  font-size: 2vmin;
+  margin: 1em;
+  padding: 0.3em 0.5em 0.4em 0.5em;
+  border-radius: 0.3em;
+  text-shadow: 2px 2px 3px white;
+  line-height:  1em;
+  display: none;
+  cursor: pointer;
+}
 p,
 text {
     font-size: 1em;
@@ -23,4 +39,8 @@ svg {
     fill: blue;
     cursor: pointer;
     display: none;
+}
+
+div#restore-view.fade-in-restore-notification{
+  display: block;
 }
