@@ -1,4 +1,6 @@
 var restoreNotification = document.getElementById('restore-view');
+var restoreNotificationText = restoreNotification.getElementsByTagName('u')[0];
+var restoreNotificationClose = restoreNotification.getElementsByTagName('strong')[0];
 
 var viewWidth = window.innerWidth;
 
@@ -32,9 +34,13 @@ function resizeFun(){
 }
 
 
+function closeNotification(){
+ restoreNotification.classList.remove('fade-in-restore-notification');    
+}
+
 
 window.addEventListener('resize', resizeFun, false);
-restoreNotification.addEventListener('click', setViewBox, false);
-
+restoreNotificationText.addEventListener('click', setViewBox, false);
+restoreNotificationClose.addEventListener('click', closeNotification, false);
 
 // Need to make fonts have min size or not zoom.
