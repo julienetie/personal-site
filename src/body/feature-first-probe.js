@@ -15,5 +15,5 @@ if ((Modernizr.svgfilters & Modernizr.svgforeignobject)) {
   removeElement(svg);
   html.style.display = 'block';
 }
-
+alert('yo');
 

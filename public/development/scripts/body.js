@@ -1,12 +1,19 @@
 //
 var svg = document.getElementsByTagName('svg')[0],
-    html = document.getElementById('html');
-if((Modernizr.svgfilters & Modernizr.svgforeignobject)){
-  html.innerHTML = '';
+  html = document.getElementById('html');
 
+
+function removeElement(el) {
+  el.innerHTML = '';
+  el.parentNode.removeChild(el);
 }
-else{
-  svg.innerHTML = '';
-  svg.parentNode.removeChild(svg);
+
+
+if ((Modernizr.svgfilters & Modernizr.svgforeignobject)) {
+  removeElement(html);
+} else {
+  removeElement(svg);
   html.style.display = 'block';
 }
+alert('yo');
+
