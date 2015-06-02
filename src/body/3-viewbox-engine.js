@@ -60,7 +60,7 @@
       // Background color
       svg.style.backgroundColor = esc.backgroundColor;
 
-      // Display block tightly-coupled 
+      // Display bposk tightly-coupled 
       svg.style.display = 'block';
 
       // Notification
@@ -161,7 +161,7 @@
         textNode = document.createTextNode(gridIncrement);
         unitText
           .attr('x', 5)
-          .attr('y', gridIncrement -5)
+          .attr('y', gridIncrement - 5)
           .attr('style', 'font-family: sans-serif; font-size  : 10;')
           .attr('fill', 'rgba(255,255,255,0.6)');
         unitText.appendChild(textNode);
@@ -170,11 +170,60 @@
     }
   }
 
+  function coordinates() {
+    if (esc.grid.development) {
+      var coords;
+
+      // Build Metrics group
+      var mouseTracker = createNS('g').attr('name', 'mouseTracker');
+      svg.appendChild(mouseTracker);
+      var mouseTrackerBG = createNS('rect');
+      mouseTrackerBG
+        .attr('x', esc.viewBox.width - 50)
+        .attr('y', esc.viewBox.height - 20)
+        .attr('width', 60)
+        .attr('height', 20)
+        .attr('fill', 'rgba(255,255,255,0.8)');
+      mouseTracker.appendChild(mouseTrackerBG);
+      var info = createNS('text');
+      coords = document.createTextNode('');
+      info
+        .attr('x', esc.viewBox.width - 40)
+        .attr('y', esc.viewBox.height - 5)
+        .attr('style', 'font-family: sans-serif; font-size  : 8;')
+        .attr('fill', 'rgba(100,50,50,0.8)');
+
+      info.appendChild(coords);
+      mouseTracker.appendChild(info);
+
+
+      var point   = svg.createSVGPoint();
+
+ var cursorPoint = function (e){
+      point.x = e.clientX; 
+      point.y = e.clientY;
+      return point.matrixTransform(svg.getScreenCTM().inverse());
+    };
+
+
+    svg.addEventListener('mousemove',function(e){
+      var loc = cursorPoint(e);
+      coords.textContent = (Math.round(loc.x * 10) / 10) + ' | ' + (Math.round(loc.y * 10) / 10);
+    },false);
+
+
+   
+
+
+    }
+  }
+
 
 
   return {
     viewBoxEngine: viewBoxEngine(),
-    grid: grid()
+    grid: grid(),
+    coordinates: coordinates()
   };
 
 }(esc, esc.grid));
