@@ -33,10 +33,7 @@ text {
     line-height: 0;
 }
 
-svg {
-    background: #3B3C7A;
-    display: block;
-}
+
 
 #restore {
     font-size: 1px;
