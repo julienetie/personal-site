@@ -19,20 +19,41 @@ if ((Modernizr.svgfilters & Modernizr.svgforeignobject)) {
 // Need to add classList
 
 // Escape
-var 
-esc = esc || {
-xUnits: 1000,
-yUnits: 500
+var
+  esc = esc || {
+    viewBox: {
+      x: 0,
+      y: 0,
+      width: 1000,
+      height: 500
+    },
+    preserveAspectRatio: {
+      align: 'xMidYMid',
+      meetOrSlice: 'slice'
+    }
 
-};
+
+  };
 // Grid
 esc.grid = {
   horizontal: 10,
   vertical: 10
 };
 
-
 (function(esc, gridOptions) {
+
+  // Defaults
+  esc.viewBox.x = esc.viewBox.x || 0;
+  esc.viewBox.y = esc.viewBox.y || 0;
+  esc.viewBox.width = esc.viewBox.width || 1000;
+  esc.viewBox.height = esc.viewBox.height || 500;
+
+  esc.preserveAspectRatio.align = esc.preserveAspectRatio.align || 'xMidYMid';
+  esc.preserveAspectRatio.meetOrSlice = esc.preserveAspectRatio.meetOrSlice || 'meet';
+
+
+
+
 
   // Chain Attributes
   Object.prototype.attr = function() {
@@ -55,22 +76,32 @@ esc.grid = {
     }
     getViewDimensions();
 
-    function setViewBox() {
+    function setSVG() {
       getViewDimensions();
       svg.style.width = view.width;
       svg.style.height = view.height;
 
-      var viewBoxInitialVals = svg.getAttribute('viewBox');
-   //   viewBoxArr = viewBoxInitialVals.split(' '),
-        //viewRatio = view.width / view.height;
-        //viewBoxArr[2] = esc.xUnits;
-        //viewBoxArr[3] = esc.yUnits;
-        viewBoxArr = [ 0, 0, esc.xUnits, esc.yUnits];
+      //   var viewBoxInitialVals = svg.getAttribute('viewBox');
+      //   viewBoxArr = viewBoxInitialVals.split(' '),
+      //viewRatio = view.width / view.height;
+      //viewBoxArr[2] = esc.xUnits;
+      //viewBoxArr[3] = esc.yUnits;
+      
+      //ViewBox
+      viewBoxArr = [esc.viewBox.x, esc.viewBox.y, esc.viewBox.width, esc.viewBox.height];
       var viewBoxNewVals = viewBoxArr.join(' ');
       svg.setAttribute('viewBox', viewBoxNewVals);
+
+
+      // preserveAspectRatio
+      preserveAspectRatioArr = [esc.preserveAspectRatio.align, esc.preserveAspectRatio.meetOrSlice];
+      var preserveAspectRatioNewVals = preserveAspectRatioArr.join(' ');
+      svg.setAttribute('preserveAspectRatio', preserveAspectRatioNewVals);
+
+      // Notification
       restoreNotification.classList.remove('fade-in-restore-notification');
     }
-    setViewBox();
+    setSVG();
 
     function resizeFun() {
       if (view.width !== window.innerWidth || view.height !== window.innerWidth) {
@@ -86,7 +117,7 @@ esc.grid = {
 
 
     window.addEventListener('resize', resizeFun, false);
-    restoreNotificationText.addEventListener('click', setViewBox, false);
+    restoreNotificationText.addEventListener('click', setSVG, false);
     restoreNotificationClose.addEventListener('click', closeNotification, false);
 
   }
@@ -99,6 +130,9 @@ esc.grid = {
 
   function grid() {
 
+    //defaults
+
+
 
     var gridline,
       gridIncrement;
@@ -110,7 +144,7 @@ esc.grid = {
     var yGridlines = createNS('g').attr('name', 'y-gridlines');
     gridlines.appendChild(yGridlines);
     // Build X Paths 
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 11; i++) {
       gridIncrement = i * 50;
       gridline = createNS('path');
       gridline.attr('d', 'M -1000 ' + gridIncrement + ' L 2000 ' + gridIncrement).attr("stroke", "lightblue").attr("stroke-width", "1");
