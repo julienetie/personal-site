@@ -12,19 +12,17 @@
     <section>
         <!-- minimum ratio of 2.2 before scrolling -->
         <!--  width and height = same values,    mid values   slice the offscreen -->
-        <svg viewBox='0 0 1000 500' preserveAspectRatio="xMidYMid meet">
+        <svg preserveAspectRatio="xMidYMid meet">
             <!-- The 4th viewBox value is overwritten & dynamic-->
-            <text id='restore' x='0.5' y='0.5'>restore scale?</text>
-            <text x='0' y='100'>Hello SVG</text>
-            <circle cx='500' cy='250' r='250' fill='red' />
+
+            <circle cx='500' cy='250' r='250' fill='rgba(60,230,230,0.7)' />
             <g>
-            <rect x="400" y="100" width="200" height="200" rx="2" ry="2" />
+            <rect x="400" y="150" width="200" height="200" rx="2" ry="2" fill='rgba(60,220,255,0.8)' />
             </g>
 
 
-            <g>
-              <path d="M 0 250 L 1000 250" fill="orange" stroke="black" stroke-width="3" />
-            </g>
+            <g name='gridlines' id='gridlines'></g>
+
         </svg>
     </section>
     <div id='html' style='top: 0; position: absolute; display: none'>
