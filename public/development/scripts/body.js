@@ -18,6 +18,8 @@ if ((Modernizr.svgfilters & Modernizr.svgforeignobject)) {
 
 // Need to add classList
 
+
+
 var restoreNotification = document.getElementById('restore-view'),
   restoreNotificationText = restoreNotification.getElementsByTagName('u')[0],
   restoreNotificationClose = restoreNotification.getElementsByTagName('strong')[0];
@@ -40,18 +42,18 @@ function setViewBox() {
   svg.style.width = view.width;
   svg.style.height = view.height;
   var viewBoxInitialVals = svg.getAttribute('viewBox');
-  viewBoxArr = viewBoxInitialVals.split(' '),
-    viewRatio = view.width / view.height;
-  viewBoxArr[3] = parseInt(viewBoxArr[2] / viewRatio, 10);
-  var viewBoxNewVals = viewBoxArr.join(' ');
-  svg.setAttribute('viewBox', viewBoxNewVals);
+ // viewBoxArr = viewBoxInitialVals.split(' '),
+    //viewRatio = view.width / view.height;
+  //viewBoxArr[3] = parseInt(viewBoxArr[2] / viewRatio, 10);
+ //var viewBoxNewVals = viewBoxArr.join(' ');
+ //svg.setAttribute('viewBox', viewBoxNewVals);
   restoreNotification.classList.remove('fade-in-restore-notification');
 }
 setViewBox();
 
 
 function resizeFun() {
-  if (view.width !== window.innerWidth) {
+  if (view.width !== window.innerWidth || view.height !== window.innerWidth) {
     restoreNotification.classList.add('fade-in-restore-notification');
 
   }
