@@ -16,3 +16,4 @@ if ((Modernizr.svgfilters & Modernizr.svgforeignobject)) {
   html.style.display = 'block';
 }
 
+// Need to add classList
