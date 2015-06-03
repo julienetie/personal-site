@@ -23,9 +23,9 @@ var
 // Grid
 esc.grid = {
 
-  development: 1,
+  development: true,
   horizontal: 10,
-  vertical: 20
-
+  vertical: 20,
+  coordinates: true
 // Need to add metric options 
 };

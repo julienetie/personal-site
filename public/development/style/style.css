@@ -3,37 +3,37 @@ body {
     margin: 0;
     padding: 0;
     background: #222;
-    height: 100vh;
+
 }
-body{
+
+body {
     background: #000 url(../visuals/hex.png) repeat;
 }
 
-html div:nth-child(2){
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(200,230,255,1);
-  font-family: sans-serif;
-  font-size: 1.3vmax;
-  margin: 1em;
-  padding: 0.4em 0.5em 0.4em 0.5em;
-  border-radius: 0.3em;
-  text-shadow: 1px 1px 1px white;
-  line-height:  1em;
-  display: none;
-  cursor: pointer;
-  z-index: 1000;
-  letter-spacing: 0.2em;
+html div:nth-child(2) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(200, 230, 255, 1);
+    font-family: sans-serif;
+    font-size: 1.3vmax;
+    margin: 1em;
+    padding: 0.4em 0.5em 0.4em 0.5em;
+    border-radius: 0.3em;
+    text-shadow: 1px 1px 1px white;
+    line-height: 1em;
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+    letter-spacing: 0.2em;
 }
+
 p,
 text {
     font-size: 1em;
     font-family: times;
     line-height: 0;
 }
-
-
 
 #restore {
     font-size: 1px;
@@ -42,40 +42,48 @@ text {
     display: none;
 }
 
-div#restore-view.fade-in-restore-notification{
-  display: block;
+div#restore-view.fade-in-restore-notification {
+    display: block;
 }
-
-
 
 @-webkit-keyframes blinker {
-  0% {
-    background-color: rgba(240,240,255,0.95); }
-
-  50% {
-    background-color: rgba(0,255,255,0.6); }
-
-  100% {
-    background-color: rgba(240,240,255,0.95); } }
-
-
-
-div#restore-view.fade-in-restore-notification {
-  -webkit-animation-name: blinker;
-  -webkit-animation-duration: 2.6s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite; 
+    0% {
+        background-color: rgba(240, 240, 255, 0.95);
+    }
+    50% {
+        background-color: rgba(0, 255, 255, 0.6);
+    }
+    100% {
+        background-color: rgba(240, 240, 255, 0.95);
+    }
 }
 
-
+div#restore-view.fade-in-restore-notification {
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 2.6s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
 
 div#restore-view.fade-in-restore-notification:hover {
-  text-shadow: 1px 1px 1px white; 
-
+    text-shadow: 1px 1px 1px white;
 }
 
 div#restore-view.fade-in-restore-notification strong {
-margin-left: 0.3em;
+    margin-left: 0.3em;
 }
 
-  
+
+
+::selection{
+  background:#00fff3;
+  color:#FF00CC;
+}
+::-moz-selection{
+  background:#00fff3;
+  color:#FF00CC;
+}
+::-webkit-selection{
+  background:#00fff3;
+  color:#FF00CC;
+}
