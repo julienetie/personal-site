@@ -43,7 +43,7 @@
       svg.attr('width', view.width );
       svg.attr('height', view.height );
 
-  console.log(view.width);
+ // console.log(view.width);
       //   var viewBoxInitialVals = svg.getAttribute('viewBox');
       //   viewBoxArr = viewBoxInitialVals.split(' '),
       //viewRatio = view.width / view.height;
