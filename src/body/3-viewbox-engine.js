@@ -31,15 +31,19 @@
         width: window.innerWidth,
         height: window.innerHeight
       };
+
       return view;
     }
     getViewDimensions();
 
     function setSVG() {
       getViewDimensions();
-      svg.style.width = view.width;
-      svg.style.height = view.height;
+     // svg.style.width = view.width;
+     // svg.style.height = view.height;
+      svg.attr('width', view.width );
+      svg.attr('height', view.height );
 
+  console.log(view.width);
       //   var viewBoxInitialVals = svg.getAttribute('viewBox');
       //   viewBoxArr = viewBoxInitialVals.split(' '),
       //viewRatio = view.width / view.height;
@@ -133,7 +137,7 @@
         gridIncrement = i * esc.viewBox.width / esc.grid.vertical;
         gridline = createNS('path');
         gridline
-          .attr('d', 'M ' + gridIncrement + ' -500, L ' + gridIncrement + ' 1000')
+          .attr('d', 'M ' + gridIncrement + ' -500 L ' + gridIncrement + ' 1000')
           .attr("stroke", "lightblue")
           .attr("stroke-width", "1")
           .attr("stroke-dasharray", "2, 5");
@@ -148,7 +152,7 @@
         unitText
           .attr('x', gridIncrement + 5)
           .attr('y', 10)
-          .attr('style', 'font-family: sans-serif; font-size  : 10;')
+          .attr('style', 'font-family: sans-serif; font-size  : 10px;')
           .attr('fill', 'rgba(255,255,255,0.6)');
         unitText.appendChild(textNode);
         metrics.appendChild(unitText);
@@ -162,7 +166,7 @@
         unitText
           .attr('x', 5)
           .attr('y', gridIncrement - 5)
-          .attr('style', 'font-family: sans-serif; font-size  : 10;')
+          .attr('style', 'font-family: sans-serif; font-size  : 10px;')
           .attr('fill', 'rgba(255,255,255,0.6)');
         unitText.appendChild(textNode);
         metrics.appendChild(unitText);
@@ -191,7 +195,7 @@
         info
           .attr('x', esc.viewBox.width - 40)
           .attr('y', esc.viewBox.height - 5)
-          .attr('style', 'font-family: sans-serif; font-size  : 8;')
+          .attr('style', 'font-family: sans-serif; font-size  : 8px;')
           .attr('fill', 'rgba(100,50,50,0.8)');
 
         info.appendChild(coords);
