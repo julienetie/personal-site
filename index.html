@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Julien Etienne - UI Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style/main.css">
+
 </head>
 
 <body>
     <script src="scripts/lazyload.js"></script>
-    <div contenteditable="true" spellcheck='false'>
+    <div contenteditable='true' spellcheck='false'>
         <h1 id='editable'>Julien Etienne can't speak French</h1>
     </div>
     <div id='contents'>
@@ -24,6 +26,7 @@
             <li><a href="#core-technologies">Core Technologies</a></li>
             <li><a href="#accounts">Accounts</a></li>
             <li><a href="#bookmarked">Bookmarked</a></li>
+            <li><a href="#stats">Stats</a></li>
         </ul>
     </div>
     <!-- experiments -->
@@ -140,8 +143,7 @@
         </svg>
         <h2>Core Technologies</h2>
         <ul>
-            <li>
-                <nav><a target="_blank" href="http://www.ecma-international.org/ecma-262/6.0/">JavaScript</a></li>
+            <li><a target="_blank" href="http://www.ecma-international.org/ecma-262/6.0/">JavaScript</a></li>
             <li><a target="_blank" href="http://www.w3.org/Style/CSS/current-work">CSS</a></li>
             <li><a target="_blank" href="http://www.w3.org/TR/html5/">HTML</a></li>
             <li><a target="_blank" href="http://www.w3.org/TR/SVG2/">SVG</a></li>
@@ -181,9 +183,30 @@
         </ul>
         <hr>
     </div>
+    <!--Stats-->
+    <div class='section' id='stats'>
+        <svg class='cross'>
+            <line x1="0" y1="0" />
+            <line x1="0" y2='0' />
+        </svg>
+        <h2>Stats</h2>
+        <ul>
+            <li><a target="_blank" href="https://developers.google.com/speed/pagespeed/insights/?url=julienetienne.co.uk">PageSpeed Insights - Mobile</a></li>
+            <li><a target="_blank" href="https://developers.google.com/speed/pagespeed/insights/?url=julienetienne.co.uk&tab=desktop">PageSpeed Insights - Desktop</a></li>
+            <li><a target="_blank" href="http://tools.pingdom.com/fpt/#!/ddtebO/http://julienetienne.co.uk/">Pingdom Website Speed Test</a></li>
+            <li><a target="_blank" href="http://wave.webaim.org/report#/http%3A%2F%2Fjulienetienne.co.uk%2F">WAVE Accessibility Check</a></li>
+        </ul>
+        <h2>About this site:</h2>
+        <ul>
+            <li>Made using:</li>
+            <li><a href='https://github.com/vvo/lazyload'>lazyload</a> | Custom lazyload polyfill | JS | CSS | SVG | Canvas | HTML5 | PHP </li>
+            <li>Browser support: IE8+, Safari 5+, </li>
+            <li>Assistive technologies support: ?</li>
+        </ul>
+        <hr>
+    </div>
     <small>&#169; 2015 Julien Etienne</small>
     <script src="experiments/smarties/js/index.js"></script>
     <script src="scripts/julienetienne.co.uk.js"></script>
 </body>
-
 </html>

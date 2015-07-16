@@ -40,14 +40,13 @@
     a:hover {
         color: blue;
     }
-
-
+    
     .cross {
         position: absolute;
         top: 0;
         z-index: 0;
     }
-
+    
     .codepen {
         opacity: 0.1;
     }
@@ -57,22 +56,24 @@
         border-top: none;
         list-style-type: none;
     }
-    ul li{
-        padding-bottom: 0.3em; 
+    
+    ul li {
+        padding-bottom: 0.3em;
     }
-    ul li:nth-child(1){
+    
+    ul li:nth-child(1) {
         border-radius: 1em;
     }
-    ul li:last-child{
+    
+    ul li:last-child {
         padding-bottom: 1em;
     }
-    #experiments ul li{
-        width: 50%;
-    }
-    #contents ul li:before{
+    
+    #contents ul li:before {
         content: '# ';
     }
     
+    #experiments ul li,
     #logos-and-branding ul li,
     #websites ul li,
     #prototypes ul li {
@@ -196,20 +197,18 @@
         transition: opacity 2s ease;
     }
     
-
     #smarties-placehlider {
         background: url('../experiments/smarties/smarties.png') no-repeat;
         background-size: 100%;
     }
-
-
     
     .cross line {
         stroke: rgba(150, 20, 80, 1);
         stroke-dasharray: 20 20 10;
         stroke-width: 0.08;
     }
-    .cross line:nth-child(2){
+    
+    .cross line:nth-child(2) {
         stroke-dasharray: none;
     }
     
@@ -222,13 +221,54 @@
         position: relative;
         z-index: 2;
     }
-
-
-ul li{
-    border-left: 1px solid rgba(0, 0, 255, 0.1);
-    padding-left: 1em;
-}
-
-
-
-
+    
+    ul li {
+        border-left: 1px solid rgba(0, 0, 255, 0.1);
+        padding-left: 1em;
+    }
+    /* Small screens */
+    
+    @media only screen {}
+    /* Define mobile styles */
+    
+    @media only screen and (max-width: 40em) {
+                #experiments ul li,
+        #logos-and-branding ul li,
+        #websites ul li,
+        #prototypes ul li {
+            width: 80%;
+        }
+    }
+    /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+    /* Medium screens */
+    
+    @media only screen and (min-width: 40.063em) {}
+    /* min-width 641px, medium screens */
+    
+    @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+        #experiments ul li,
+        #logos-and-branding ul li,
+        #websites ul li,
+        #prototypes ul li {
+            width: 80%;
+        }
+    }
+    /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+    /* Large screens */
+    
+    @media only screen and (min-width: 64.063em) {}
+    /* min-width 1025px, large screens */
+    
+    @media only screen and (min-width: 64.063em) and (max-width: 90em) {}
+    /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+    /* XLarge screens */
+    
+    @media only screen and (min-width: 90.063em) {}
+    /* min-width 1441px, xlarge screens */
+    
+    @media only screen and (min-width: 90.063em) and (max-width: 120em) {}
+    /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+    /* XXLarge screens */
+    
+    @media only screen and (min-width: 120.063em) {}
+    /* min-width 1921px, xxlarge screens */
