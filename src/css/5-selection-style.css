@@ -1,47 +1,48 @@
  ::selection {
-        background: #f5da55;
-        color: #CC0000;
-    }
-    
-    ::-moz-selection {
-        background: #f5da55;
-        color: #CC0000;
-    }
-    
-    p::selection {
-        background: lime;
-        color: lilac;
-    }
-    
-    h1::selection {
-        background: lime;
-        color: lilac;
-    }
-    
-    h2::selection {
-        background: lime;
-        color: lilac;
-    }
-    
-    img::selection {
-        background: yellow;
-    }
-    
-    p::-moz-selection {
-        background: lime;
-        color: lilac;
-    }
-    
-    h1::-moz-selection {
-        background: lime;
-        color: lilac;
-    }
-    
-    h2::-moz-selection {
-        background: lime;
-        color: lilac;
-    }
-    
-    img::-moz-selection {
-        background: yellow;
-    }
+     background: #f5da55;
+     color: #CC0000;
+ }
+ 
+ ::-moz-selection {
+     background: #f5da55;
+     color: #CC0000;
+ }
+ 
+ p::selection {
+     background: lime;
+     color: lilac;
+ }
+ 
+ h1::selection {
+     background: lime;
+     color: lilac;
+ }
+ 
+ h2::selection {
+     background: lime;
+     color: lilac;
+ }
+ 
+ img::selection {
+     background: yellow;
+ }
+ 
+ p::-moz-selection {
+     background: lime;
+     color: lilac;
+ }
+ 
+ h1::-moz-selection {
+     background: lime;
+     color: lilac;
+ }
+ 
+ h2::-moz-selection {
+     background: lime;
+     color: lilac;
+ }
+ 
+ img::-moz-selection {
+     background: yellow;
+ }
+

@@ -27,6 +27,7 @@ var gulp = require('gulp'),
         '!./**/*.jade'
     ],
     buildList = [
+        'clean-css-dir',
         'build-css',
         'build-index-critical-css',
         'build-404-css',
@@ -35,13 +36,19 @@ var gulp = require('gulp'),
         'build-lazy-js',
         'manifest'
     ],
-    manifestDepList = buildList.slice(0, buildList.length - 1);
+    manifestDepList = buildList.slice(0, buildList.length - 1),
+    count = 0,
+    hr = Array(12).join('≡');
 
 /**
  * By order
  */
+gulp.task('separator', function() {
+    gutil.log(hr + '(', count += 1, ')' + hr);
+});
 
-gulp.task('clean-css-dir', function() {
+
+gulp.task('clean-css-dir', ['separator'], function() {
     return gulp.src('./style', {
             read: false
         })
@@ -90,6 +97,7 @@ gulp.task('build-404-critical-css', ['build-404-css'], function() {
         src: './src/html/404.html',
         css: ['./style/404.min.css'],
         htmlTarget: '404.html',
+        exclude: true,
         width: 1366,
         height: 4000,
         minify: true
