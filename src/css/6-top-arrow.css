@@ -1,0 +1,26 @@
+#top-arrow{
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    -webkit-transition: opacity 1.2s ease;
+-moz-transition: opacity 1.2s ease;
+-o-transition: opacity 1.2s ease;
+transition: opacity 1.2s ease;
+}
+#top-arrow a{
+    font-size: 100px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+
+
+
+    -webkit-transition: -webkit-transform 1.2s ease;
+-moz-transition: -webkit-transform 1.2s ease;
+-o-transition: -webkit-transform 1.2s ease;
+transition: -webkit-transform 1.2s ease;
+
+}

@@ -1,0 +1,171 @@
+a:visited {
+  color: #222;
+}
+
+h2:before {
+  content: '# ';
+}
+
+a:active {
+  color: red;
+}
+
+a:hover {
+  color: #00f;
+}
+
+.section,
+small {
+  position: relative;
+}
+
+.codepen {
+  opacity: .1;
+}
+
+#experiments ul li,
+#logos-and-branding ul li,
+#prototypes ul li,
+#websites ul li {
+  width: 50%;
+}
+
+#logos-and-branding ul li img,
+#prototypes ul li img,
+#websites ul li img,
+.section {
+  width: 100%;
+}
+
+hr {
+  left: 0;
+  padding: 0;
+  border: 4px double #EDEDFF;
+  border-radius: 5px;
+}
+
+.section {
+  float: left;
+  transition: all .3s linear;
+  overflow: hidden;
+}
+
+.section,
+.section:hover {
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -o-transition: all .3s linear;
+}
+
+.section:hover {
+  background: #E1E192;
+  text-shadow: 1.5em -.45em 3px rgba(255,200,200,.7),1em -.3em 3px rgba(200,255,200,.7),.5em -.15em 3px rgba(200,200,255,.7);
+  transition: all .3s linear;
+}
+
+h2,
+p {
+  padding: .5em 1.4em;
+}
+
+small {
+  float: right;
+  text-align: right;
+  margin: 2em;
+}
+
+.section h2,
+.section ul {
+  position: relative;
+  z-index: 2;
+}
+
+@media only screen and (max-width:40em) {
+  #experiments ul li,
+  #logos-and-branding ul li,
+  #prototypes ul li,
+  #websites ul li {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width:40.063em) and (max-width:64em) {
+  #experiments ul li,
+  #logos-and-branding ul li,
+  #prototypes ul li,
+  #websites ul li {
+    width: 80%;
+  }
+}
+
+#smarties {
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 2s ease;
+  -moz-transition: opacity 2s ease;
+  -o-transition: opacity 2s ease;
+  transition: opacity 2s ease;
+}
+
+#smarties-placehlider {
+  background: url(../experiments/smarties/smarties.png) no-repeat;
+  background-size: 100%;
+}
+
+#editable:focus {
+  border: none;
+  outline: 0;
+}
+
+p::selection {
+  background: #0f0;
+  color: lilac;
+}
+
+h1::selection {
+  background: #0f0;
+  color: lilac;
+}
+
+h2::selection {
+  background: #0f0;
+  color: lilac;
+}
+
+img::selection {
+  background: #ff0;
+}
+
+p::-moz-selection {
+  background: #0f0;
+  color: lilac;
+}
+
+h2::-moz-selection {
+  background: #0f0;
+  color: lilac;
+}
+
+img::-moz-selection {
+  background: #ff0;
+}
+
+#top-arrow {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  bottom: 1.5em;
+  right: 0;
+  z-index: 10;
+  font-size: 100px;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+#top-arrow a {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}

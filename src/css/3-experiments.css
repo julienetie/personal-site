@@ -1,0 +1,23 @@
+  #smarties {
+      width: 100%;
+      opacity: 0;
+      -webkit-transition: opacity 2s ease;
+      -moz-transition: opacity 2s ease;
+      -o-transition: opacity 2s ease;
+      transition: opacity 2s ease;
+  }
+  
+  #smarties-placehlider {
+      background: url('../experiments/smarties/smarties.png') no-repeat;
+      background-size: 100%;
+  }
+  
+  .cross line {
+      stroke: rgba(150, 20, 80, 1);
+      stroke-dasharray: 20 20 10;
+      stroke-width: 0.08;
+  }
+  
+  .cross line:nth-child(2) {
+      stroke-dasharray: none;
+  }
