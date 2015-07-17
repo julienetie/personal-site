@@ -2,45 +2,12 @@ CACHE MANIFEST
 
 
 CACHE:
+404.html
 index.html
 scripts/julienetienne.min.js
 scripts/lazyload.min.js
-style/julienetienne.min.02ab2502.css
-style/julienetienne.min.07fb3c81.css
-style/julienetienne.min.1143c5de.css
-style/julienetienne.min.11ce2084.css
-style/julienetienne.min.1d773265.css
-style/julienetienne.min.39337c7a.css
-style/julienetienne.min.3b140f06.css
-style/julienetienne.min.3bbda233.css
-style/julienetienne.min.4c80ba08.css
-style/julienetienne.min.5b0e73a7.css
-style/julienetienne.min.63024d34.css
-style/julienetienne.min.6b0005cb.css
-style/julienetienne.min.72b79597.css
-style/julienetienne.min.80952882.css
-style/julienetienne.min.81104744.css
-style/julienetienne.min.832e3f4c.css
-style/julienetienne.min.88a2c1e0.css
-style/julienetienne.min.893d18b9.css
-style/julienetienne.min.89f4a4a6.css
-style/julienetienne.min.93fd00be.css
-style/julienetienne.min.97f89f03.css
-style/julienetienne.min.b1e576df.css
-style/julienetienne.min.b29935eb.css
-style/julienetienne.min.b51712bf.css
-style/julienetienne.min.b51b6889.css
-style/julienetienne.min.bc6c4bfa.css
-style/julienetienne.min.c8c4b47d.css
-style/julienetienne.min.c9213695.css
-style/julienetienne.min.cfa31b79.css
-style/julienetienne.min.d8bef894.css
-style/julienetienne.min.de5621f0.css
-style/julienetienne.min.dec3b824.css
-style/julienetienne.min.e8a503dd.css
-style/julienetienne.min.ea5854cb.css
-style/julienetienne.min.f4095ca0.css
-style/julienetienne.min.fb510f17.css
+style/404.min.css
+style/julienetienne.min.d531ae95.css
 experiments/smarties/index.html
 experiments/smarties/smarties-pix.png
 experiments/smarties/smarties.jpg
@@ -115,4 +82,4 @@ http://*
 https://*
 *
 
-# hash: d44f50af148ae6be882aa3337266e9adab94d45352e4c25d2da84dc7c7a2f9b8
+# hash: 518e8e9e6d2dd05cf16aba3f38325c12549848bfffcc4630cd4271b1ba8333a6

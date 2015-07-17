@@ -100,10 +100,20 @@
     }
     captchaCanvas();
 */
+  setInitArrow();
 
-  window.onscroll = function(e) {
-    getScrollPosition();
-  };
+  setTimeout(
+    function() {
+        window.onscroll = function(e) {
+            getScrollPosition();
+        };  
+    }, 1000);
+
+  function setInitArrow() {
+    var midWidth = window.innerWidth / 2;
+    var midHeight = window.innerHeight / 2;
+    topArrow.childNodes[0].style.webkitTransform = 'translate3d(-' + midWidth + 'px, -' + midHeight + 'px, 60px)';
+  }
 
   function getScrollPosition() {
     var midWidth = window.innerWidth / 2;
