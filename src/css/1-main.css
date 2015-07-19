@@ -145,3 +145,7 @@
         border-left: 1px solid rgba(0, 0, 255, 0.1);
         padding-left: 1em;
     }
+
+#old-school{
+    display: none;
+}

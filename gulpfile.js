@@ -14,6 +14,7 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     manifest = require('gulp-manifest'),
     gutil = require('gulp-util'),
+    inlinesource = require('gulp-inline-source'),
     manifestSrc = [
         './**',
         '!node_modules',
@@ -27,6 +28,7 @@ var gulp = require('gulp'),
         '!./**/*.jade'
     ],
     buildList = [
+        'inject-index-lazyload',
         'clean-css-dir',
         'build-css',
         'build-index-critical-css',
@@ -48,7 +50,14 @@ gulp.task('separator', function() {
 });
 
 
-gulp.task('clean-css-dir', ['separator'], function() {
+gulp.task('inject-index-lazyload', ['separator'], function () {
+    return gulp.src('./src/html/index.html')
+        .pipe(inlinesource({compress: true}))
+        .pipe(gulp.dest('./src/html/injected'));
+});
+
+
+gulp.task('clean-css-dir', ['inject-index-lazyload'], function() {
     return gulp.src('./style', {
             read: false
         })
@@ -58,7 +67,9 @@ gulp.task('clean-css-dir', ['separator'], function() {
 
 gulp.task('build-css', ['clean-css-dir'], function() {
     // The 1-main.css file is not excluded from the build.
-    return gulp.src(['./src/css/*.css', '!./src/css/8-404.css'])
+    return gulp.src([
+        './src/css/*.css', 
+        '!./src/css/8-404.css'])
         .pipe(concatCss('julienetienne.min.css'))
         .pipe(minifyCss({
             compatibility: 'ie8'
@@ -70,13 +81,13 @@ gulp.task('build-css', ['clean-css-dir'], function() {
 gulp.task('build-index-critical-css', ['build-css'], function() {
     return critical.generateInline({
         base: './',
-        src: './src/html/index.html',
+        src: './src/html/injected/index.html',
         css: ['./style/julienetienne.min.css'],
-        htmlTarget: 'index.html',
+        htmlTarget: 'index.php',
         extract: true,
         width: 1366,
         height: 4000,
-        minify: true
+        minify: false
     });
 });
 
@@ -96,7 +107,7 @@ gulp.task('build-404-critical-css', ['build-404-css'], function() {
         base: './',
         src: './src/html/404.html',
         css: ['./style/404.min.css'],
-        htmlTarget: '404.html',
+        htmlTarget: './404/index.php',
         exclude: true,
         width: 1366,
         height: 4000,
@@ -125,6 +136,7 @@ gulp.task('build-lazy-js', ['build-js'], function() {
 });
 
 
+// Add a task, add it to the list
 gulp.task('manifest', manifestDepList, function() {
     gulp.src(manifestSrc)
         .pipe(manifest({
@@ -140,6 +152,9 @@ gulp.task('manifest', manifestDepList, function() {
         }))
         .pipe(gulp.dest('./'));
 });
+
+
+
 
 
 /**

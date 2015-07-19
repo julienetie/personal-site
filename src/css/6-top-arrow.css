@@ -17,9 +17,7 @@ transition: opacity 1.2s ease;
     right: 0;
     position: absolute;
 
-
-
-    -webkit-transition: -webkit-transform 1.2s ease;
+-webkit-transition: -webkit-transform 1.2s ease;
 -moz-transition: -webkit-transform 1.2s ease;
 -o-transition: -webkit-transform 1.2s ease;
 transition: -webkit-transform 1.2s ease;

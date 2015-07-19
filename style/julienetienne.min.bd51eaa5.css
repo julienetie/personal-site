@@ -14,7 +14,6 @@ a:hover {
   color: #00f;
 }
 
-.section,
 small {
   position: relative;
 }
@@ -32,8 +31,7 @@ small {
 
 #logos-and-branding ul li img,
 #prototypes ul li img,
-#websites ul li img,
-.section {
+#websites ul li img {
   width: 100%;
 }
 
@@ -44,13 +42,6 @@ hr {
   border-radius: 5px;
 }
 
-.section {
-  float: left;
-  transition: all .3s linear;
-  overflow: hidden;
-}
-
-.section,
 .section:hover {
   -webkit-transition: all .3s linear;
   -moz-transition: all .3s linear;
@@ -78,6 +69,10 @@ small {
 .section ul {
   position: relative;
   z-index: 2;
+}
+
+#old-school {
+  display: none;
 }
 
 @media only screen and (max-width:40em) {
@@ -173,4 +168,96 @@ img::-moz-selection {
   -moz-transition: -webkit-transform 1.2s ease;
   -o-transition: -webkit-transform 1.2s ease;
   transition: -webkit-transform 1.2s ease;
+}
+
+@media print {
+  blockquote,
+  img,
+  pre,
+  tr {
+    page-break-inside: avoid;
+  }
+
+  hr,
+  ul,
+  ul li {
+    border: none;
+  }
+
+  #old-school {
+    display: block;
+  }
+
+  #old-school img {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  #accounts svg,
+  #apis svg,
+  #bookmarked,
+  #contact,
+  #contents,
+  #core-technologies svg,
+  #editable,
+  #experiments,
+  #maya,
+  #stats {
+    display: none;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  blockquote,
+  pre {
+    border: 1px solid #999;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  img {
+    max-width: 100%!important;
+  }
+
+@page {
+    margin: .5cm;
+}
+
+  h2,
+  h3,
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  a:after {
+    content: attr(href);
+    font-size: .8em;
+    font-weight: 400;
+    color: #F0F;
+  }
 }

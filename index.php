@@ -2,60 +2,87 @@
 <html lang="en" manifest="julienetienne.co.uk.manifest">
 
 <head>
+    <!-- -+-+-+ +-+-+-+-+-+-+-+-+
+    |J|u|l|i|e|n| |E|t|i|e|n|n|e|
+    +-+-+-+-+-+-+ +-+-+-+-+-+-+-+
+    Copyright 2015 Julien Etienne 
+        
+           ||Welcome Scavengers|| 
+    
+    This is pretty much a simple
+    bespoke  vanilla  website. I 
+    enjoy using jQuery,  Angular,
+    backbone  etc  but I  wanted 
+    this  to  be a  little  more 
+    organic.
+
+    Make yourself at home,  have
+    some repo: http://github.com
+    /julienetie/personal-site.git
+    +-+-+-+-+-+-+ +-+-+-+-+-+-+-+
+    
+    Julien -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Work of Freelance Designer &amp; Developer Julien Etienne">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Julien Etienne - UI Developer</title>
-    
-    <!-- everybody loves web icons, so consistent ;-) -->
+    <!-- Web icon support -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="manifest" href="visuals/icons/manifest.json">
-
     <!-- Fun loving icon src -_- -->
-    <link rel="icon" sizes="192x192" href="visuals/icons/android-chrome-192x192.png"> 
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" sizes="192x192" href="visuals/icons/android-chrome-192x192.png">
     <link rel="apple-touch-icon" sizes="76x76" href="visuals/icons/apple-touch-icon-76x76.png">
     <link rel="apple-touch-icon" sizes="120x120" href="visuals/icons/apple-touch-icon-120x120.png">
     <link rel="apple-touch-icon" sizes="152x152" href="visuals/icons/apple-touch-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="visuals/icons/apple-touch-icon-180x180.png">
-    <link rel="shortcut icon" href="favicon.ico">
+    <!-- MS metro thing -->
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
     <!-- hash fragments are not part of HTTP requests, opting out of canonical attr -->
     <meta name="author" content="Julien Etienne">
     <meta name="copyright" content="Copyright Julien Etienne 2015. All Rights Reserved.">
-
     <!-- /**
           * The below is critical CSS, not me being lazy: http://addyosmani.com/blog/tag/critical-path-css/
           */ -->
     <style type="text/css">
-a:link,body{color:#222}.cross,body{position:absolute}#contents ul li:before,h1{content:'# '}*{cursor:default}html{background:#222}body,html{margin:0;padding:0}body{font-family:'Open Sans',sans-serif;font-weight:400;letter-spacing:.2em;background:#e6ebff;width:100%;display:block}a:link{text-decoration:none;cursor:pointer}.cross{top:0;z-index:0}.section{position:relative;width:100%;float:left;transition:all .3s linear;overflow:hidden;-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-o-transition:all .3s linear}ul{border:1px solid rgba(0,0,255,.05);border-top:none;list-style-type:none}ul li{padding-bottom:.3em}ul li:nth-child(1){border-radius:1em}ul li:last-child{padding-bottom:1em}h1{padding:.5em 1.4em}ul li{border-left:1px solid rgba(0,0,255,.1);padding-left:1em}@media only screen and (max-width:40em){ul li{padding-bottom:2.2em}}.cross line{stroke:rgba(150,20,80,1);stroke-dasharray:20 20 10;stroke-width:.08}.cross line:nth-child(2){stroke-dasharray:none}div[contenteditable]{outline:0}::selection{background:#f5da55;color:#C00}::-moz-selection{background:#f5da55;color:#C00}h1::-moz-selection{background:#0f0;color:lilac}
+a:link,body{color:#222}.cross,body{position:absolute}#contents ul li:before,h1{content:'# '}*{cursor:default}html{background:#222}body,html{margin:0;padding:0}body{font-family:'Open Sans',sans-serif;font-weight:400;letter-spacing:.2em;background:#e6ebff;width:100%;display:block}a:link{text-decoration:none;cursor:pointer}.cross{top:0;z-index:0}.section{position:relative}ul{border:1px solid rgba(0,0,255,.05);border-top:none;list-style-type:none}ul li{padding-bottom:.3em}ul li:nth-child(1){border-radius:1em}ul li:last-child{padding-bottom:1em}.section{width:100%}.section{float:left;transition:all .3s linear;overflow:hidden}.section{-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-o-transition:all .3s linear}h1{padding:.5em 1.4em}ul li{border-left:1px solid rgba(0,0,255,.1);padding-left:1em}@media only screen and (max-width:40em){ul li{padding-bottom:2.2em}}.cross line{stroke:rgba(150,20,80,1);stroke-dasharray:20 20 10;stroke-width:.08}.cross line:nth-child(2){stroke-dasharray:none}div[contenteditable]{outline:0}::selection{background:#f5da55;color:#C00}::-moz-selection{background:#f5da55;color:#C00}h1::-moz-selection{background:#0f0;color:lilac}
 </style>
 <script>
-(function(u){function loadCSS(e,t,n){"use strict";function r(){for(var t,i=0;i<d.length;i++)d[i].href&&d[i].href.indexOf(e)>-1&&(t=!0);t?o.media=n||"all":setTimeout(r)}var o=window.document.createElement("link"),i=t||window.document.getElementsByTagName("script")[0],d=window.document.styleSheets;return o.rel="stylesheet",o.href=e,o.media="only x",i.parentNode.insertBefore(o,i),r(),o}for(var i in u){loadCSS(u[i]);}}(['style/julienetienne.min.d531ae95.css']));
+(function(u){function loadCSS(e,t,n){"use strict";function r(){for(var t,i=0;i<d.length;i++)d[i].href&&d[i].href.indexOf(e)>-1&&(t=!0);t?o.media=n||"all":setTimeout(r)}var o=window.document.createElement("link"),i=t||window.document.getElementsByTagName("script")[0],d=window.document.styleSheets;return o.rel="stylesheet",o.href=e,o.media="only x",i.parentNode.insertBefore(o,i),r(),o}for(var i in u){loadCSS(u[i]);}}(['style/julienetienne.min.bd51eaa5.css']));
 </script>
 <noscript>
-<link rel="stylesheet" href="style/julienetienne.min.d531ae95.css">
+<link rel="stylesheet" href="style/julienetienne.min.bd51eaa5.css">
 </noscript>
+    <style>
+    @media print {
+        @page {
+            counter-increment: page;
+            counter-reset: page 1;
+            @bottom-right {
+                content: "Page " counter(page) " of " counter(pages);
+            }
+        }
+    }
+    </style>
 </head>
 
 <body>
-    <!-- 
-/**
- *  lazyload.js is required in the body above the images. Embedding  
- *  it into the page eliminates blocking, which is bad for mobile & SEO.
- */
--->
-    <script>
-    !function(t){var n;"undefined"!=typeof window?n=window:"undefined"!=typeof self&&(n=self),n.lazyload=t()}(function(){return function t(n,e,o){function r(u,f){if(!e[u]){if(!n[u]){var c="function"==typeof require&&require;if(!f&&c)return c(u,!0);if(i)return i(u,!0);var l=new Error("Cannot find module '"+u+"'");throw l.code="MODULE_NOT_FOUND",l}var a=e[u]={exports:{}};n[u][0].call(a.exports,function(t){var e=n[u][1][t];return r(e?e:t)},a,a.exports,t,n,e,o)}return e[u].exports}for(var i="function"==typeof require&&require,u=0;u<o.length;u++)r(o[u]);return r}({1:[function(t,n,e){(function(e){function o(t){-1===f.call(l,t)&&l.push(t)}function r(t){function n(t){var n=e(t);console.log(n),n&&(t.src=n),t["data-lzled"]=!0,i[f.call(i,t)]=null}function e(n){return"function"==typeof t.src?t.src(n):n.getAttribute(t.src)}function r(e){e.onload=null,e.removeAttribute("onload"),e.onerror=null,e.removeAttribute("onerror"),-1===f.call(i,e)&&c(e,t,n)}t=u({offset:333,src:"data-src",container:!1},t||{}),"string"==typeof t.src&&o(t.src);var i=[];return r}function i(t){var n="HTML"+t+"Element";if(n in e!=!1){var o=e[n].prototype.getAttribute;e[n].prototype.getAttribute=function(t){if("src"===t){for(var n,e=0,r=l.length;r>e&&!(n=o.call(this,l[e]));e++);return n||o.call(this,t)}return o.call(this,t)}}}function u(t,n){for(var e in t)void 0===n[e]&&(n[e]=t[e]);return n}function f(t){for(var n=this.length;n--&&this[n]!==t;);return n}n.exports=r;var c=t("in-viewport"),l=["data-src"];e.lzld=r(),i("Image"),i("IFrame")}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"in-viewport":2}],2:[function(t,n,e){(function(t){function e(n,e,o){var r={container:t.document.body,offset:0};(void 0===e||"function"==typeof e)&&(o=e,e={});for(var u=r.container=e.container||r.container,f=r.offset=e.offset||r.offset,l=0;l<c.length;l++)if(c[l].container===u)return c[l].isInViewport(n,f,o);return c[c.push(i(u))-1].isInViewport(n,f,o)}function o(t,n,e){t.attachEvent?t.attachEvent("on"+n,e):t.addEventListener(n,e,!1)}function r(t,n,e){var o;return function(){function r(){o=null,e||t.apply(i,u)}var i=this,u=arguments,f=e&&!o;clearTimeout(o),o=setTimeout(r,n),f&&t.apply(i,u)}}function i(n){function e(t,n,e){var o=i(t,n);return o?(e&&(s.splice(u.call(s,t),1),e(t)),!0):(e&&setTimeout(c(t,n,e),0),!1)}function i(e,o){if(!l(t.document.documentElement,e)||!l(t.document.documentElement,n))return!1;if(!e.offsetWidth||!e.offsetHeight)return!1;var r=e.getBoundingClientRect(),i=n.getBoundingClientRect(),u={left:r.left,top:r.top},f={width:o,height:o};n===t.document.body?(f.width+=t.document.documentElement.clientWidth,f.height+=t.document.documentElement.clientHeight,i={bottom:n.scrollHeight,top:0,left:0,right:n.scrollWidth}):(u.left-=i.left,u.top-=i.top,f.width+=n.clientWidth,f.height+=n.clientHeight);var c=!(r.right<i.left||r.left>i.right||r.bottom<i.top||r.top>i.bottom)&&u.top<=f.height&&u.left<=f.width;return c}function c(t,n,o){return-1===u.call(s,t)&&s.push(t),function(){d.push(function(){e(t,n,o)})}}function a(){for(var t;t=d.shift();)t()}var d=[],s=[],p=n===t.document.body?t:n,h=r(a,15);return o(p,"scroll",h),p===t&&o(t,"resize",h),"function"==typeof t.MutationObserver&&f(s,n,h),{container:n,isInViewport:e}}function u(t){for(var n=this.length;n--&&this[n]!==t;);return n}function f(t,n,e){function o(t){t.some(i)===!0&&setTimeout(e,0)}function r(n){return-1!==u.call(t,n)}function i(t){return c.call(t.addedNodes,r).length>0}var f=new MutationObserver(o),c=Array.prototype.filter;f.observe(n,{childList:!0,subtree:!0})}n.exports=e;var c=[],l=t.document.documentElement.compareDocumentPosition?function(t,n){return!!(16&t.compareDocumentPosition(n))}:t.document.documentElement.contains?function(t,n){return t!==n&&(t.contains?t.contains(n):!1)}:function(t,n){for(;n=n.parentNode;)if(n===t)return!0;return!1}}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{}]},{},[1])(1)});
-    </script>
+    <!-- /**
+      *  Embedding lazyload into the page eliminates blocking, 
+      *  which is supposedly bad for mobile & SEO. This lazyload script
+      *  is required to be in the top of the body or all hell breaks loose.
+      */ -->
+    <script>!function(t){var n;"undefined"!=typeof window?n=window:"undefined"!=typeof self&&(n=self),n.lazyload=t()}(function(){return function t(n,e,o){function r(u,f){if(!e[u]){if(!n[u]){var c="function"==typeof require&&require;if(!f&&c)return c(u,!0);if(i)return i(u,!0);var l=new Error("Cannot find module '"+u+"'");throw l.code="MODULE_NOT_FOUND",l}var a=e[u]={exports:{}};n[u][0].call(a.exports,function(t){var e=n[u][1][t];return r(e?e:t)},a,a.exports,t,n,e,o)}return e[u].exports}for(var i="function"==typeof require&&require,u=0;u<o.length;u++)r(o[u]);return r}({1:[function(t,n,e){(function(e){function o(t){-1===f.call(l,t)&&l.push(t)}function r(t){function n(t){var n=e(t);console.log(n),n&&(t.src=n),t["data-lzled"]=!0,i[f.call(i,t)]=null}function e(n){return"function"==typeof t.src?t.src(n):n.getAttribute(t.src)}function r(e){e.onload=null,e.removeAttribute("onload"),e.onerror=null,e.removeAttribute("onerror"),-1===f.call(i,e)&&c(e,t,n)}t=u({offset:333,src:"data-src",container:!1},t||{}),"string"==typeof t.src&&o(t.src);var i=[];return r}function i(t){var n="HTML"+t+"Element";if(n in e!=!1){var o=e[n].prototype.getAttribute;e[n].prototype.getAttribute=function(t){if("src"===t){for(var n,e=0,r=l.length;r>e&&!(n=o.call(this,l[e]));e++);return n||o.call(this,t)}return o.call(this,t)}}}function u(t,n){for(var e in t)void 0===n[e]&&(n[e]=t[e]);return n}function f(t){for(var n=this.length;n--&&this[n]!==t;);return n}n.exports=r;var c=t("in-viewport"),l=["data-src"];e.lzld=r(),i("Image"),i("IFrame")}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"in-viewport":2}],2:[function(t,n,e){(function(t){function e(n,e,o){var r={container:t.document.body,offset:0};(void 0===e||"function"==typeof e)&&(o=e,e={});for(var u=r.container=e.container||r.container,f=r.offset=e.offset||r.offset,l=0;l<c.length;l++)if(c[l].container===u)return c[l].isInViewport(n,f,o);return c[c.push(i(u))-1].isInViewport(n,f,o)}function o(t,n,e){t.attachEvent?t.attachEvent("on"+n,e):t.addEventListener(n,e,!1)}function r(t,n,e){var o;return function(){function r(){o=null,e||t.apply(i,u)}var i=this,u=arguments,f=e&&!o;clearTimeout(o),o=setTimeout(r,n),f&&t.apply(i,u)}}function i(n){function e(t,n,e){var o=i(t,n);return o?(e&&(s.splice(u.call(s,t),1),e(t)),!0):(e&&setTimeout(c(t,n,e),0),!1)}function i(e,o){if(!l(t.document.documentElement,e)||!l(t.document.documentElement,n))return!1;if(!e.offsetWidth||!e.offsetHeight)return!1;var r=e.getBoundingClientRect(),i=n.getBoundingClientRect(),u={left:r.left,top:r.top},f={width:o,height:o};n===t.document.body?(f.width+=t.document.documentElement.clientWidth,f.height+=t.document.documentElement.clientHeight,i={bottom:n.scrollHeight,top:0,left:0,right:n.scrollWidth}):(u.left-=i.left,u.top-=i.top,f.width+=n.clientWidth,f.height+=n.clientHeight);var c=!(r.right<i.left||r.left>i.right||r.bottom<i.top||r.top>i.bottom)&&u.top<=f.height&&u.left<=f.width;return c}function c(t,n,o){return-1===u.call(s,t)&&s.push(t),function(){d.push(function(){e(t,n,o)})}}function a(){for(var t;t=d.shift();)t()}var d=[],s=[],p=n===t.document.body?t:n,h=r(a,15);return o(p,"scroll",h),p===t&&o(t,"resize",h),"function"==typeof t.MutationObserver&&f(s,n,h),{container:n,isInViewport:e}}function u(t){for(var n=this.length;n--&&this[n]!==t;);return n}function f(t,n,e){function o(t){t.some(i)===!0&&setTimeout(e,0)}function r(n){return-1!==u.call(t,n)}function i(t){return c.call(t.addedNodes,r).length>0}var f=new MutationObserver(o),c=Array.prototype.filter;f.observe(n,{childList:!0,subtree:!0})}n.exports=e;var c=[],l=t.document.documentElement.compareDocumentPosition?function(t,n){return!!(16&t.compareDocumentPosition(n))}:t.document.documentElement.contains?function(t,n){return t!==n&&(t.contains?t.contains(n):!1)}:function(t,n){for(;n=n.parentNode;)if(n===t)return!0;return!1}}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{}]},{},[1])(1)});</script>
+    <!-- I figured people may type "Julien Etienne is a ?????. Ha, either way inleast it's memorable. -->
     <div id="top" contenteditable="true" spellcheck="false">
-        <h1 id="editable">Julien Etienne can't speak French</h1>
+        <!-- Just wanted to let the word know. -->
+        <h1 id="editable" data-print-header="Julien Etienne UI Developer">Julien Etienne can't speak French</h1>
     </div>
     <!-- #0 Contents -->
     <div id="contents">
@@ -70,6 +97,7 @@ a:link,body{color:#222}.cross,body{position:absolute}#contents ul li:before,h1{c
             <li><a href="#accounts">Accounts</a></li>
             <li><a href="#bookmarked">Bookmarked</a></li>
             <li><a href="#stats">Stats</a></li>
+            <li><a href="#contact" id="bottom">Contact</a></li>
         </ul>
     </div>
     <!-- #1 Experiments -->
@@ -191,15 +219,15 @@ a:link,body{color:#222}.cross,body{position:absolute}#contents ul li:before,h1{c
         </svg>
         <h2>Core technologies</h2>
         <ul>
-            <li><a target="_blank" href="http://www.ecma-international.org/ecma-262/6.0/">JavaScript</a></li>
-            <li><a target="_blank" href="http://www.w3.org/Style/CSS/current-work">CSS</a></li>
-            <li><a target="_blank" href="http://www.w3.org/TR/html5/">HTML</a></li>
-            <li><a target="_blank" href="http://www.w3.org/TR/SVG2/">SVG</a></li>
-            <li><a target="_blank" href="http://www.w3.org/TR/2dcontext/">Canvas</a></li>
-            <li><a target="_blank" href="https://docs.python.org/3/">Python</a></li>
-            <li><a target="_blank" href="https://nodejs.org/api/">node.js</a></li>
-            <li><a target="_blank" href="https://nodejs.org/api/">Illustrator</a></li>
-            <li><a target="_blank" href="https://nodejs.org/api/">Inkscape</a></li>
+            <li>JavaScript</li>
+            <li>CSS</li>
+            <li>HTML</li>
+            <li>SVG</li>
+            <li>Canvas</li>
+            <li>Python</li>
+            <li>node.js</li>
+            <li>Illustrator</li>
+            <li>Inkscape</li>
         </ul>
         <hr>
     </div>
@@ -247,10 +275,15 @@ a:link,body{color:#222}.cross,body{position:absolute}#contents ul li:before,h1{c
         </ul>
         <h2>About this site:</h2>
         <ul>
-            <li>Libraries: <a href="https://github.com/vvo/lazyload">lazyload</a></li>
-            <li>JS, CSS, SVG, Canvas, HTML5</li>
-            <li>Browser support: IE8+, Safari 5.1+ </li>
-            <li>Assistive technologies support: ?</li>
+            <li>Libs: <a target="_blank" href="https://github.com/vvo/lazyload" title="lazyload, loads images when they enter the veiwport.">lazyload</a>,
+                <a target="_blank" href="https://gist.github.com/galambalazs/6477177" title="SmoothScroll improves fluidity when scrolling.">SmoothScroll.js</a>,
+                <a target="_blank" href="https://github.com/julienetie/smooth-scroll" title="smooth-scroll pans to links, I added a few improvements.">smooth-scroll customized</a>,
+                <a target="_blank" href="https://github.com/filamentgroup/loadCSS" title="Non-blocking Async CSS">loadCSS</a>
+            </li>
+            <li>Setup: <a target="_blank" href="https://github.com/julienetie/personal-site/blob/master/gulpfile.js" title="A simple gulp setup that takes advantage of critical (above the fold) CSS and application caching.">gulpfile.js</a></li>
+            <li>Technologies: JS, CSS, SVG, Canvas, HTML5'</li>
+            <li>Legacy support from: IE8+, Safari 5.1+ </li>
+            <li>Assistive technologies support: ???</li>
         </ul>
         <hr>
     </div>
@@ -262,14 +295,15 @@ a:link,body{color:#222}.cross,body{position:absolute}#contents ul li:before,h1{c
         </svg>
         <h2>Contact</h2>
         <ul>
-            <li><a target="_blank" href="">julien etie </a></li>
+            <li><a href="#">"julienetie" ("@") "[letter after f] mail,com"</a></li>
         </ul>
         <hr>
     </div>
-
-<!-- Top Arrow -->
-<div id="top-arrow"><a href="#top">&#x25B2;</a></div>
+    <!-- Top Arrow & Logo -->
+    <div id="top-arrow"><a href="#top">&#x25B2;</a></div>
+    <!-- Self maintainable copyright notice, in case I forget what year it is -->
     <small>&#169; 2015 Julien Etienne</small>
+    <!-- After DOM body scripts -->
     <script>
     WebFontConfig = {
         google: {
@@ -288,6 +322,111 @@ a:link,body{color:#222}.cross,body{position:absolute}#contents ul li:before,h1{c
     smoothScrollspeed = 280;
     </script>
     <script src="scripts/julienetienne.min.js" defer></script>
+    <!-- GOOGLE ANALYTICS -->
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-60745535-1', 'auto');
+    ga('send', 'pageview');
+
+    var prompt = true;
+    (function() {
+
+        function removeElement(node) {
+            node.parentNode.removeChild(node);
+        }
+
+        function oldSchoolPrinting() {
+            var websites = document.getElementById('websites');
+            var oldSchoolDiv = document.createElement('div');
+            //   oldSchoolDiv.style.width = window.innerWidth + 'px';
+
+            var oldSchool = document.createElement('img');
+            oldSchool.style.margin = 'o auto';
+            oldSchoolDiv.appendChild(oldSchool);
+
+            var h1 = document.createElement('h1');
+            h1.innerHTML = 'Julien Etienne UI Developer';
+            h1.style.width = window.innerWidth + 'px';
+            h1.style.textAlign = 'center';
+
+
+            var h3 = document.createElement('h3');
+            h3.innerHTML = 'PRINT LIKE IT\'S 1977';
+            h3.style.width = window.innerWidth + 'px';
+            h3.style.textAlign = 'center';
+
+            oldSchoolDiv.insertBefore(h3, oldSchool);
+            oldSchoolDiv.insertBefore(h1, h3);
+
+            oldSchool.setAttribute('src', 'visuals/print/old-school.jpg');
+            oldSchoolDiv.id = 'old-school';
+            var oldImgWidth = parseInt(window.innerWidth, 10);
+            var oldImgHeight = parseInt(oldImgWidth / 1.3966777, 10);
+            oldSchool.style.width = oldImgWidth + 'px';
+            oldSchool.style.height = oldImgHeight + 'px';
+
+            websites.parentNode.insertBefore(oldSchoolDiv, websites);
+            websites.parentNode.insertBefore(oldSchoolDiv, websites);
+        }
+
+        var beforePrint = function() {
+            if (prompt === true) {
+                alert('Before we print, let\'s first ensure that all images have rendered, then we can try again.');
+                // Scroll entire website
+                oldSchoolPrinting();
+                var body = document.getElementsByTagName('body')[0];
+
+                var bodyHeight = body.scrollHeight;
+                var increments = bodyHeight / 100;
+                window.scrollTo(0, 0);
+                var bottom = document.getElementById('bottom');
+                bottom.click();
+            }
+        };
+        var afterPrint = function() {
+            if (prompt === true) {
+                setTimeout(function() {
+                    prompt = false;
+                    window.print();
+                }, 1000);
+            } else {
+                removeElement()
+            }
+        };
+
+        if (window.matchMedia) {
+            var mediaQueryList = window.matchMedia('print');
+            mediaQueryList.addListener(function(mql) {
+                if (mql.matches) {
+                    beforePrint();
+                } else {
+                    afterPrint();
+                }
+            });
+        }
+
+
+        window.onbeforeprint = beforePrint;
+        window.onafterprint = afterPrint;
+
+    }());
+
+
+
+
+
+    // alert('Finished geting images');
+    </script>
 </body>
 
 </html>

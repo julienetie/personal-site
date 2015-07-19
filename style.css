@@ -1,0 +1,13 @@
+<?php header("Content-type: text/css"); ?>
+
+body{
+    font-family: arial;
+    width: 200px;
+}
+
+
+div{
+    height: 500px;
+    width: 30px;
+    background: <?php echo 'red'; ?>;
+}

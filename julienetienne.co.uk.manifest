@@ -2,30 +2,21 @@ CACHE MANIFEST
 
 
 CACHE:
-404.html
 favicon.ico
-index.html
+index.php
 mstile-144x144.png
+print.css
+style.css
+404/index.php
 scripts/julienetienne.min.js
 scripts/lazyload.min.js
 style/404.min.css
-style/julienetienne.min.d531ae95.css
-visuals/fav%20icon%20.html
-visuals/favicons.zip
+style/julienetienne.min.bd51eaa5.css
 experiments/smarties/index.html
 experiments/smarties/smarties-pix.png
 experiments/smarties/smarties.jpg
 experiments/smarties/smarties.png
 experiments/smarties/smarties.zip
-visuals/_icons/icons-hinted.ttf
-visuals/_icons/icons.eot
-visuals/_icons/icons.svg
-visuals/_icons/icons.ttf
-visuals/_icons/icons.woff
-visuals/_icons/icons.woff2
-visuals/_icons/placeholder--medium.png
-visuals/_icons/placeholder--small.png
-visuals/_icons/placeholder--wide.png
 visuals/alt/1.jpg
 visuals/alt/2.jpg
 visuals/alt/3.jpg
@@ -52,9 +43,6 @@ visuals/icons/apple-touch-icon-152x152.png
 visuals/icons/apple-touch-icon-180x180.png
 visuals/icons/apple-touch-icon-76x76.png
 visuals/icons/manifest.json
-visuals/touch/chrome-touch-icon-192x192.png
-visuals/touch/icon-128x128.png
-visuals/touch/ms-touch-icon-144x144-precomposed.png
 visuals/landb/10-pix.jpg
 visuals/landb/10.jpg
 visuals/landb/11-pix.jpg
@@ -78,6 +66,7 @@ visuals/landb/wyw-logo-pix.jpg
 visuals/landb/wyw_logo.jpg
 visuals/landb/zizi-pix.jpg
 visuals/landb/zizi.gif
+visuals/print/old-school.jpg
 visuals/websites/clp-pix.jpg
 visuals/websites/clp.jpg
 visuals/websites/codeheads-pix.jpg
@@ -104,4 +93,4 @@ http://*
 https://*
 *
 
-# hash: 722ef4af94058be1113415055e81d604e06854c8d25bb5c3c61b81360a317f15
+# hash: 6147a0e94b0182bca5cc16c3882127a72fb57ba3ef4ecc8231f29bd99f1697f3
