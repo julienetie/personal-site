@@ -11,21 +11,12 @@ style.css
 scripts/julienetienne.min.js
 scripts/lazyload.min.js
 style/404.min.css
-style/julienetienne.min.bd51eaa5.css
+style/julienetienne.min.ce5be2bc.css
 experiments/smarties/index.html
 experiments/smarties/smarties-pix.png
 experiments/smarties/smarties.jpg
 experiments/smarties/smarties.png
 experiments/smarties/smarties.zip
-visuals/alt/1.jpg
-visuals/alt/2.jpg
-visuals/alt/3.jpg
-visuals/alt/4.jpg
-visuals/alt/7.jpg
-visuals/alt/8.jpg
-visuals/alt/9.jpg
-visuals/alt/alt.php
-visuals/alt/view.php
 visuals/concepts/a7-pix.jpg
 visuals/concepts/a7.jpg
 visuals/concepts/angry-young-rats-pix.jpg
@@ -43,6 +34,15 @@ visuals/icons/apple-touch-icon-152x152.png
 visuals/icons/apple-touch-icon-180x180.png
 visuals/icons/apple-touch-icon-76x76.png
 visuals/icons/manifest.json
+visuals/alt/1.jpg
+visuals/alt/2.jpg
+visuals/alt/3.jpg
+visuals/alt/4.jpg
+visuals/alt/7.jpg
+visuals/alt/8.jpg
+visuals/alt/9.jpg
+visuals/alt/alt.php
+visuals/alt/view.php
 visuals/landb/10-pix.jpg
 visuals/landb/10.jpg
 visuals/landb/11-pix.jpg
@@ -93,4 +93,4 @@ http://*
 https://*
 *
 
-# hash: 08796db5f6df632a60f90498a3db40682e4805a63b88e7cc027bbd0fd444f428
+# hash: 66112cb6f250208049580e9f80792f90acb25b3e62b5f998345c168e10d73660

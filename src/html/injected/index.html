@@ -5,19 +5,19 @@
     <!-- -+-+-+ +-+-+-+-+-+-+-+-+
     |J|u|l|i|e|n| |E|t|i|e|n|n|e|
     +-+-+-+-+-+-+ +-+-+-+-+-+-+-+
-    Copyright 2015 Julien Etienne 
+    Copyright 2015 Julien Etienne
         
-           ||Welcome Scavengers|| 
+           ||Welcome Scavengers||
     
-    This is pretty much a simple
-    bespoke  vanilla  website. I 
+    This is pretty much a  simple
+    bespoke   vanilla  website. I
     enjoy using jQuery,  Angular,
-    backbone  etc  but I  wanted 
-    this  to  be a  little  more 
+    backbone   etc  but I  wanted
+    this  to  be  a  little  more
     organic.
 
-    Make yourself at home,  have
-    some repo: http://github.com
+    Make yourself at  home,  have
+    some  repo: http://github.com
     /julienetie/personal-site.git
     +-+-+-+-+-+-+ +-+-+-+-+-+-+-+
     
@@ -27,9 +27,9 @@
     <meta name="description" content="Work of Freelance Designer &amp; Developer Julien Etienne" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Julien Etienne - UI Developer</title>
-    <!-- Web icon support -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Apple setup -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="manifest" href="visuals/icons/manifest.json">
@@ -72,10 +72,10 @@
       */ -->
     <script>!function(t){var n;"undefined"!=typeof window?n=window:"undefined"!=typeof self&&(n=self),n.lazyload=t()}(function(){return function t(n,e,o){function r(u,f){if(!e[u]){if(!n[u]){var c="function"==typeof require&&require;if(!f&&c)return c(u,!0);if(i)return i(u,!0);var l=new Error("Cannot find module '"+u+"'");throw l.code="MODULE_NOT_FOUND",l}var a=e[u]={exports:{}};n[u][0].call(a.exports,function(t){var e=n[u][1][t];return r(e?e:t)},a,a.exports,t,n,e,o)}return e[u].exports}for(var i="function"==typeof require&&require,u=0;u<o.length;u++)r(o[u]);return r}({1:[function(t,n,e){(function(e){function o(t){-1===f.call(l,t)&&l.push(t)}function r(t){function n(t){var n=e(t);console.log(n),n&&(t.src=n),t["data-lzled"]=!0,i[f.call(i,t)]=null}function e(n){return"function"==typeof t.src?t.src(n):n.getAttribute(t.src)}function r(e){e.onload=null,e.removeAttribute("onload"),e.onerror=null,e.removeAttribute("onerror"),-1===f.call(i,e)&&c(e,t,n)}t=u({offset:333,src:"data-src",container:!1},t||{}),"string"==typeof t.src&&o(t.src);var i=[];return r}function i(t){var n="HTML"+t+"Element";if(n in e!=!1){var o=e[n].prototype.getAttribute;e[n].prototype.getAttribute=function(t){if("src"===t){for(var n,e=0,r=l.length;r>e&&!(n=o.call(this,l[e]));e++);return n||o.call(this,t)}return o.call(this,t)}}}function u(t,n){for(var e in t)void 0===n[e]&&(n[e]=t[e]);return n}function f(t){for(var n=this.length;n--&&this[n]!==t;);return n}n.exports=r;var c=t("in-viewport"),l=["data-src"];e.lzld=r(),i("Image"),i("IFrame")}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"in-viewport":2}],2:[function(t,n,e){(function(t){function e(n,e,o){var r={container:t.document.body,offset:0};(void 0===e||"function"==typeof e)&&(o=e,e={});for(var u=r.container=e.container||r.container,f=r.offset=e.offset||r.offset,l=0;l<c.length;l++)if(c[l].container===u)return c[l].isInViewport(n,f,o);return c[c.push(i(u))-1].isInViewport(n,f,o)}function o(t,n,e){t.attachEvent?t.attachEvent("on"+n,e):t.addEventListener(n,e,!1)}function r(t,n,e){var o;return function(){function r(){o=null,e||t.apply(i,u)}var i=this,u=arguments,f=e&&!o;clearTimeout(o),o=setTimeout(r,n),f&&t.apply(i,u)}}function i(n){function e(t,n,e){var o=i(t,n);return o?(e&&(s.splice(u.call(s,t),1),e(t)),!0):(e&&setTimeout(c(t,n,e),0),!1)}function i(e,o){if(!l(t.document.documentElement,e)||!l(t.document.documentElement,n))return!1;if(!e.offsetWidth||!e.offsetHeight)return!1;var r=e.getBoundingClientRect(),i=n.getBoundingClientRect(),u={left:r.left,top:r.top},f={width:o,height:o};n===t.document.body?(f.width+=t.document.documentElement.clientWidth,f.height+=t.document.documentElement.clientHeight,i={bottom:n.scrollHeight,top:0,left:0,right:n.scrollWidth}):(u.left-=i.left,u.top-=i.top,f.width+=n.clientWidth,f.height+=n.clientHeight);var c=!(r.right<i.left||r.left>i.right||r.bottom<i.top||r.top>i.bottom)&&u.top<=f.height&&u.left<=f.width;return c}function c(t,n,o){return-1===u.call(s,t)&&s.push(t),function(){d.push(function(){e(t,n,o)})}}function a(){for(var t;t=d.shift();)t()}var d=[],s=[],p=n===t.document.body?t:n,h=r(a,15);return o(p,"scroll",h),p===t&&o(t,"resize",h),"function"==typeof t.MutationObserver&&f(s,n,h),{container:n,isInViewport:e}}function u(t){for(var n=this.length;n--&&this[n]!==t;);return n}function f(t,n,e){function o(t){t.some(i)===!0&&setTimeout(e,0)}function r(n){return-1!==u.call(t,n)}function i(t){return c.call(t.addedNodes,r).length>0}var f=new MutationObserver(o),c=Array.prototype.filter;f.observe(n,{childList:!0,subtree:!0})}n.exports=e;var c=[],l=t.document.documentElement.compareDocumentPosition?function(t,n){return!!(16&t.compareDocumentPosition(n))}:t.document.documentElement.contains?function(t,n){return t!==n&&(t.contains?t.contains(n):!1)}:function(t,n){for(;n=n.parentNode;)if(n===t)return!0;return!1}}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{}]},{},[1])(1)});</script>
     <!-- I figured people may type "Julien Etienne is a ?????. Ha, either way inleast it's memorable. -->
-    <div id='top' contenteditable='true' spellcheck='false'>
+    <header id='top' contenteditable='true' spellcheck='false'>
         <!-- Just wanted to let the word know. -->
         <h1 id='editable' data-print-header="Julien Etienne UI Developer">Julien Etienne can't speak French</h1>
-    </div>
+    </header>
     <!-- #0 Contents -->
     <div id='contents'>
         <ul>
@@ -110,91 +110,91 @@
         <hr>
     </div>
     <!-- #2 Web design & development -->
-    <div class='section' id='websites'>
+    <div class='section' id='websites' itemscope itemtype="https://schema.org/CreativeWork">
         <svg class='cross'>
             <line x1="0" y1="0" />
             <line x1="0" y2='0' />
         </svg>
         <h2>Web design &#38; development</h2>
         <ul>
-            <li><img onload="lzld(this)" data-src="visuals/websites/clp.jpg" src="visuals/websites/clp-pix.jpg" alt="Christian Lewis Photography" /></li>
-            <li><img onload="lzld(this)" data-src="visuals/websites/kaiwoshe.jpg" src="visuals/websites/kaiwoshe-pix.jpg" alt="Kaiwoshe Inn Guest House" /></li>
-            <li><img onload="lzld(this)" data-src="visuals/websites/wyw2.jpg" src="visuals/websites/wyw2-pix.jpg" alt="Write Your Will Limited" /></li>
-            <li><img onload="lzld(this)" data-src="visuals/websites/music-site.jpg" src="visuals/websites/music-site-pix.jpg" alt="JK Music site" /></li>
-            <li><img onload="lzld(this)" data-src="visuals/websites/uds.jpg" src="visuals/websites/uds-pix.jpg" alt="Université de Sherbrooke comminications site" /></li>
-            <li><img onload="lzld(this)" data-src="visuals/websites/jeetan.jpg" src="visuals/websites/jeetan-pix.jpg" alt="Jeetan Patel's professional home page" /></li>
-            <li><img onload="lzld(this)" data-src="visuals/websites/codeheads.jpg" src="visuals/websites/codeheads-pix.jpg" alt="Codeheads flash games" /></li>
-            <li><img onload="lzld(this)" data-src="visuals/websites/zizi_2012.jpg" src="visuals/websites/zizi_2012-pix.jpg" alt="Zizi Hair Salon" /></li>
+            <li itemprop='workExample' ><img onload="lzld(this)" data-src="visuals/websites/clp.jpg" src="visuals/websites/clp-pix.jpg" alt="Christian Lewis Photography" /></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/websites/kaiwoshe.jpg" src="visuals/websites/kaiwoshe-pix.jpg" alt="Kaiwoshe Inn Guest House" /></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/websites/wyw2.jpg" src="visuals/websites/wyw2-pix.jpg" alt="Write Your Will Limited" /></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/websites/music-site.jpg" src="visuals/websites/music-site-pix.jpg" alt="JK Music site" /></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/websites/uds.jpg" src="visuals/websites/uds-pix.jpg" alt="Université de Sherbrooke comminications site" /></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/websites/jeetan.jpg" src="visuals/websites/jeetan-pix.jpg" alt="Jeetan Patel's professional home page" /></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/websites/codeheads.jpg" src="visuals/websites/codeheads-pix.jpg" alt="Codeheads flash games" /></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/websites/zizi_2012.jpg" src="visuals/websites/zizi_2012-pix.jpg" alt="Zizi Hair Salon" /></li>
         </ul>
         <hr>
     </div>
     <!-- #3 Prototypes & other -->
-    <div class="section" id="prototypes">
+    <div class="section" id="prototypes" itemscope itemtype="https://schema.org/CreativeWork">
         <svg class="cross">
             <line x1="0" y1="0" />
             <line x1="0" y2="0" />
         </svg>
         <h2>Prototypes &#38; other</h2>
         <ul>
-            <li><img onload="lzld(this)" data-src="visuals/concepts/a7.jpg" src="visuals/concepts/a7-pix.jpg" alt="A7 landing page live snapshot"></li>
-            <li><img onload="lzld(this)" data-src="visuals/concepts/angry-young-rats.jpg" src="visuals/concepts/angry-young-rats-pix.jpg" alt="Angry Young Rats CSS3 design concept"></li>
-            <li><img onload="lzld(this)" data-src="visuals/concepts/envidia.jpg" src="visuals/concepts/envidia-pix.jpg" alt="ENVIDIA Webware"></li>
-            <li><img onload="lzld(this)" data-src="visuals/concepts/en.jpg" src="visuals/concepts/en-pix.jpg" alt="ENVIDIA Webware prototype"></li>
-            <li><img onload="lzld(this)" data-src="visuals/concepts/je-rev2.jpg" src="visuals/concepts/je-rev2-pix.jpg" alt="Early Julien Etienne web design and development website"></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/concepts/a7.jpg" src="visuals/concepts/a7-pix.jpg" alt="A7 landing page live snapshot"></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/concepts/angry-young-rats.jpg" src="visuals/concepts/angry-young-rats-pix.jpg" alt="Angry Young Rats CSS3 design concept"></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/concepts/envidia.jpg" src="visuals/concepts/envidia-pix.jpg" alt="ENVIDIA Webware"></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/concepts/en.jpg" src="visuals/concepts/en-pix.jpg" alt="ENVIDIA Webware prototype"></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/concepts/je-rev2.jpg" src="visuals/concepts/je-rev2-pix.jpg" alt="Early Julien Etienne web design and development website"></li>
         </ul>
         <hr>
     </div>
     <!-- #4 Logos & branding -->
-    <div class="section" id="logos-and-branding">
+    <div class="section" id="logos-and-branding" itemscope itemtype="https://schema.org/CreativeWork">
         <svg class="cross">
             <line x1="0" y1="0" />
             <line x1="0" y2="0" />
         </svg>
         <h2>Logos &#38; branding</h2>
         <ul>
-            <li><img onload="lzld(this)" data-src="visuals/landb/2.jpg" src="visuals/landb/2-pix.jpg" alt="Branding header image"></li>
-            <li><img onload="lzld(this)" data-src="visuals/landb/zizi.gif" src="visuals/landb/zizi-pix.jpg" alt="Zizi Hair Salon logo"></li>
-            <li><img onload="lzld(this)" data-src="visuals/landb/10.jpg" src="visuals/landb/10-pix.jpg" alt="Iris computers logo"></li>
-            <li><img onload="lzld(this)" data-src="visuals/landb/8.jpg" src="visuals/landb/8-pix.jpg" alt="Vector Zip design symbolic logo"></li>
-            <li><img onload="lzld(this)" data-src="visuals/landb/wyw_logo.jpg" src="visuals/landb/wyw-logo-pix.jpg" alt="Write Your Will logo"></li>
-            <li><img onload="lzld(this)" data-src="visuals/landb/k-live.gif" src="visuals/landb/k-live-pix.jpg" alt="K Live Entertainment logo"></li>
-            <li><img onload="lzld(this)" data-src="visuals/landb/11.jpg" src="visuals/landb/11-pix.jpg" alt="Apolo Technologies logo"></li>
-            <li><img onload="lzld(this)" data-src="visuals/landb/15.jpg" src="visuals/landb/15-pix.jpg" alt="Resource & UK Live Events logo"></li>
-            <li><img onload="lzld(this)" data-src="visuals/landb/17.jpg" src="visuals/landb/17-pix.jpg" alt="Play God logo"></li>
-            <li><img onload="lzld(this)" data-src="visuals/landb/jw.png" src="visuals/landb/jw-pix.jpg" alt="Jo Woode logo"></li>
-            <li><img onload="lzld(this)" data-src="visuals/landb/9.jpg" src="visuals/landb/9-pix.jpg" alt="Pharo & Go Digital logo"></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/landb/2.jpg" src="visuals/landb/2-pix.jpg" alt="Branding header image"></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/landb/zizi.gif" src="visuals/landb/zizi-pix.jpg" alt="Zizi Hair Salon logo"></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/landb/10.jpg" src="visuals/landb/10-pix.jpg" alt="Iris computers logo"></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/landb/8.jpg" src="visuals/landb/8-pix.jpg" alt="Vector Zip design symbolic logo"></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/landb/wyw_logo.jpg" src="visuals/landb/wyw-logo-pix.jpg" alt="Write Your Will logo"></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/landb/k-live.gif" src="visuals/landb/k-live-pix.jpg" alt="K Live Entertainment logo"></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/landb/11.jpg" src="visuals/landb/11-pix.jpg" alt="Apolo Technologies logo"></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/landb/15.jpg" src="visuals/landb/15-pix.jpg" alt="Resource & UK Live Events logo"></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/landb/17.jpg" src="visuals/landb/17-pix.jpg" alt="Play God logo"></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/landb/jw.png" src="visuals/landb/jw-pix.jpg" alt="Jo Woode logo"></li>
+            <li itemprop='workExample'><img onload="lzld(this)" data-src="visuals/landb/9.jpg" src="visuals/landb/9-pix.jpg" alt="Pharo & Go Digital logo"></li>
         </ul>
         <hr>
     </div>
     <!-- #5 Autocad Maya 3d modeling & rendering -->
-    <div class='section' id='maya'>
+    <div class='section' id='maya' itemscope itemtype="https://schema.org/CreativeWork">
         <svg class='cross'>
             <line x1="0" y1="0" />
             <line x1="0" y2='0' />
         </svg>
         <h2>Autocad Maya 3d modeling &#38; rendering</h2>
         <ul>
-            <li><a target='_blank' href="visuals/alt/2.jpg">Rosso Diablo: Tiger Heads</a></li>
-            <li><a target='_blank' href="visuals/alt/1.jpg">Wild Rapid Gaming Character</a></li>
-            <li><a target='_blank' href="visuals/alt/3.jpg">SolaRay Logo symbol</a></li>
-            <li><a target='_blank' href="visuals/alt/4.jpg">Sprite design for JavaScript game</a></li>
-            <li><a target='_blank' href="visuals/alt/7.jpg">2nd World, art</a></li>
-            <li><a target='_blank' href="visuals/alt/9.jpg">Automobile design prototype</a></li>
+            <li itemprop='workExample'><a target='_blank' href="visuals/alt/2.jpg">Rosso Diablo: Tiger Heads</a></li>
+            <li itemprop='workExample'><a target='_blank' href="visuals/alt/1.jpg">Wild Rapid Gaming Character</a></li>
+            <li itemprop='workExample'><a target='_blank' href="visuals/alt/3.jpg">SolaRay Logo symbol</a></li>
+            <li itemprop='workExample'><a target='_blank' href="visuals/alt/4.jpg">Sprite design for JavaScript game</a></li>
+            <li itemprop='workExample'><a target='_blank' href="visuals/alt/7.jpg">2nd World, art</a></li>
+            <li itemprop='workExample'><a target='_blank' href="visuals/alt/9.jpg">Automobile design prototype</a></li>
         </ul>
         <hr>
     </div>
     <!-- #6 APIs-->
-    <div class='section' id='apis'>
+    <div class='section' id='apis' itemscope itemtype="https://schema.org/CreativeWork">
         <svg class='cross'>
             <line x1="0" y1="0" />
             <line x1="0" y2='0' />
         </svg>
         <h2>APIs</h2>
         <ul>
-            <li><a target="_blank" href='https://github.com/julienetie/soucouyant'>Soucouyant</a></li>
-            <li><a target="_blank" href='https://github.com/julienetie/resizilla'>Resizilla</a></li>
-            <li><a target="_blank" href='https://github.com/julienetie/cssesta-css-reset'>CSSesta</a></li>
-            <li>
+            <li itemprop='codeRepository workExample'><a target="_blank" href='https://github.com/julienetie/soucouyant'>Soucouyant</a></li>
+            <li itemprop='codeRepository workExample'><a target="_blank" href='https://github.com/julienetie/resizilla'>Resizilla</a></li>
+            <li itemprop='codeRepository workExample'><a target="_blank" href='https://github.com/julienetie/cssesta-css-reset'>CSSesta</a></li>
+            <li itemprop='codeRepository workExample'>
                 <a target="_blank" href='https://github.com/julienetie/imagine-list'>
                     <s>Imagine-list
                     </s>
@@ -204,22 +204,22 @@
         <hr>
     </div>
     <!-- #7 Core technologies -->
-    <div class='section' id='core-technologies'>
+    <div class='section' id='core-technologies'  itemscope itemtype="https://schema.org/SoftwareSourceCode">
         <svg class='cross'>
             <line x1="0" y1="0" />
             <line x1="0" y2='0' />
         </svg>
         <h2>Core technologies</h2>
         <ul>
-            <li>JavaScript</li>
-            <li>CSS</li>
-            <li>HTML</li>
-            <li>SVG</li>
-            <li>Canvas</li>
-            <li>Python</li>
-            <li>node.js</li>
-            <li>Illustrator</li>
-            <li>Inkscape</li>
+            <li itemprop='runtimePlatform'>JavaScript</li>
+            <li itemprop='programmingLanguage'>CSS</li>
+            <li itemprop='programmingLanguage'>HTML</li>
+            <li itemprop='programmingLanguage'>SVG</li>
+            <li >Canvas</li>
+            <li itemprop='runtimePlatform'>Python</li>
+            <li itemprop='runtimePlatform'>node.js</li>
+            <li itemprop='targetProduct'>Illustrator</li>
+            <li itemprop='targetProduct'>Inkscape</li>
         </ul>
         <hr>
     </div>
@@ -280,21 +280,26 @@
         <hr>
     </div>
     <!-- #9 Contact -->
-    <div class='section' id='contact'>
+    <div class='section' id='contact'itemscope itemtype="http://schema.org/Person" >
         <svg class='cross'>
             <line x1="0" y1="0" />
             <line x1="0" y2='0' />
         </svg>
         <h2>Contact</h2>
         <ul>
+        <li itemprop="name">Julien Etienne</li>
+        <li itemprop="jobTitle">Web UI Developer</li>
+        <li itemprop="addressLocality">London/ UK</li>
             <li><a href="#">"julienetie" ("@") "[letter after f] mail,com"</a></li>
         </ul>
         <hr>
     </div>
     <!-- Top Arrow & Logo -->
-    <div id='top-arrow'><a href='#top'>&#x25B2;</a></div>
+    <section id='top-arrow'><a href='#top'>&#x25B2;</a></section>
     <!-- Self maintainable copyright notice, in case I forget what year it is -->
-    <small>&#169; 2015 Julien Etienne</small>
+    <footer itemscope itemtype='https://schema.org/Person'>
+        <small>&#169; <span itemprop='copyrightYear'>2015</span> <span itemprop='copyrightHolder'>Julien Etienne</span></small>
+    </footer>
     <!-- After DOM body scripts -->
     <script>
     WebFontConfig = {
@@ -361,7 +366,7 @@
             oldSchoolDiv.insertBefore(h3, oldSchool);
             oldSchoolDiv.insertBefore(h1, h3);
 
-            oldSchool.src ='visuals/print/old-school.jpg';
+            oldSchool.src = 'visuals/print/old-school.jpg';
             oldSchoolDiv.id = 'old-school';
             var oldImgWidth = parseInt(window.innerWidth, 10);
             var oldImgHeight = parseInt(oldImgWidth / 1.3966777, 10);
@@ -403,9 +408,6 @@
         window.onafterprint = afterPrint;
 
     }());
-
-
-    // alert('Finished geting images');
     </script>
 </body>
 

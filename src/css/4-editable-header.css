@@ -1,7 +1,8 @@
-    #editable:focus {
-        border: none;
-        outline: none;
-    }
-    div[contenteditable] {
-        outline: none;
-    }
+#editable:focus {
+    border: none;
+    outline: none;
+}
+
+header[contenteditable] {
+    outline: none;
+}

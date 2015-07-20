@@ -6,6 +6,11 @@ h2:before {
   content: '# ';
 }
 
+h2,
+p {
+  font-weight: 400;
+}
+
 a:active {
   color: red;
 }
