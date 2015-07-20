@@ -311,7 +311,7 @@
     })(document);
     var appCache = window.applicationCache;
 
-    smoothScrollspeed = 3000;//280;
+    smoothScrollspeed = 3000; //280;
     </script>
     <script src="scripts/julienetienne.min.js" defer></script>
     <!-- GOOGLE ANALYTICS -->
@@ -361,7 +361,7 @@
             oldSchoolDiv.insertBefore(h3, oldSchool);
             oldSchoolDiv.insertBefore(h1, h3);
 
-            oldSchool.setAttribute('src', 'visuals/print/old-school.jpg');
+            oldSchool.src ='visuals/print/old-school.jpg';
             oldSchoolDiv.id = 'old-school';
             var oldImgWidth = parseInt(window.innerWidth, 10);
             var oldImgHeight = parseInt(oldImgWidth / 1.3966777, 10);
@@ -372,31 +372,19 @@
             websites.parentNode.insertBefore(oldSchoolDiv, websites);
         }
 
- 
+
 
         var beforePrint = function() {
             if (prompt === true) {
-                alert('Before we print, let\'s first ensure that all images have rendered, then we can try again.');
-                //oldSchoolPrinting();  
-       
-
-             
+                oldSchoolPrinting();
+                alert('Because images load on view, you may need to close this print prompt and quickly scroll to each image to ensure a good print/ pdf.');
                 window.scrollTo(0, 0);
-               var bottom = document.getElementById('contact');
-               bottom.click();
             }
         };
         var afterPrint = function() {
             if (prompt === true) {
-                         //location.href = 'http://localhost/julienetienne.co.uk/#contact';
-                setTimeout(function() {
-                    prompt = false;
-                    window.print();
-                }, 2000);
-            } else {
-                //
+                prompt = false;
             }
-
         };
 
         if (window.matchMedia) {
