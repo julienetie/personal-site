@@ -64,8 +64,6 @@ var prefixes = ['moz', 'webkit', 'o'],
         animationFrame(doScroll);
     }
 
-    // Declaire scroll duration, (before script) 
-   var speed = window.smoothScrollSpeed || 1000; 
 
     function smoothScroll(e) {   // no smooth scroll class to ignore links
         if(e.target.className === 'no-ss'){
@@ -89,7 +87,7 @@ var prefixes = ['moz', 'webkit', 'o'],
         scrollTo(window, {
             x: 0,
             y: getOffsetTop(target)
-        }, speed);
+        }, 1000);
     }
 
     // Uses target's hash for scroll

@@ -319,7 +319,7 @@ a:link,body{color:#222}.cross,body{position:absolute}#contents ul li:before,h1{c
     })(document);
     var appCache = window.applicationCache;
 
-    smoothScrollspeed = 280;
+    smoothScrollspeed = 3000;//280;
     </script>
     <script src="scripts/julienetienne.min.js" defer></script>
     <!-- GOOGLE ANALYTICS -->
@@ -339,6 +339,7 @@ a:link,body{color:#222}.cross,body{position:absolute}#contents ul li:before,h1{c
     ga('send', 'pageview');
 
     var prompt = true;
+
     (function() {
 
         function removeElement(node) {
@@ -379,29 +380,31 @@ a:link,body{color:#222}.cross,body{position:absolute}#contents ul li:before,h1{c
             websites.parentNode.insertBefore(oldSchoolDiv, websites);
         }
 
+ 
+
         var beforePrint = function() {
             if (prompt === true) {
                 alert('Before we print, let\'s first ensure that all images have rendered, then we can try again.');
-                // Scroll entire website
-                oldSchoolPrinting();
-                var body = document.getElementsByTagName('body')[0];
+                //oldSchoolPrinting();  
+       
 
-                var bodyHeight = body.scrollHeight;
-                var increments = bodyHeight / 100;
+             
                 window.scrollTo(0, 0);
-                var bottom = document.getElementById('bottom');
-                bottom.click();
+               var bottom = document.getElementById('contact');
+               bottom.click();
             }
         };
         var afterPrint = function() {
             if (prompt === true) {
+                         //location.href = 'http://localhost/julienetienne.co.uk/#contact';
                 setTimeout(function() {
                     prompt = false;
                     window.print();
-                }, 1000);
+                }, 2000);
             } else {
-                removeElement()
+                //
             }
+
         };
 
         if (window.matchMedia) {
@@ -420,9 +423,6 @@ a:link,body{color:#222}.cross,body{position:absolute}#contents ul li:before,h1{c
         window.onafterprint = afterPrint;
 
     }());
-
-
-
 
 
     // alert('Finished geting images');
