@@ -31,11 +31,20 @@ p {
 
 a:visited {
   color: inherit;
+  transition: all .3s linear;
+}
+
+a:active,
+a:visited {
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -o-transition: all .3s linear;
 }
 
 a:active {
   outline: red solid 1px;
   color: red;
+  transition: all .3s linear;
 }
 
 a:hover,
@@ -45,6 +54,10 @@ article:hover a {
 
 a:hover {
   outline: green solid 1px;
+  -webkit-transition: all .5s linear;
+  -moz-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  transition: all .5s linear;
 }
 
 b,
@@ -112,7 +125,7 @@ article:hover {
 }
 
 article:hover a:hover {
-  color: #DE1040;
+  color: #AB031A;
   text-shadow: none;
 }
 

@@ -56,32 +56,45 @@
     
     a {
         cursor: default;
-        outline: rgba(255,255,255,0.01) solid 1px;
         background-color: transparent;
         padding: 0em 0.2em 0.1em 0.4em;
-        -webkit-transition: all 0.5s ease;
--moz-transition: all 0.5s ease;
--o-transition: all 0.5s ease;
-transition: all 0.5s ease;
+
     }
     
     a:link {
+        outline: 1px solid rgba(255,255,255,0.01);
         text-decoration: none;
         color: inherit;
+        -webkit-transition: all 0.3s linear;
+-moz-transition: all 0.3s linear;
+-o-transition: all 0.3s linear;
+transition: all 0.3s linear;
     }
     
     a:visited {
         color: inherit;
+        -webkit-transition: all 0.3s linear;
+-moz-transition: all 0.3s linear;
+-o-transition: all 0.3s linear;
+transition: all 0.3s linear;
     }
     
     a:active {
         outline: red solid 1px;
         color: red;
+        -webkit-transition: all 0.3s linear;
+-moz-transition: all 0.3s linear;
+-o-transition: all 0.3s linear;
+transition: all 0.3s linear;
     }
     
     a:hover {
         outline: green solid 1px;
         color: blue;
+        -webkit-transition: all 0.5s linear;
+-moz-transition: all 0.5s linear;
+-o-transition: all 0.5s linear;
+transition: all 0.5s linear;
     }
     
     b,
@@ -174,7 +187,7 @@ transition: all 0.5s ease;
     }
     
     article:hover a:hover {
-        color: #DE1040;
+        color: #AB031A;
         text-shadow: none;
     }
     /*__Custom List Sections__________________________________________________*/
