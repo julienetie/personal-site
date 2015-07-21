@@ -5,13 +5,12 @@ CACHE:
 favicon.ico
 index.php
 mstile-144x144.png
-print.css
-style.css
+sitemap.xml
 404/index.php
 scripts/julienetienne.min.js
 scripts/lazyload.min.js
 style/404.min.css
-style/julienetienne.min.ce5be2bc.css
+style/julienetienne.min.11de0427.css
 experiments/smarties/index.html
 experiments/smarties/smarties-pix.png
 experiments/smarties/smarties.jpg
@@ -27,22 +26,39 @@ visuals/concepts/envidia-pix.jpg
 visuals/concepts/envidia.jpg
 visuals/concepts/je-rev2-pix.jpg
 visuals/concepts/je-rev2.jpg
-visuals/error/funny-how.jpg
 visuals/icons/android-chrome-192x192.png
 visuals/icons/apple-touch-icon-120x120.png
 visuals/icons/apple-touch-icon-152x152.png
 visuals/icons/apple-touch-icon-180x180.png
 visuals/icons/apple-touch-icon-76x76.png
 visuals/icons/manifest.json
+visuals/error/funny-how.jpg
+visuals/websites/clp-pix.jpg
+visuals/websites/clp.jpg
+visuals/websites/codeheads-pix.jpg
+visuals/websites/codeheads.jpg
+visuals/websites/jeetan-pix.jpg
+visuals/websites/jeetan.jpg
+visuals/websites/kaiwoshe-pix.jpg
+visuals/websites/kaiwoshe.jpg
+visuals/websites/music-site-pix.jpg
+visuals/websites/music-site.jpg
+visuals/websites/uds-pix.jpg
+visuals/websites/uds.jpg
+visuals/websites/wyw2-pix.jpg
+visuals/websites/wyw2.jpg
+visuals/websites/zizi_2012-pix.jpg
+visuals/websites/zizi_2012.jpg
 visuals/alt/1.jpg
 visuals/alt/2.jpg
 visuals/alt/3.jpg
 visuals/alt/4.jpg
 visuals/alt/7.jpg
-visuals/alt/8.jpg
 visuals/alt/9.jpg
-visuals/alt/alt.php
-visuals/alt/view.php
+visuals/print/old-school.jpg
+experiments/smarties/css/normalize.css
+experiments/smarties/css/style.css
+experiments/smarties/js/index.js
 visuals/landb/10-pix.jpg
 visuals/landb/10.jpg
 visuals/landb/11-pix.jpg
@@ -66,26 +82,6 @@ visuals/landb/wyw-logo-pix.jpg
 visuals/landb/wyw_logo.jpg
 visuals/landb/zizi-pix.jpg
 visuals/landb/zizi.gif
-visuals/print/old-school.jpg
-visuals/websites/clp-pix.jpg
-visuals/websites/clp.jpg
-visuals/websites/codeheads-pix.jpg
-visuals/websites/codeheads.jpg
-visuals/websites/jeetan-pix.jpg
-visuals/websites/jeetan.jpg
-visuals/websites/kaiwoshe-pix.jpg
-visuals/websites/kaiwoshe.jpg
-visuals/websites/music-site-pix.jpg
-visuals/websites/music-site.jpg
-visuals/websites/uds-pix.jpg
-visuals/websites/uds.jpg
-visuals/websites/wyw2-pix.jpg
-visuals/websites/wyw2.jpg
-visuals/websites/zizi_2012-pix.jpg
-visuals/websites/zizi_2012.jpg
-experiments/smarties/css/normalize.css
-experiments/smarties/css/style.css
-experiments/smarties/js/index.js
 
 
 NETWORK:
@@ -93,4 +89,4 @@ http://*
 https://*
 *
 
-# hash: 66112cb6f250208049580e9f80792f90acb25b3e62b5f998345c168e10d73660
+# hash: 1d3146f3a955490771c559ebc0b1caef292a381e3b18a82a48dadba3e4ee9f0e

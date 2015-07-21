@@ -2,82 +2,146 @@ a:visited {
   color: #222;
 }
 
-h2:before {
-  content: '# ';
+figcaption,
+figure,
+footer,
+section {
+  display: block;
 }
 
-h2,
-p {
-  font-weight: 400;
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+a:active,
+a:hover {
+  outline: 1;
 }
 
 a:active {
+  outline-color: red;
   color: red;
 }
 
 a:hover {
+  outline-color: green;
   color: #00f;
 }
 
+b,
+strong {
+  font-weight: 700;
+}
+
+#ch {
+  font-style: normal;
+  display: block;
+  font-size: 1.5em;
+  -webkit-margin-before: .83em;
+  -webkit-margin-after: .83em;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+}
+
 small {
+  font-size: 80%;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+address {
+  width: 100%;
   position: relative;
+  float: left;
+  transition: all .3s linear;
+  overflow: hidden;
+}
+
+address,
+article:hover {
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -o-transition: all .3s linear;
+}
+
+address h2,
+address ul,
+article h2,
+article ul {
+  position: relative;
+  z-index: 2;
+}
+
+article:hover {
+  background: #E1E192;
+  text-shadow: 1.5em -.45em 3px rgba(255,200,200,.7),1em -.3em 3px rgba(200,255,200,.7),.5em -.15em 3px rgba(200,200,255,.7);
+  transition: all .3s linear;
+}
+
+.visual-portfolio ul li {
+  width: 50%;
+}
+
+.visual-portfolio ul li img {
+  width: 100%;
+}
+
+#experiments ul li img {
+  width: initial;
 }
 
 .codepen {
   opacity: .1;
 }
 
-#experiments ul li,
-#logos-and-branding ul li,
-#prototypes ul li,
-#websites ul li {
-  width: 50%;
-}
-
-#logos-and-branding ul li img,
-#prototypes ul li img,
-#websites ul li img {
-  width: 100%;
-}
-
 hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
   left: 0;
   padding: 0;
   border: 4px double #EDEDFF;
   border-radius: 5px;
 }
 
-.section:hover {
-  -webkit-transition: all .3s linear;
-  -moz-transition: all .3s linear;
-  -o-transition: all .3s linear;
+#ch:before,
+h2:before {
+  content: '# ';
 }
 
-.section:hover {
-  background: #E1E192;
-  text-shadow: 1.5em -.45em 3px rgba(255,200,200,.7),1em -.3em 3px rgba(200,255,200,.7),.5em -.15em 3px rgba(200,200,255,.7);
-  transition: all .3s linear;
-}
-
+#ch,
 h2,
 p {
   padding: .5em 1.4em;
+  font-weight: 400;
 }
 
-small {
+footer small {
+  position: relative;
   float: right;
   text-align: right;
   margin: 0 180px 2em 0;
-}
-
-.section h2,
-.section ul {
-  position: relative;
-  z-index: 2;
-}
-
-#old-school {
-  display: none;
 }
 
 @media only screen and (max-width:40em) {
@@ -146,10 +210,6 @@ h2::-moz-selection {
   color: lilac;
 }
 
-img::-moz-selection {
-  background: #ff0;
-}
-
 #top-arrow {
   width: 100px;
   height: 100px;
@@ -183,19 +243,35 @@ img::-moz-selection {
     page-break-inside: avoid;
   }
 
+  * {
+    background: 0 0!important;
+    text-shadow: none!important;
+    filter: none!important;
+    -ms-filter: none!important;
+    border-radius: none;
+  }
+
   hr,
   ul,
   ul li {
     border: none;
   }
 
-  #old-school {
+  #oldschool {
     display: block;
   }
 
-  #old-school img {
+  #oldschool img {
     width: 75%;
-    margin: 0 auto;
+    margin-left: .9in;
+  }
+
+  #oldschool h1 {
+    margin-left: .7in;
+  }
+
+  #oldschool h3 {
+    margin-left: 2.3in;
   }
 
   #accounts svg,
@@ -209,6 +285,30 @@ img::-moz-selection {
   #maya,
   #stats {
     display: none;
+  }
+
+  svg line {
+    fill: #F0F;
+    stroke-dasharray: none;
+  }
+
+  #accounts {
+    -webkit-transform: rotate(-30deg) skew(10deg,2deg);
+    -moz-transform: rotate(-30deg) skew(10deg,2deg);
+    -o-transform: rotate(-30deg) skew(10deg,2deg);
+    -ms-transform: rotate(-30deg) skew(10deg,2deg);
+    transform: rotate(-30deg) skew(10deg,2deg);
+  }
+
+  #accounts:after {
+    content: "Don't worry, your printer is fine ;-)";
+    -webkit-transform: skew(12deg,2deg);
+    -moz-transform: skew(12deg,2deg);
+    -o-transform: skew(12deg,2deg);
+    -ms-transform: skew(12deg,2deg);
+    transform: skew(12deg,2deg);
+    text-shadow: 0 0 5px #000;
+    opacity: .3;
   }
 
   a,

@@ -20,8 +20,9 @@
 #                      |  /            /   |/\/
 #                       ~~             /  /
 #                                     |__/
-# Hello snooper!
-#
+
+# INTRUDER!!!!!
+
 # The below files & folders are not likely to be live
 # this is for precaution.
 # All files are public on github 
@@ -36,3 +37,5 @@ Disallow: /src/
 Disallow: .gitignore
 Disallow: julienetienne.co.uk.manifest
 Disallow: package.json
+Disallow: /404/
+Disallow: opcache.php

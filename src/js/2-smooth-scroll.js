@@ -1,3 +1,15 @@
+/**
+ * smooth-scroll fork
+ * @desc This API is different to  the other smooth-scroll. This API is
+ * responsible for the panning of the viewport when clicking on internal links.
+ * @author Kieren Evans
+ * @see  @link {https://github.com/kierenevans/smooth-scroll}
+ * @license GNU
+ * This API has been heavily customized by Julien Etienne, and is not
+ * applicable for redistribution.
+ */
+
+
 /*jslint browser: true */
 (function (window, document) {
     "use strict";
@@ -87,7 +99,7 @@ var prefixes = ['moz', 'webkit', 'o'],
         scrollTo(window, {
             x: 0,
             y: getOffsetTop(target)
-        }, 1000);
+        }, 1350);
     }
 
     // Uses target's hash for scroll

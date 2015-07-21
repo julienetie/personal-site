@@ -1,26 +1,66 @@
-    * {
+    /* -+-+-+ +-+-+-+-+-+-+-+-+
+    |J|u|l|i|e|n| |E|t|i|e|n|n|e|
+    +-+-+-+-+-+-+ +-+-+-+-+-+-+-+
+    Copyright 2015 Julien Etienne
+
+    /*__Base Normalisation____________________________________________________*/
+    /*                     Custom normalizations for solid compatibility      */
+    
+    html {
+        font-family: 'Open Sans', sans-serif;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        background-color: #222;
         cursor: default;
     }
     
-    html {
-        background: #222;
-    }
-    
-    html,
     body {
-        margin: 0;
-        padding: 0;
-    }
-    
-    body {
-        font-family: 'Open Sans', sans-serif;
         font-weight: normal;
         letter-spacing: 0.2em;
         color: #222;
-        background: rgb(230, 235, 255);
+        background-color: #e6ebff;
         position: absolute;
         width: 100%;
+        margin: 0;
+    }
+    
+    a,
+    article,
+    figcaption,
+    figure,
+    footer,
+    header,
+    nav,
+    section{
         display: block;
+    }
+    
+    audio,
+    canvas,
+    video {
+        display: inline-block;
+    }
+    
+    audio:not([controls]) {
+        display: none;
+        height: 0;
+    }
+    
+    a {
+        background-color: transparent;
+    }
+    
+    a:active,
+    a:hover {
+        outline: 1;
+    }
+    
+    a:active {
+        outline-color: red;
+    }
+    
+    a:hover {
+        outline-color: green;
     }
     
     a:link {
@@ -41,59 +81,64 @@
         color: blue;
     }
     
-    .cross {
-        position: absolute;
-        top: 0;
-        z-index: 0;
+    b,
+    strong {
+        font-weight: bold;
     }
     
-    .codepen {
-        opacity: 0.1;
+    h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
     }
     
-    ul {
-        border: 1px solid rgba(0, 0, 255, 0.05);
-        border-top: none;
-        list-style-type: none;
+    #ch {
+        font-style: normal;
+        display: block;
+        font-size: 1.5em;
+        -webkit-margin-before: 0.83em;
+        -webkit-margin-after: 0.83em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
     }
     
-    ul li {
-        padding-bottom: 0.3em;
+    small {
+        font-size: 80%;
     }
     
-    ul li:nth-child(1) {
-        border-radius: 1em;
+    img {
+        border: 0;
     }
     
-    ul li:last-child {
-        padding-bottom: 1em;
+    svg:not(:root) {
+        overflow: hidden;
     }
     
-    #contents ul li:before {
-        content: '# ';
-    }
-    
-    #experiments ul li,
-    #logos-and-branding ul li,
-    #websites ul li,
-    #prototypes ul li {
-        width: 50%;
-    }
-    
-    #logos-and-branding ul li img,
-    #websites ul li img,
-    #prototypes ul li img {
-        width: 100%;
+    figure {
+        margin: 1em 40px;
     }
     
     hr {
-        left: 0;
-        padding: 0;
-        border: 4px double #EDEDFF;
-        border-radius: 5px;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        height: 0;
     }
     
-    .section {
+    pre {
+        overflow: auto;
+    }
+    
+    code,
+    kbd,
+    pre,
+    samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+    }
+    /*__List Sections_________________________________________________________*/
+    /*                 Applies to both text and images                          */
+    
+    article,
+    address {
         width: 100%;
         position: relative;
         float: left;
@@ -104,7 +149,15 @@
         overflow: hidden;
     }
     
-    .section:hover {
+    article ul,
+    address ul,
+    article h2,
+    address h2 {
+        position: relative;
+        z-index: 2;
+    }
+    
+    article:hover {
         background: #E1E192;
         text-shadow: 1.5em -0.45em 3px rgba(255, 200, 200, 0.7), 1em -0.3em 3px rgba(200, 255, 200, 0.7), 0.5em -0.15em 3px rgba(200, 200, 255, 0.7);
         -webkit-transition: all 0.3s linear;
@@ -112,41 +165,90 @@
         -o-transition: all 0.3s linear;
         transition: all 0.3s linear;
     }
+    /*__Custom List Sections__________________________________________________*/
+    /*                         Apply to both text and images                  */
+    .visual-portfolio ul li {
+        width: 50%;
+    }
     
-    h1,
+    .visual-portfolio ul li img {
+        width: 100%;
+    }
+    
+    #experiments ul li img {
+        width: initial;
+    }
+    nav ul li:before {
+        content: '#';
+        position: relative;
+        float: left;
+        margin-right: 0.5em; 
+    }
+    .cross {
+        position: absolute;
+        top: 0;
+        z-index: 0;
+    }
+    
+    .codepen {
+        opacity: 0.1;
+    }
+    /*__Global List Sections__________________________________________________*/
+    /*                                                                        */
+    
+    ul {
+        border: 1px solid #CFCFFF;
+        border-color: rgba(0, 0, 255, 0.05);
+        border-top: none;
+        list-style-type: none;
+    }
+    
+    ul li {
+        padding-bottom: 0.3em;
+        border-left: 1px solid #ACACFC;
+        border-left-color: rgba(0, 0, 255, 0.1);
+        padding-left: 1em;
+    }
+    
+    ul li:nth-child(1) {
+        border-radius: 1em;
+    }
+    
+    ul li:last-child {
+        padding-bottom: 1em;
+    }
+    
+    hr {
+        left: 0;
+        padding: 0;
+        border: 4px double #EDEDFF;
+        border-radius: 5px;
+    }
+    
+    #ch:before,
     h2:before {
         content: '# ';
     }
     
+    #ch,
     h1,
     h2,
     p {
         padding: 0.5em 1.4em;
         font-weight: normal;
     }
+    /*__Footer notice_________________________________________________________*/
+    /*                 Contains the copyright notice                          */
     
-    small {
+    footer small {
         position: relative;
         float: right;
         text-align: right;
         margin: 0 180px 2em 0;
     }
+    /*__Print satirical image_________________________________________________*/
+    /*                        8kb image of woman using a printer in 1977      */
     
-    .section h2 {
-        position: relative;
-        z-index: 2;
+    #oldschool {
+        display: none;
     }
-    
-    .section ul {
-        position: relative;
-        z-index: 2;
-    }
-    
-    ul li {
-        border-left: 1px solid rgba(0, 0, 255, 0.1);
-        padding-left: 1em;
-    }
-
-#old-school{
-    display: none;
-}

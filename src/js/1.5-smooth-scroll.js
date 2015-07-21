@@ -1,16 +1,11 @@
-//
-// SmoothScroll for websites v1.3.8 (Balazs Galambosi)
-// Licensed under the terms of the MIT license.
-//
-// You may use it in your theme if you credit me. 
-// It is also free to use on any individual website.
-//
-// Exception:
-// The only restriction would be not to publish any  
-// extension for browsers or native application
-// without getting a written permission first.
-//
- 
+/**
+ * SmoothScroll
+ * @author Balazs Galambosi
+ * @version 1.3.8
+ * @license  MIT
+ * @see  @link {https://gist.github.com/galambalazs/6477177}
+ */
+
 (function () {
   
 // Scroll Variables (tweakable)

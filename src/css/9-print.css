@@ -1,99 +1,156 @@
-@media print {
-    /*
+    /* -+-+-+ +-+-+-+-+-+-+-+-+
+    |J|u|l|i|e|n| |E|t|i|e|n|n|e|
+    +-+-+-+-+-+-+ +-+-+-+-+-+-+-+
+    Copyright 2015 Julien Etienne
+          ______________
+         /             /|
+        /             / |
+       /____________ /  |
+      |  _________  |   |____________________
+      | |         | |   |/        /|,       /|
+      | |     ..  | |   /        / /9      / |
+      | |  .      | |  /_______ / /9      /  |
+      | |_________| | |  ____ +| /9      /   |
+      |________++___|/|________|/9      /    |
+         ________________     ,9`      /   / |
+        /  -/      /-   /|  ,9        /   /| |
+       /______________ //|,9         /   / | |
+      |       ______  ||,9          /   /  | |
+      |  -+  |_9366_| ||/          /   /|  | |
+      |_______________|/__________/   / |  | |
+      /////----------/|           |  /__|  | |___
+      |o     o  \o|  \|           |  |  |  | |
+      |o    \|_  ||  o|______     |  |__|  | |_____
+      |o \_  |   ||  o|      |    |  |  |  | /
+      |o /   |\  /|  o|      |    |  |  |__|/
+      |o             o|      |    |  |
+      |o-------------o|      |    |  |
+      |o   /\/\      o|      |    |  |
+      |o  / o o|     o|      |    |  |
+      |o / \_+_/     o|      |    |  |
+      |o |\     \    o|      |    |  |
+      |o | |+ +-|    o|      |    |  |
+      |o-------------o|      |    |  |
+      |o     /|      o|      |    | /   m1a
+       \/|/|/ |/\/|/\/       |____|/
+
+
+    /*__PRINT CSS_____________________________________________________________*/
+    
+    @media print {
+
     * {
         background: transparent !important;
-        color: black !important;
         text-shadow: none !important;
         filter: none !important;
         -ms-filter: none !important;
         border-radius: none;
     }
-*/
-    /* Black prints faster: h5bp.com/s */
-    
-    ul,
-    ul li,
-    hr {
-        border: none;
-    }
-    #old-school {
-        display: block;
 
+        ul,
+        ul li,
+        hr {
+            border: none;
+        }
+        #oldschool {
+            display: block;
+        }
+        #oldschool img {
+            width: 75%;
+            margin-left: 0.9in;
+        }
+        #oldschool h1 {
+            margin-left: 0.7in;
+        }
+        #oldschool h3 {
+            margin-left: 2.3in;
+        }
+        #editable,
+        #contents,
+        #experiments,
+        #bookmarked,
+        #stats,
+        #contact,
+        #maya {
+            display: none;
+        }
+        svg line {
+            fill: #FF00FF;
+            stroke-dasharray: none;
+        }
+        #accounts {
+            -webkit-transform: rotate(-30deg) skew(10deg, 2deg);
+            -moz-transform: rotate(-30deg) skew(10deg, 2deg);
+            -o-transform: rotate(-30deg) skew(10deg, 2deg);
+            -ms-transform: rotate(-30deg) skew(10deg, 2deg);
+            transform: rotate(-30deg) skew(10deg, 2deg);
+        }
+        #accounts:after {
+            content: "Don't worry, your printer is fine ;-)";
+            -webkit-transform: skew(12deg, 2deg);
+            -moz-transform: skew(12deg, 2deg);
+            -o-transform: skew(12deg, 2deg);
+            -ms-transform: skew(12deg, 2deg);
+            transform: skew(12deg, 2deg);
+            text-shadow: 0px 0px 5px #000;
+            opacity: 0.3;
+        }
+        #apis svg,
+        #core-technologies svg,
+        #accounts svg {
+            display: none;
+        }
+        a,
+        a:visited {
+            text-decoration: underline;
+        }
+        a[href]:after {
+            content: " (" attr(href) ")";
+        }
+        abbr[title]:after {
+            content: " (" attr(title) ")";
+        }
+        .ir a:after,
+        a[href^="javascript:"]:after,
+        a[href^="#"]:after {
+            content: "";
+        }
+        /* Don't show links for images, or javascript/internal links */
+        
+        pre,
+        blockquote {
+            border: 1px solid #999;
+            page-break-inside: avoid;
+        }
+        thead {
+            display: table-header-group;
+        }
+        /* h5bp.com/t */
+        
+        tr,
+        img {
+            page-break-inside: avoid;
+        }
+        img {
+            max-width: 100% !important;
+        }
+        @page {
+            margin: 0.5cm;
+        }
+        p,
+        h2,
+        h3 {
+            orphans: 3;
+            widows: 3;
+        }
+        h2,
+        h3 {
+            page-break-after: avoid;
+        }
+        a:after {
+            content: attr(href);
+            font-size: 0.8em;
+            font-weight: normal;
+            color: #FF00FF;
+        }
     }
-    #old-school img{
-        width: 75%;
-        margin: 0 auto;
-    }
-    
-
-
-    #editable,
-    #contents,
-    #experiments,
-    #bookmarked,
-    #stats,
-    #contact,
-    #maya
-     {
-        display: none;
-    }
-
-#apis svg,
-#core-technologies svg,
-#accounts svg{
-    display: none;
-}
-
-
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
-    /* Don't show links for images, or javascript/internal links */
-    
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-    thead {
-        display: table-header-group;
-    }
-    /* h5bp.com/t */
-    
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-    img {
-        max-width: 100% !important;
-    }
-    @page {
-        margin: 0.5cm;
-    }
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-
- a:after{content: attr(href);font-size:0.8em;font-weight:normal; color: #FF00FF;}
-
-}
