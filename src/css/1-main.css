@@ -24,14 +24,13 @@
         margin: 0;
     }
     
-    a,
     article,
     figcaption,
     figure,
     footer,
     header,
     nav,
-    section{
+    section {
         display: block;
     }
     
@@ -46,38 +45,42 @@
         height: 0;
     }
     
+    #ch,
+    h1,
+    h2,
+    p {
+        padding: 0.5em 1.4em;
+        font-weight: normal;
+        color: #222;
+    }
+    
     a {
+        cursor: default;
+        outline: rgba(255,255,255,0.01) solid 1px;
         background-color: transparent;
-    }
-    
-    a:active,
-    a:hover {
-        outline: 1;
-    }
-    
-    a:active {
-        outline-color: red;
-    }
-    
-    a:hover {
-        outline-color: green;
+        padding: 0em 0.2em 0.1em 0.4em;
+        -webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+transition: all 0.5s ease;
     }
     
     a:link {
         text-decoration: none;
-        color: #222;
-        cursor: pointer;
+        color: inherit;
     }
     
     a:visited {
-        color: #222;
+        color: inherit;
     }
     
     a:active {
+        outline: red solid 1px;
         color: red;
     }
     
     a:hover {
+        outline: green solid 1px;
         color: blue;
     }
     
@@ -165,8 +168,18 @@
         -o-transition: all 0.3s linear;
         transition: all 0.3s linear;
     }
+    
+    article:hover a {
+        color: blue;
+    }
+    
+    article:hover a:hover {
+        color: #DE1040;
+        text-shadow: none;
+    }
     /*__Custom List Sections__________________________________________________*/
     /*                         Apply to both text and images                  */
+    
     .visual-portfolio ul li {
         width: 50%;
     }
@@ -178,12 +191,14 @@
     #experiments ul li img {
         width: initial;
     }
+    
     nav ul li:before {
         content: '#';
         position: relative;
         float: left;
-        margin-right: 0.5em; 
+        margin-right: 0.2em;
     }
+    
     .cross {
         position: absolute;
         top: 0;
@@ -204,6 +219,7 @@
     }
     
     ul li {
+        color: #222;
         padding-bottom: 0.3em;
         border-left: 1px solid #ACACFC;
         border-left-color: rgba(0, 0, 255, 0.1);
@@ -228,14 +244,6 @@
     #ch:before,
     h2:before {
         content: '# ';
-    }
-    
-    #ch,
-    h1,
-    h2,
-    p {
-        padding: 0.5em 1.4em;
-        font-weight: normal;
     }
     /*__Footer notice_________________________________________________________*/
     /*                 Contains the copyright notice                          */

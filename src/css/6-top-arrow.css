@@ -23,3 +23,6 @@ transition: opacity 1.2s ease;
 transition: -webkit-transform 1.2s ease;
 
 }
+#top-arrow a:link{
+    outline: none;
+}
