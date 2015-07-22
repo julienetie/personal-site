@@ -30,7 +30,7 @@
     Julien -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Work of Freelance Designer &amp; Developer Julien Etienne" />
+    <meta name="description" content="Interactive user experiences for the web by Julien Etienne" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Julien Etienne - UI Developer</title>
     <!-- Apple setup -->
@@ -98,7 +98,7 @@
       *  Embedding lazyload into the page eliminates blocking, lazyload is 
       *  required to be in the top of the body to prevent hell breaking loose.
       */ -->
-    <script src='../js/1-lazyload.js' inline></script>
+    <script src='../js/3-lazyload.js' inline></script>
     <!-- I figured people may type "Julien Etienne is a ?????. Ha, either way inleast it's memorable. -->
     <header id='top' contenteditable='true' spellcheck='false'>
         <!-- Just wanted to let the word know. -->
@@ -293,7 +293,7 @@
         </svg>
         <h2>Stats</h2>
         <ul>
-            <li><a target="_blank" href="https://developers.google.com/speed/pagespeed/insights/?url=julienetienne.co.uk">PageSpeed Insights - Mobile (This website dosen't use "PageSpeed" )</a></li>
+            <li><a target="_blank" href="https://developers.google.com/speed/pagespeed/insights/?url=julienetienne.co.uk">PageSpeed Insights - Mobile (This website doesn't use "PageSpeed" )</a></li>
             <li><a target="_blank" href="http://tools.pingdom.com/fpt/#!/ddtebO/http://julienetienne.co.uk/">Pingdom Website Speed Test</a></li>
             <li><a target="_blank" href="https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=http%3A%2F%2Fjulienetienne.co.uk%2F">W3  Validation</a></li>
             <li><a target="_blank" href="http://wave.webaim.org/report#/http%3A%2F%2Fjulienetienne.co.uk%2F">WAVE Accessibility Check</a></li>
@@ -346,46 +346,6 @@
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
     ga('create', 'UA-60745535-1', 'auto');
     ga('send', 'pageview');
-
-    var prompt = true;
-
-    (function() {
-
-        function removeElement(node) {
-            node.parentNode.removeChild(node);
-        }
-
-
-
-        var beforePrint = function() {
-            if (prompt === true) {
-
-                alert('Because images load on view, you may need to close this print prompt and quickly scroll to each image to ensure a good print/ pdf.');
-                window.scrollTo(0, 0);
-            }
-        };
-        var afterPrint = function() {
-            if (prompt === true) {
-                prompt = false;
-            }
-        };
-
-        if (window.matchMedia) {
-            var mediaQueryList = window.matchMedia('print');
-            mediaQueryList.addListener(function(mql) {
-                if (mql.matches) {
-                    beforePrint();
-                } else {
-                    afterPrint();
-                }
-            });
-        }
-
-
-        window.onbeforeprint = beforePrint;
-        window.onafterprint = afterPrint;
-
-    }());
     </script>
 </body>
 

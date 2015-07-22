@@ -39,7 +39,7 @@ function lazyload(opts) {
 
   function show(elt) {
     var src = findRealSrc(elt);
-console.log(src);
+//console.log(src);
     if (src) {
       elt.src = src;
     }

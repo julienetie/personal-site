@@ -4,7 +4,7 @@
     Copyright 2015 Julien Etienne
 
     /*__Base Normalisation____________________________________________________*/
-    /*                     Custom normalizations for solid compatibility      */
+    /*                     Custom normalizations                              */
     
     html {
         font-family: 'Open Sans', sans-serif;
@@ -265,7 +265,7 @@ transition: all 0.5s linear;
         position: relative;
         float: right;
         text-align: right;
-        margin: 0 180px 2em 0;
+        margin: 0 90px 2em 0;
     }
     /*__Print satirical image_________________________________________________*/
     /*                        8kb image of woman using a printer in 1977      */
