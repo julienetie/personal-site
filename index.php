@@ -1,6 +1,7 @@
-<?php // ?>
+<?php // Expire cache header( "Cache-Control: no-store, no-cache, must-revalidate, max-age=0"); header( "Cache-Control: post-check=0, pre-check=0", false); header( "Pragma: no-cache"); ?>
 <!DOCTYPE html>
 <html lang="en" manifest="julienetienne.co.uk.manifest">
+
 <head>
     <!-- -+-+-+ +-+-+-+-+-+-+-+-+
     |J|u|l|i|e|n| |E|t|i|e|n|n|e|
@@ -54,11 +55,11 @@
     <meta name="author" content="Julien Etienne">
     <!-- Disabled JS -->
     <noscript>
-    <style>
-        #oldschool{
+        <style>
+        #oldschool {
             display: none;
         }
-    </style>
+        </style>
     </noscript>
     <!-- /**
           * The below is critical CSS, not me being lazy: http://addyosmani.com/blog/tag/critical-path-css/
@@ -112,8 +113,8 @@ body,h1{font-weight:400;color:#222}a,html{cursor:default}html{font-family:'Open 
         <!-- Just wanted to let the word know. -->
         <h1 id="editable" data-print-header="Julien Etienne UI Developer">Julien Etienne can't speak French</h1>
         <div id="oldschool">
-        <h1>Julien Etienne UI Developer</h1>
-        <h3>PRINT LIKE IT'S 1977</h3>
+            <h1>Julien Etienne UI Developer</h1>
+            <h3>PRINT LIKE IT'S 1977</h3>
             <img src="visuals/print/old-school.jpg" alt="">
         </div>
     </header>
@@ -194,6 +195,8 @@ body,h1{font-weight:400;color:#222}a,html{cursor:default}html{font-family:'Open 
         <h2>Logos &#38; branding</h2>
         <ul>
             <li itemprop="workExample"><img onload="lzld(this)" data-src="visuals/landb/2.jpg" src="visuals/landb/2-pix.jpg" alt="Branding header image"></li>
+            <li itemprop="workExample"><img onload="lzld(this)" data-src="visuals/landb/wander.jpg" src="visuals/landb/wander-pix.jpg" alt="Wanderlust Restaurant logo"></li>
+            <li itemprop="workExample"><img onload="lzld(this)" data-src="visuals/landb/kwi-fb.jpg" src="visuals/landb/kwi-fb-pix.jpg" alt="Kaiwoshe Inn logo"></li>
             <li itemprop="workExample"><img onload="lzld(this)" data-src="visuals/landb/zizi.gif" src="visuals/landb/zizi-pix.jpg" alt="Zizi Hair Salon logo"></li>
             <li itemprop="workExample"><img onload="lzld(this)" data-src="visuals/landb/10.jpg" src="visuals/landb/10-pix.jpg" alt="Iris computers logo"></li>
             <li itemprop="workExample"><img onload="lzld(this)" data-src="visuals/landb/8.jpg" src="visuals/landb/8-pix.jpg" alt="Vector Zip design symbolic logo"></li>
@@ -232,6 +235,7 @@ body,h1{font-weight:400;color:#222}a,html{cursor:default}html{font-family:'Open 
         </svg>
         <h2>APIs</h2>
         <ul itemscope="" itemtype="https://schema.org/SoftwareSourceCode">
+            <li><a itemprop="codeRepository workExample" target="_blank" href="https://github.com/julienetie/request-frame">request-frame</a></li>
             <li><a itemprop="codeRepository workExample" target="_blank" href="https://github.com/julienetie/soucouyant">Soucouyant</a></li>
             <li><a itemprop="codeRepository workExample" target="_blank" href="https://github.com/julienetie/resizilla">Resizilla</a></li>
             <li><a itemprop="codeRepository workExample" target="_blank" href="https://github.com/julienetie/cssesta-css-reset">CSSesta</a></li>

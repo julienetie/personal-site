@@ -6,40 +6,11 @@
  * @see  @link {https://gist.github.com/galambalazs/6477177}
  */
 
-(function () {
+(function (globalOptions) {
   
 // Scroll Variables (tweakable)
-var defaultOptions = {
- 
-    // Scrolling Core
-    frameRate        : 150, // [Hz]
-    animationTime    : 400, // [ms]
-    stepSize         : 400, // [px]
- 
-    // Pulse (less tweakable)
-    // ratio of "tail" to "acceleration"
-    pulseAlgorithm   : true,
-    pulseScale       : 4,
-    pulseNormalize   : 1,
- 
-    // Acceleration
-    accelerationDelta : 20,  // 20
-    accelerationMax   : 1,   // 1
- 
-    // Keyboard Settings
-    keyboardSupport   : true,  // option
-    arrowScroll       : 50,     // [px]
- 
-    // Other
-    touchpadSupport   : true,
-    fixedBackground   : true, 
-    excluded          : ''    
-};
+var options = globalOptions.smoothScrollOptions;
 
-
-var options = defaultOptions;
- 
- 
 // Other Variables
 var isExcluded = false;
 var isFrame = false;
@@ -53,13 +24,6 @@ var isMac = /^Mac/.test(navigator.platform);
  
 var key = { left: 37, up: 38, right: 39, down: 40, spacebar: 32, 
             pageup: 33, pagedown: 34, end: 35, home: 36 };
- 
- 
-/***********************************************
- * SETTINGS
- ***********************************************/
- 
-var options = defaultOptions;
  
  
 /***********************************************
@@ -263,14 +227,14 @@ function scrollArray(elem, left, top) {
         }
         
         if (que.length) { 
-            requestFrame(step, elem, (1000 / options.frameRate + 1)); 
+            requestFrameSmoothScroll(step, elem, (1000 / options.frameRate + 1)); 
         } else { 
             pending = false;
         }
     };
     
     // start a new queue of actions
-    requestFrame(step, elem, 0);
+    requestFrameSmoothScroll(step, elem, 0);
     pending = true;
 }
  
@@ -554,7 +518,7 @@ function isTouchpad(deltaY) {
     if (!deltaBuffer.length) {
         deltaBuffer = [deltaY, deltaY, deltaY];
     }
-    deltaY = Math.abs(deltaY)
+    deltaY = Math.abs(deltaY);
     deltaBuffer.push(deltaY);
     deltaBuffer.shift();
     clearTimeout(deltaBufferTimer);
@@ -588,11 +552,12 @@ function isInsideYoutubeVideo(event) {
     }
     return isControl;
 }
- 
-var requestFrame = (function () {
+
+var requestFrameSmoothScroll = (function () {
       return (window.requestAnimationFrame       || 
-              window.webkitRequestAnimationFrame || 
-              window.mozRequestAnimationFrame    ||
+//
+//              window.webkitRequestAnimationFrame || 
+//              window.mozRequestAnimationFrame    ||
               function (callback, element, delay) {
                  window.setTimeout(callback, delay || (1000/60));
              });
@@ -673,4 +638,4 @@ if (wheelEvent) {
     addEvent('load', init);
 }
  
-})();
+}(opt));

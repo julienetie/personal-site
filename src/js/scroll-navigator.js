@@ -49,7 +49,7 @@ function scrollNavigator(navigator, root) {
       // Translate to center of window
       setInitArrow.call(null, middleWidth, middleHeight);
 
-      arrow.addEventListener(prefixTransitionEnd(), revertToCorner, false);
+      arrow.addEventListener(prefixTransitionEnd(arrow), revertToCorner, false);
 
     } else {
       navigator.style.opacity = 0.7;

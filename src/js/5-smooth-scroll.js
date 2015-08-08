@@ -11,23 +11,10 @@
 
 
 /*jslint browser: true */
-(function (window, document) {
+(function(window, document, options) {
     "use strict";
 
-var prefixes = ['moz', 'webkit', 'o'],
-      animationFrame;
-
-    // Modern rAF prefixing without setTimeout
-    function requestAnimationFrameNative() {
-        prefixes.map(function(prefix) {
-            if (!window.requestAnimationFrame) {
-                animationFrame = window[prefix + 'RequestAnimationFrame'];
-            } else {
-                animationFrame = requestAnimationFrame;
-            }
-        });
-    }
-    requestAnimationFrameNative();
+    var images = get('tag', 'img');
 
     function getOffsetTop(el) {
         if (!el) {
@@ -46,7 +33,7 @@ var prefixes = ['moz', 'webkit', 'o'],
         return scrollable.scrollTop || document.body.scrollTop || document.documentElement.scrollTop;
     }
 
-    function scrollTo(scrollable, coords, millisecondsToTake) {
+    function scrollTo(scrollable, coords, millisecondsToTake, callback) {
         var currentY = getScrollTop(scrollable),
             diffY = coords.y - currentY,
             startTimestamp = null;
@@ -66,19 +53,20 @@ var prefixes = ['moz', 'webkit', 'o'],
             scrollable.scrollTo(0, currentY + (diffY * pointOnSineWave));
 
             if (progress < millisecondsToTake) {
-                animationFrame(doScroll);
+                requestAnimationFrame(doScroll);
             } else {
                 // Ensure we're at our destination
                 scrollable.scrollTo(coords.x, coords.y);
+                callback();
             }
         }
 
-        animationFrame(doScroll);
+        requestAnimationFrame(doScroll);
     }
 
 
-    function smoothScroll(e) {   // no smooth scroll class to ignore links
-        if(e.target.className === 'no-ss'){
+    function smoothScroll(e, scrollSpeedMs, callback) { // no smooth scroll class to ignore links
+        if (e.target.className === 'no-ss') {
             return;
         }
 
@@ -99,10 +87,33 @@ var prefixes = ['moz', 'webkit', 'o'],
         scrollTo(window, {
             x: 0,
             y: getOffsetTop(target)
-        }, 1350);
+        }, scrollSpeedMs, callback);
+    }
+
+    function visibility(callback, event, fadeVal, fadeSpeedVal) {
+        function callbackToDelay() {
+            callback(event);
+        }
+        for (var i = 0; i < images.length; i++) {
+            fade.to(images[i], fadeSpeedVal, fadeVal, 'block');
+            if (i === images.length - 1 && callback) {
+                delay(callbackToDelay, fadeSpeedVal * 1000);
+            }
+        }
+    }
+
+    function scrollToLink(e) {
+            smoothScroll(e, options.linkScrollSpeed, function() {
+                visibility(false, e, 1, options.fadeInSpeed);
+            });
     }
 
     // Uses target's hash for scroll
-    document.addEventListener('click', smoothScroll, false);
+    document.addEventListener('click', function(e) {
+        if (e.target.hash) {
+            e.preventDefault();
+        }
+        visibility(scrollToLink, e, 0, options.fadeOutSpeed);
+    }, false);
 
-}(window, document));
+}(window, document, opt));
