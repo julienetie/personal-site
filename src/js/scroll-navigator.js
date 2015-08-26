@@ -20,17 +20,14 @@ function scrollNavigator(navigator, root) {
     }, 1000);
 
   function setInitArrow(middleWidth, middleHeight) {
-    // Translate to center of window
-    stylePrefix({
-      el: arrow,
-      style: 'transform',
-      value: 'translate3d(-' + middleWidth + 'px, -' + middleHeight + 'px, 0px)'
-    });
+
+      arrow.style[transformName] = 'translate3d(-' + middleWidth + 'px, -' + middleHeight + 'px, 0)';
+
   }
 
   function revertToCorner(event) {
     // Need a get computed prefix
-    if (arrow.style.webkitTransform !== corner) {
+    if (arrow.style[transformName] !== corner) {
       navigator.style.zIndex = '-10';
     }
   }
@@ -38,13 +35,6 @@ function scrollNavigator(navigator, root) {
   function getScrollPosition(middleWidth, middleHeight) {
     if (root.scrollY < screen.height) {
       navigator.style.opacity = 0;
-
-      // Scale arrow to full size
-      stylePrefix({
-        el: arrow,
-        style: 'transform',
-        value: 'scale(1,1)'
-      });
 
       // Translate to center of window
       setInitArrow.call(null, middleWidth, middleHeight);
@@ -55,20 +45,7 @@ function scrollNavigator(navigator, root) {
       navigator.style.opacity = 0.7;
       navigator.style.zIndex = '10';
 
-      // Scale arrow to a 5th
-      stylePrefix({
-        el: arrow,
-        style: 'transform',
-        value: 'scale(0.2,0.2)'
-      });
-
-      // Translate to corner
-      stylePrefix({
-        el: arrow,
-        style: 'transform',
-        value: corner
-      });
-
+    arrow.style[transformName] =  corner;
 
     }
 

@@ -21,13 +21,13 @@ function stylePrefix(styleObject) {
 
     var vendors = ['ms', 'o', 'moz', 'webkit'],
         cssStyleCap = cssStyle.charAt(0).toUpperCase() + cssStyle.substring(1);
-    if (!element.style.cssStyle) {
+    if (!element.style[cssStyle]) {
         vendors.filter(function(vendor) {
             if (element.style[vendor + cssStyleCap] !== undefined) {
                 element.style[vendor + cssStyleCap] = value;
             }
         });
     } else {
-        element.style.cssStyle = value;
+        element.style[cssStyle] = value;
     }
 }

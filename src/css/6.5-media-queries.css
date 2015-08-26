@@ -11,6 +11,7 @@
     /* Define mobile styles */
     
     @media only screen and (max-width: 40em) {
+
         #experiments ul li,
         #logos-and-branding ul li,
         #websites ul li,
@@ -22,6 +23,16 @@
         ul li {
             padding-bottom: 2.2em;
         }
+        #top-arrow {
+            position: fixed;
+        }
+
+        #top-arrow a {
+            font-size: 20vmin;
+            bottom: 0;
+            right: 0;
+          
+        }
     }
     /* max-width 640px, mobile-only styles, use when QAing mobile issues */
     /* Medium screens */
@@ -30,17 +41,26 @@
     /* min-width 641px, medium screens */
     
     @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+
+        html{
+            background-color: #e6ebff;
+        }
+
         #experiments ul li,
         #logos-and-branding ul li,
         #websites ul li,
         #prototypes ul li {
             width: 80%;
         }
+
+
+
     }
     /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
     /* Large screens */
     
-    @media only screen and (min-width: 64.063em) {}
+    @media only screen and (min-width: 64.063em) {
+    }
     /* min-width 1025px, large screens */
     
     @media only screen and (min-width: 64.063em) and (max-width: 90em) {}

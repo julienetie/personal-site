@@ -33,6 +33,7 @@ var gulp = require('gulp'),
         'build-css',
         'build-index-critical-css',
         'build-404-css',
+        'build-ie-css',
         'build-404-critical-css',
         'build-js',
         'build-lazy-js',
@@ -50,9 +51,11 @@ gulp.task('separator', function() {
 });
 
 
-gulp.task('inject-index-lazyload', ['separator'], function () {
+gulp.task('inject-index-lazyload', ['separator'], function() {
     return gulp.src('./src/html/index.html')
-        .pipe(inlinesource({compress: true}))
+        .pipe(inlinesource({
+            compress: true
+        }))
         .pipe(gulp.dest('./src/html/injected'));
 });
 
@@ -68,8 +71,9 @@ gulp.task('clean-css-dir', ['inject-index-lazyload'], function() {
 gulp.task('build-css', ['clean-css-dir'], function() {
     // The 1-main.css file is not excluded from the build.
     return gulp.src([
-        './src/css/*.css', 
-        '!./src/css/8-404.css'])
+            './src/css/*.css',
+            '!./src/css/8-404.css'
+        ])
         .pipe(concatCss('julienetienne.min.css'))
         .pipe(minifyCss({
             compatibility: 'ie8'
@@ -102,7 +106,17 @@ gulp.task('build-404-css', ['build-index-critical-css'], function() {
 });
 
 
-gulp.task('build-404-critical-css', ['build-404-css'], function() {
+gulp.task('build-ie-css', ['build-404-css'], function() {
+    return gulp.src(['./src/css/ie.css'])
+        .pipe(concatCss('ie.min.css'))
+        .pipe(minifyCss({
+            compatibility: 'ie8'
+        }))
+        .pipe(gulp.dest('./style'));
+});
+
+
+gulp.task('build-404-critical-css', ['build-ie-css'], function() {
     return critical.generateInline({
         base: './',
         src: './src/html/404.html',
@@ -118,8 +132,8 @@ gulp.task('build-404-critical-css', ['build-404-css'], function() {
 
 gulp.task('build-js', ['build-404-critical-css'], function() {
     // lazyload is served in the body, so lets exclude that.
-    return gulp.src(['./experiments/**/*.js',
-            './src/js/*.js',
+    return gulp.src(['./src/js/*.js',
+            './experiments/**/*.js',
             '!./src/js/3-lazyload.js'
         ])
         .pipe(concat('julienetienne.min.js'))

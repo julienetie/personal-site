@@ -5,6 +5,12 @@ p {
   color: #222;
 }
 
+#top-arrow a,
+#top-arrow a:link {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 figcaption,
 figure,
 footer,
@@ -164,25 +170,13 @@ footer small {
   position: relative;
   float: right;
   text-align: right;
-  margin: 0 90px 2em 0;
+  margin: 0 8em 2em 0;
 }
 
-@media only screen and (max-width:40em) {
-  #experiments ul li,
-  #logos-and-branding ul li,
-  #prototypes ul li,
-  #websites ul li {
-    width: 80%;
-  }
-}
-
-@media only screen and (min-width:40.063em) and (max-width:64em) {
-  #experiments ul li,
-  #logos-and-branding ul li,
-  #prototypes ul li,
-  #websites ul li {
-    width: 80%;
-  }
+#logo-holder,
+#top-arrow a {
+  display: block;
+  cursor: pointer;
 }
 
 #smarties {
@@ -201,10 +195,6 @@ footer small {
 
 #editable:focus {
   border: none;
-  outline: 0;
-}
-
-#top-arrow a:link {
   outline: 0;
 }
 
@@ -252,14 +242,121 @@ h2::-moz-selection {
 }
 
 #top-arrow a {
-  font-size: 5vw;
-  bottom: 0;
-  right: 0;
-  position: absolute;
+  padding: 0;
+  background: 0 0;
   -webkit-transition: -webkit-transform 1.2s ease;
-  -moz-transition: -webkit-transform 1.2s ease;
-  -o-transition: -webkit-transform 1.2s ease;
-  transition: -webkit-transform 1.2s ease;
+  -moz-transition: -moz-transform 1.2s ease;
+  -o-transition: -o-transform 1.2s ease;
+  transition: transform 1.2s ease;
+  opacity: inherit;
+}
+
+#top-arrow a svg {
+  width: 100%;
+  height: 100%;
+}
+
+#top-arrow a:link {
+  outline: 0;
+}
+
+#top-arrow a:active,
+#top-arrow a:hover,
+#top-arrow a:link,
+#top-arrow a:visited {
+  background-color: transparent;
+}
+
+@-ms-keyframes spin {
+  from {
+    -ms-transform: rotate(0);
+  }
+
+  to {
+    -ms-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0);
+  }
+
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#logo-holder {
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 4s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 4s;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  animation-name: spin;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+@media only screen and (max-width:40em) {
+  #experiments ul li,
+  #logos-and-branding ul li,
+  #prototypes ul li,
+  #websites ul li {
+    width: 80%;
+  }
+
+  #top-arrow {
+    position: fixed;
+  }
+
+  #top-arrow a {
+    font-size: 20vmin;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+@media only screen and (min-width:40.063em) and (max-width:64em) {
+  #experiments ul li,
+  #logos-and-branding ul li,
+  #prototypes ul li,
+  #websites ul li {
+    width: 80%;
+  }
 }
 
 @media print {

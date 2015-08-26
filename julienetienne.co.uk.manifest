@@ -10,7 +10,8 @@ sitemap.xml
 scripts/julienetienne.min.js
 scripts/lazyload.min.js
 style/404.min.css
-style/julienetienne.min.3d43f04c.css
+style/ie.min.css
+style/julienetienne.min.81666750.css
 experiments/smarties/index.html
 experiments/smarties/smarties-pix.png
 experiments/smarties/smarties.jpg
@@ -93,4 +94,4 @@ http://*
 https://*
 *
 
-# hash: 75070ebf44fdcde404a249be4e69e41273e2cf9349383fadef49cfc3c2ef237f
+# hash: e6214b377a0fd7caeca24f02bdc753f66be8bc397fde50e00cecf16cd1aba739

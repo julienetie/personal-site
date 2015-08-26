@@ -2,8 +2,9 @@
     var preferences = {
 
         linkScrollSpeed: 1350,
-        fadeOutSpeed: 0.2,
+        fadeOutSpeed: 0.25,
         fadeInSpeed: 0.6,
+        logoSize: 11,
         smoothScrollOptions: {
 
             // Scrolling Core

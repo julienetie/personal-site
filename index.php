@@ -1,4 +1,7 @@
-<?php // Expire cache header( "Cache-Control: no-store, no-cache, must-revalidate, max-age=0"); header( "Cache-Control: post-check=0, pre-check=0", false); header( "Pragma: no-cache"); ?>
+<?php 
+//Expire cache header( "Cache-Control: no-store, no-cache, must-revalidate, max-age=0"); 
+header( "Cache-Control: post-check=0, pre-check=0", false); 
+header( "Pragma: no-cache"); ?>
 <!DOCTYPE html>
 <html lang="en" manifest="julienetienne.co.uk.manifest">
 
@@ -65,14 +68,17 @@
           * The below is critical CSS, not me being lazy: http://addyosmani.com/blog/tag/critical-path-css/
           */ -->
     <style type="text/css">
-body,h1{font-weight:400;color:#222}a,html{cursor:default}html{font-family:'Open Sans',sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#222}body{letter-spacing:.2em;background-color:#e6ebff;position:absolute;width:100%;margin:0}article,header,nav{display:block}h1{padding:.5em 1.4em}a{background-color:transparent;padding:0 .2em .1em .4em}a:link{outline:rgba(255,255,255,.01) solid 1px;text-decoration:none;color:inherit;-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-o-transition:all .3s linear;transition:all .3s linear}h1{font-size:2em;margin:.67em 0}img{border:0}svg:not(:root){overflow:hidden}article{width:100%;position:relative;float:left;transition:all .3s linear;overflow:hidden}article{-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-o-transition:all .3s linear}nav ul li:before{content:'#';position:relative;float:left;margin-right:.2em}.cross{position:absolute;top:0;z-index:0}ul{border:1px solid #CFCFFF;border-color:rgba(0,0,255,.05);border-top:none;list-style-type:none}ul li{color:#222;padding-bottom:.3em;border-left:1px solid #ACACFC;border-left-color:rgba(0,0,255,.1);padding-left:1em}ul li:nth-child(1){border-radius:1em}ul li:last-child{padding-bottom:1em}#oldschool{display:none}@media only screen and (max-width:40em){ul li{padding-bottom:2.2em}}.cross line{stroke:rgba(150,20,80,1);stroke-dasharray:20 20 10;stroke-width:.08}.cross line:nth-child(2){stroke-dasharray:none}header[contenteditable]{outline:0}::selection{background:#f5da55;color:#C00}::-moz-selection{background:#f5da55;color:#C00}h1::-moz-selection{background:#0f0;color:lilac}img::-moz-selection{background:#ff0}
+body,html{background-color:#e6ebff}body,h1{font-weight:400;color:#222}a,html{cursor:default}html{font-family:'Open Sans',sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{letter-spacing:.2em;position:absolute;margin:0}article,header,nav{display:block}h1{padding:.5em 1.4em}a{background-color:transparent;padding:0 .2em .1em .4em}a:link{outline:rgba(255,255,255,.01) solid 1px;text-decoration:none;color:inherit;-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-o-transition:all .3s linear;transition:all .3s linear}h1{font-size:2em;margin:.67em 0}img{border:0;opacity:1}svg:not(:root){overflow:hidden}article{width:100%;position:relative;float:left;transition:all .3s linear;overflow:hidden}article{-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-o-transition:all .3s linear}nav ul li:before{content:'#';position:relative;float:left;margin-right:.2em}.cross{position:absolute;top:0;z-index:0}ul{border:1px solid #CFCFFF;border-color:rgba(0,0,255,.05);border-top:none;list-style-type:none}ul li{color:#222;padding-bottom:.3em;border-left:1px solid #ACACFC;border-left-color:rgba(0,0,255,.1);padding-left:1em}ul li:nth-child(1){border-radius:1em}ul li:last-child{padding-bottom:1em}#oldschool{display:none}.cross line{stroke:rgba(150,20,80,1);stroke-dasharray:20 20 10;stroke-width:.08}.cross line:nth-child(2){stroke-dasharray:none}header[contenteditable]{outline:0}::selection{background:#f5da55;color:#C00}::-moz-selection{background:#f5da55;color:#C00}h1::-moz-selection{background:#0f0;color:lilac}img::-moz-selection{background:#ff0}@media only screen and (max-width:40em){ul li{padding-bottom:2.2em}}@media only screen and (min-width:40.063em) and (max-width:64em){html{background-color:#e6ebff}}body{width:100%}img{width:50%}
 </style>
 <script>
-(function(u){function loadCSS(e,t,n){"use strict";function r(){for(var t,i=0;i<d.length;i++)d[i].href&&d[i].href.indexOf(e)>-1&&(t=!0);t?o.media=n||"all":setTimeout(r)}var o=window.document.createElement("link"),i=t||window.document.getElementsByTagName("script")[0],d=window.document.styleSheets;return o.rel="stylesheet",o.href=e,o.media="only x",i.parentNode.insertBefore(o,i),r(),o}for(var i in u){loadCSS(u[i]);}}(['style/julienetienne.min.3d43f04c.css']));
+(function(u){function loadCSS(e,t,n){"use strict";function r(){for(var t,i=0;i<d.length;i++)d[i].href&&d[i].href.indexOf(e)>-1&&(t=!0);t?o.media=n||"all":setTimeout(r)}var o=window.document.createElement("link"),i=t||window.document.getElementsByTagName("script")[0],d=window.document.styleSheets;return o.rel="stylesheet",o.href=e,o.media="only x",i.parentNode.insertBefore(o,i),r(),o}for(var i in u){loadCSS(u[i]);}}(['style/julienetienne.min.81666750.css']));
 </script>
 <noscript>
-<link rel="stylesheet" href="style/julienetienne.min.3d43f04c.css">
+<link rel="stylesheet" href="style/julienetienne.min.81666750.css">
 </noscript>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="style/ie.min.css" />
+    <![endif]-->
     <style>
     @media print {
         @page {
@@ -112,13 +118,16 @@ body,h1{font-weight:400;color:#222}a,html{cursor:default}html{font-family:'Open 
     <header id="top" contenteditable="true" spellcheck="false">
         <!-- Just wanted to let the word know. -->
         <h1 id="editable" data-print-header="Julien Etienne UI Developer">Julien Etienne can't speak French</h1>
+        <!--[if gte IE 9]><!-->
         <div id="oldschool">
             <h1>Julien Etienne UI Developer</h1>
             <h3>PRINT LIKE IT'S 1977</h3>
             <img src="visuals/print/old-school.jpg" alt="">
         </div>
+        <!--<![endif]-->
     </header>
     <!-- #0 Contents -->
+    <!--[if gte IE 9]><!-->
     <nav id="contents">
         <ul>
             <li><a href="#experiments">Experiments</a></li>
@@ -134,6 +143,7 @@ body,h1{font-weight:400;color:#222}a,html{cursor:default}html{font-family:'Open 
             <li><a href="#contact" id="bottom">Contact</a></li>
         </ul>
     </nav>
+    <!--<![endif]-->
     <!-- #1 Experiments -->
     <article class="visual-portfolio" id="experiments">
         <svg class="cross">
@@ -336,7 +346,11 @@ body,h1{font-weight:400;color:#222}a,html{cursor:default}html{font-family:'Open 
         <hr>
     </address>
     <!-- Top Arrow & Logo -->
-    <div id="top-arrow"><a href="#top">&#x25B2;</a></div>
+    <div id="top-arrow"><a href="#top">
+        <svg id="logo-holder" viewbox="0 0 100 100">
+        <g id="logo">
+        </g></svg>
+    </a></div>
     <!-- Self maintainable copyright notice, in case I forget what year it is -->
     <footer itemscope="" itemtype="https://schema.org/creativeWork">
         <small>&#169; <time datetime="2015" itemprop="copyrightYear">2015</time> <span itemprop="copyrightHolder">Julien Etienne</span></small>

@@ -1,4 +1,7 @@
-<?php // Expire cache header( "Cache-Control: no-store, no-cache, must-revalidate, max-age=0"); header( "Cache-Control: post-check=0, pre-check=0", false); header( "Pragma: no-cache"); ?>
+<?php 
+//Expire cache header( "Cache-Control: no-store, no-cache, must-revalidate, max-age=0"); 
+header( "Cache-Control: post-check=0, pre-check=0", false); 
+header( "Pragma: no-cache"); ?>
 <!DOCTYPE html>
 <html lang="en" manifest="julienetienne.co.uk.manifest">
 
@@ -65,6 +68,9 @@
           * The below is critical CSS, not me being lazy: http://addyosmani.com/blog/tag/critical-path-css/
           */ -->
     <link rel="stylesheet" href="style/julienetienne.min.css">
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="style/ie.min.css" />
+    <![endif]-->
     <style>
     @media print {
         @page {
@@ -104,13 +110,16 @@
     <header id='top' contenteditable='true' spellcheck='false'>
         <!-- Just wanted to let the word know. -->
         <h1 id='editable' data-print-header="Julien Etienne UI Developer">Julien Etienne can't speak French</h1>
+        <!--[if gte IE 9]><!-->
         <div id='oldschool'>
             <h1>Julien Etienne UI Developer</h1>
             <h3>PRINT LIKE IT'S 1977</h3>
             <img src="visuals/print/old-school.jpg" alt="">
         </div>
+        <!--<![endif]-->
     </header>
     <!-- #0 Contents -->
+    <!--[if gte IE 9]><!-->
     <nav id='contents'>
         <ul>
             <li><a href="#experiments">Experiments</a></li>
@@ -126,6 +135,7 @@
             <li><a href="#contact" id='bottom'>Contact</a></li>
         </ul>
     </nav>
+    <!--<![endif]-->
     <!-- #1 Experiments -->
     <article class='visual-portfolio' id='experiments'>
         <svg class='cross'>
@@ -328,7 +338,11 @@
         <hr>
     </address>
     <!-- Top Arrow & Logo -->
-    <div id='top-arrow'><a href='#top'>&#x25B2;</a></div>
+    <div id='top-arrow'><a href='#top'>
+        <svg id='logo-holder' viewBox='0 0 100 100'>
+        <g id='logo'></g>
+        </svg>
+    </a></div>
     <!-- Self maintainable copyright notice, in case I forget what year it is -->
     <footer itemscope itemtype='https://schema.org/creativeWork'>
         <small>&#169; <time datetime='2015' itemprop='copyrightYear'>2015</time> <span itemprop='copyrightHolder'>Julien Etienne</span></small>

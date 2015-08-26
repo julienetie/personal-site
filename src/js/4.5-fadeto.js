@@ -1,59 +1,25 @@
-/**!
- * fadeto
- * @author  Julien Etienne
- * {@link https://github.com/julienetie/fadeto}
- * @license MIT
+/**
+ * @Author Barney Carroll 
+ * @see  {@Link https://gist.github.com/barneycarroll/1096784}
  */
+function detectCSS(prop){
+    var prop = prop.replace(/-(\w)/g,function(s,g){
+            return g.toUpperCase();
+        }), 
+        pre  = ',Moz,Ms,O,Webkit'.split(',');
 
+    for (var i = 0; i < pre.length; ++i){
+        if(i==1)
+            prop = prop.slice(0,1).toUpperCase() + prop.slice(1);
 
-var fade = (function(window, undefined) {
-
-    var accuracy = 3; //    Decimals
-    var assumedFps = 1 / 60; //    assumed frames per second  
-    assumedFps = assumedFps.toPrecision(1 + accuracy);
-
-    //  Get current opacity
-    function getComputedOpacity(el) {
-        var computedOpacity = window.getComputedStyle(el).opacity;
-        return computedOpacity;
+        if(pre[i] + prop in document.documentElement.style)
+            return pre[i] + prop;
     }
 
-    //FadeTo 
-    function fadeTo(el, rate, fadeToVal, display) {
+    return false; 
+}
 
-        //Set opacity to computed value
-        el.style.opacity = getComputedOpacity(el);
 
-        //Self execute fade 
-        (function fade() {
-
-            //  Disclaimer: Not a representation of duration, but assumes repaints at assumedFps
-            var increments = assumedFps / rate;
-
-            //Fade out then set display
-            if (el.style.opacity > fadeToVal) {
-                if ((el.style.opacity -= increments) < fadeToVal) {
-                    if (el.style.opacity <= 0.01) el.style.display =
-                        display;
-                } else {
-                    requestAnimationFrame(fade);
-                }
-            } else {
-                //Fade in then set display
-                var val = parseFloat(el.style.opacity);
-                if (((val += increments) < fadeToVal)) {
-                    el.style.opacity = val;
-                    if (el.style.opacity > 0.99) el.style.display =
-                        display;
-                    requestAnimationFrame(fade);
-                }
-            }
-        })();
-    }
-
-    //Public action
-    return {
-        to: fadeTo
-    };
-
-})(window);
+var transitionName = detectCSS('transition');
+var transformName = detectCSS('transform');
+var animationDuration = detectCSS('animationDuration');

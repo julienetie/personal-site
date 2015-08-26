@@ -3,14 +3,14 @@
  * More fruity circle BS, enjoy ;-) 
 */
     // Options
-    opt = {
+    var opt = {
         count: 32,
         min: 0.3,
         max: 0.8,
         maxVel: 12, // Set this to 1
         opacity: 0.5, // For mobile
         filter: "difference" // multiply | exclusion
-    }
+    };
 
     
     
@@ -34,7 +34,7 @@ if(screen.width < 1023){
     var circles = [];
     for (var i = 0; i < opt.count; i++) {
         rand = Math.random();
-        rand > opt.min ? rand : rand = opt.min;
+        rand = rand > opt.min ? rand : opt.min;
         var rDiff = (opt.max * 300) * rand;
         circles.push({
             x: ~~ ((space[0] * rand) - rDiff) || 25,
@@ -46,26 +46,19 @@ if(screen.width < 1023){
         });
     }
 
-    
-    // Animation loop
-    var rAF = (function () {
-        return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (loop) {
-            window.setTimeout(callback, 1000 / 60);
-        };
-    })();
 
 // Switch
 var sw,count = 0;
 root.switchState = function(state){
     if(!count){
         sw = state;
-     rAF(paint);
+     requestAnimationFrame(paint);
      count = 1;
     }else{
-       sw = state
+       sw = state;
        count = 0;
     }
-}
+};
     // Paint circles
     function paint() {
         c.fillRect.apply(c, cProps);
@@ -91,7 +84,7 @@ root.switchState = function(state){
             circles[i].y += circles[i].vy; // vertical force 
         }
         if(sw)
-            rAF(paint);
+            requestAnimationFrame(paint);
     }
 
   
