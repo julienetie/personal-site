@@ -1,9 +1,8 @@
 /**
  * @copyright Julien Etienne 2015
  */
-
 function scrollNavigator(navigator, root) {
-  var arrow = navigator.childNodes[0],
+    var arrow = navigator.childNodes[0],
     corner = 'translate3d(0px, 0px, 0px)',
     midDimensions = [root.innerWidth / 2,
       root.innerHeight / 2
@@ -20,9 +19,7 @@ function scrollNavigator(navigator, root) {
     }, 1000);
 
   function setInitArrow(middleWidth, middleHeight) {
-
       arrow.style[transformName] = 'translate3d(-' + middleWidth + 'px, -' + middleHeight + 'px, 0)';
-
   }
 
   function revertToCorner(event) {

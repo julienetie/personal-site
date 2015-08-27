@@ -111,40 +111,55 @@ var t = equilateral(65, [50, 50], logo);
         smoothScroll(e, options.linkScrollSpeed, function() {
             visibility(function() {
                 tri.style[animationDuration] = '4s';
-                t.setAttribute('fill','black');
+
+                t.setAttribute('fill', 'black');
             }, e, 1, options.fadeInSpeed);
         });
     }
 
-function randomColor(){
-   var colors = ['#FA3442','#4EEB00','#1A5DED'];
-var rand = Math.floor(Math.random() * colors.length); 
-return colors[rand];
-}
- 
+    function randomColor() {
+        var colors = ['#FA3442', '#4EEB00', '#1A5DED'];
+        var rand = Math.floor(Math.random() * colors.length);
+        return colors[rand];
+    }
+
 
     // Uses target's hash for scroll
     clicktap(document, function(e) {
-        var speed, eventTarget;
+        var speed, eventTarget, isOpera = false,
+            target;
+        // alert(e.target.id);
+
+        if (window.opera && opera.version() < 15) {
+            target = 'logo-holder';
+
+        } else {
+            target = 'equilateral';
+        }
 
         e.stopPropagation();
-        if (e.target.hash || e.target.parentNode.id === 'logo') {
+        if (e.target.hash || e.target.id === target) {
             e.preventDefault();
 
-            
 
-            if (e.target.hash === '#top' || e.target.parentNode.id === 'logo') {
+
+            if (e.target.hash === '#top' || e.target.id === target) {
                 tri.style[animationDuration] = '0.4s';
                 t.setAttribute('fill', randomColor());
                 speed = options.fadeOutSpeed;
             } else {
                 tri.style[animationDuration] = '4s';
-                t.setAttribute('fill','black');
+                t.setAttribute('fill', 'black');
                 speed = 0;
             }
 
-            if (e.target.parentNode.id === 'logo') {
-                eventTarget = e.target.parentNode.parentNode.parentNode;
+            if (e.target.id === target) {
+                if (window.opera && opera.version() < 15) {
+                    eventTarget = e.target.parentNode;
+                } else {
+                    eventTarget = e.target.parentNode.parentNode.parentNode;
+                }
+
 
             } else {
                 eventTarget = e.target;

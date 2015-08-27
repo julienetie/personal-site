@@ -6,8 +6,15 @@
     /*__EXPERIMENTS SECTION___________________________________________________*/
     /*                     The moving things on the site                      */
 
+
+
+    #experiments ul li img {
+        width: initial;
+    }
+
   #smarties {
-      width: 100%;
+    width: 100%;
+    height: 100%;
       opacity: 0;
       -webkit-transition: opacity 2s ease;
       -moz-transition: opacity 2s ease;
@@ -18,6 +25,9 @@
   #smarties-placehlider {
       background: url('../experiments/smarties/smarties.png') no-repeat;
       background-size: 100%;
+      width: 100%;
+      height: 300px;
+      height: 30vw;
   }
   
   .cross line {

@@ -71,10 +71,10 @@ header( "Pragma: no-cache"); ?>
 body,html{background-color:#e6ebff}body,h1{font-weight:400;color:#222}a,html{cursor:default}html{font-family:'Open Sans',sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{letter-spacing:.2em;position:absolute;margin:0}article,header,nav{display:block}h1{padding:.5em 1.4em}a{background-color:transparent;padding:0 .2em .1em .4em}a:link{outline:rgba(255,255,255,.01) solid 1px;text-decoration:none;color:inherit;-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-o-transition:all .3s linear;transition:all .3s linear}h1{font-size:2em;margin:.67em 0}img{border:0;opacity:1}svg:not(:root){overflow:hidden}article{width:100%;position:relative;float:left;transition:all .3s linear;overflow:hidden}article{-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-o-transition:all .3s linear}nav ul li:before{content:'#';position:relative;float:left;margin-right:.2em}.cross{position:absolute;top:0;z-index:0}ul{border:1px solid #CFCFFF;border-color:rgba(0,0,255,.05);border-top:none;list-style-type:none}ul li{color:#222;padding-bottom:.3em;border-left:1px solid #ACACFC;border-left-color:rgba(0,0,255,.1);padding-left:1em}ul li:nth-child(1){border-radius:1em}ul li:last-child{padding-bottom:1em}#oldschool{display:none}.cross line{stroke:rgba(150,20,80,1);stroke-dasharray:20 20 10;stroke-width:.08}.cross line:nth-child(2){stroke-dasharray:none}header[contenteditable]{outline:0}::selection{background:#f5da55;color:#C00}::-moz-selection{background:#f5da55;color:#C00}h1::-moz-selection{background:#0f0;color:lilac}img::-moz-selection{background:#ff0}@media only screen and (max-width:40em){ul li{padding-bottom:2.2em}}@media only screen and (min-width:40.063em) and (max-width:64em){html{background-color:#e6ebff}}body{width:100%}img{width:50%}
 </style>
 <script>
-(function(u){function loadCSS(e,t,n){"use strict";function r(){for(var t,i=0;i<d.length;i++)d[i].href&&d[i].href.indexOf(e)>-1&&(t=!0);t?o.media=n||"all":setTimeout(r)}var o=window.document.createElement("link"),i=t||window.document.getElementsByTagName("script")[0],d=window.document.styleSheets;return o.rel="stylesheet",o.href=e,o.media="only x",i.parentNode.insertBefore(o,i),r(),o}for(var i in u){loadCSS(u[i]);}}(['style/julienetienne.min.81666750.css']));
+(function(u){function loadCSS(e,t,n){"use strict";function r(){for(var t,i=0;i<d.length;i++)d[i].href&&d[i].href.indexOf(e)>-1&&(t=!0);t?o.media=n||"all":setTimeout(r)}var o=window.document.createElement("link"),i=t||window.document.getElementsByTagName("script")[0],d=window.document.styleSheets;return o.rel="stylesheet",o.href=e,o.media="only x",i.parentNode.insertBefore(o,i),r(),o}for(var i in u){loadCSS(u[i]);}}(['style/julienetienne.min.c96503a3.css']));
 </script>
 <noscript>
-<link rel="stylesheet" href="style/julienetienne.min.81666750.css">
+<link rel="stylesheet" href="style/julienetienne.min.c96503a3.css">
 </noscript>
     <!--[if lt IE 9]>
         <link rel="stylesheet" type="text/css" href="style/ie.min.css" />
@@ -154,7 +154,7 @@ body,html{background-color:#e6ebff}body,h1{font-weight:400;color:#222}a,html{cur
         <ul>
             <li>
                 <div id="smarties-placehlider">
-                    <canvas id="smarties" width="1200" height="800">Your browser is prehistoric, please upgrade.</canvas>
+                    <canvas id="smarties" width="800" height="500">Your browser is prehistoric, please upgrade.</canvas>
                 </div>
             </li>
             <li><a target="_blank" href="http://codepen.io/undefined_">...more</a></li>

@@ -38,6 +38,7 @@ function equilateral(sideLength, centerPosition, parentNode) {
         ' ' + this.leftVertex[0] + ',' + this.leftVertex[1];
     parentNode.appendChild(polygon);
     polygon.setAttribute('points', points);
+    polygon.setAttribute('id', 'equilateral');  
     
     return polygon;
 }

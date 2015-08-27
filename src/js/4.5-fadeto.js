@@ -23,3 +23,4 @@ function detectCSS(prop){
 var transitionName = detectCSS('transition');
 var transformName = detectCSS('transform');
 var animationDuration = detectCSS('animationDuration');
+var animation = detectCSS('animation');

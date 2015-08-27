@@ -7,6 +7,7 @@
   var body = g('tag', 'body'),
     smartiesCanvas = g('#', 'smarties'),
     triangleNavigator = g('#', 'top-arrow'),
+    navLink = g('#', 'logo-holder'),
     smartiesPlaceholder = g('#', 'smarties-placeholder'),
     svgCrossElements = g('.', 'cross'),
     header = g('#', 'top'),
@@ -66,8 +67,10 @@
      // alert(logoSize);
     }
 
-    logoHolder.setAttributeNS(null, 'width', logoSize);
-    logoHolder.setAttributeNS(null, 'height', logoSize);
+ //   logoHolder.setAttributeNS(null, 'width', logoSize);
+ //   logoHolder.setAttributeNS(null, 'height', logoSize);
+   tri.style.width = logoSize;
+    tri.style.height = logoSize;
   }
 
 
@@ -82,7 +85,7 @@
     buildSVGSchematics(svgCrossElements);
     setLogoSize(logo, opt.logoSize);
 
-    if (screen.width > 736) {
+    if (screen.width > 736 || screen.width === undefined) {
       headerCaretToEOL(g('#', 'editable'));
     } else {
       header.removeAttribute("contenteditable");

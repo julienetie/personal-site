@@ -143,10 +143,6 @@ article:hover a:hover {
   width: 100%;
 }
 
-#experiments ul li img {
-  width: initial;
-}
-
 .codepen {
   opacity: .1;
 }
@@ -179,8 +175,13 @@ footer small {
   cursor: pointer;
 }
 
+#experiments ul li img {
+  width: initial;
+}
+
 #smarties {
   width: 100%;
+  height: 100%;
   opacity: 0;
   -webkit-transition: opacity 2s ease;
   -moz-transition: opacity 2s ease;
@@ -191,6 +192,9 @@ footer small {
 #smarties-placehlider {
   background: url(../experiments/smarties/smarties.png) no-repeat;
   background-size: 100%;
+  width: 100%;
+  height: 300px;
+  height: 30vw;
 }
 
 #editable:focus {
@@ -241,6 +245,12 @@ h2::-moz-selection {
   transition: opacity 1.2s ease;
 }
 
+#top-arrow a,
+#top-arrow a svg {
+  width: 100%;
+  height: 100%;
+}
+
 #top-arrow a {
   padding: 0;
   background: 0 0;
@@ -249,11 +259,6 @@ h2::-moz-selection {
   -o-transition: -o-transform 1.2s ease;
   transition: transform 1.2s ease;
   opacity: inherit;
-}
-
-#top-arrow a svg {
-  width: 100%;
-  height: 100%;
 }
 
 #top-arrow a:link {
@@ -348,6 +353,11 @@ h2::-moz-selection {
     bottom: 0;
     right: 0;
   }
+
+  #smarties-placehlider {
+    height: 300px;
+    height: 50vw;
+  }
 }
 
 @media only screen and (min-width:40.063em) and (max-width:64em) {
@@ -356,6 +366,11 @@ h2::-moz-selection {
   #prototypes ul li,
   #websites ul li {
     width: 80%;
+  }
+
+  #smarties-placehlider {
+    height: 300px;
+    height: 50vw;
   }
 }
 

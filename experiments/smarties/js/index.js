@@ -5,8 +5,8 @@
     // Options
     var opt = {
         count: 32,
-        min: 0.3,
-        max: 0.8,
+        min: 0.15,
+        max: 0.6,
         maxVel: 12, // Set this to 1
         opacity: 0.5, // For mobile
         filter: "difference" // multiply | exclusion

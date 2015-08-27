@@ -11,7 +11,7 @@ scripts/julienetienne.min.js
 scripts/lazyload.min.js
 style/404.min.css
 style/ie.min.css
-style/julienetienne.min.81666750.css
+style/julienetienne.min.c96503a3.css
 experiments/smarties/index.html
 experiments/smarties/smarties-pix.png
 experiments/smarties/smarties.jpg
@@ -94,4 +94,4 @@ http://*
 https://*
 *
 
-# hash: e6214b377a0fd7caeca24f02bdc753f66be8bc397fde50e00cecf16cd1aba739
+# hash: 879951a3eb9432163c88d45c001eda2fbf06b8e157d54e6c7b07d7000107f81e
