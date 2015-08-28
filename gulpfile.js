@@ -134,7 +134,7 @@ gulp.task('build-js', ['build-404-critical-css'], function() {
     // lazyload is served in the body, so lets exclude that.
     return gulp.src(['./src/js/*.js',
             './experiments/**/*.js',
-            '!./src/js/3-lazyload.js'
+            '!./src/js/z-lazyload.js'
         ])
         .pipe(concat('julienetienne.min.js'))
         //.pipe(uglify())
@@ -143,7 +143,7 @@ gulp.task('build-js', ['build-404-critical-css'], function() {
 
 
 gulp.task('build-lazy-js', ['build-js'], function() {
-    return gulp.src('./src/js/3-lazyload.js')
+    return gulp.src('./src/js/z-lazyload.js')
         .pipe(rename('lazyload.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./scripts'));

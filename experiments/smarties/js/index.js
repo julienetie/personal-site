@@ -49,7 +49,7 @@ if(screen.width < 1023){
 
 // Switch
 var sw,count = 0;
-root.switchState = function(state){
+root.switchState.smarties = function(state){
     if(!count){
         sw = state;
      requestAnimationFrame(paint);

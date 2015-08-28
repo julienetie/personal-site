@@ -14,6 +14,5 @@ function prefixTransitionEnd(dummyElement) {
         if (dummyElement.style[transitions[i]] !== undefined) {
             return transitionEnd[i];
         }
-
     }
 }

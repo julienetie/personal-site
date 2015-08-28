@@ -11,7 +11,7 @@ scripts/julienetienne.min.js
 scripts/lazyload.min.js
 style/404.min.css
 style/ie.min.css
-style/julienetienne.min.c96503a3.css
+style/julienetienne.min.08c3e1fb.css
 experiments/smarties/index.html
 experiments/smarties/smarties-pix.png
 experiments/smarties/smarties.jpg
@@ -39,6 +39,7 @@ visuals/icons/apple-touch-icon-120x120.png
 visuals/icons/apple-touch-icon-152x152.png
 visuals/icons/apple-touch-icon-180x180.png
 visuals/icons/apple-touch-icon-76x76.png
+visuals/icons/location.png
 visuals/icons/manifest.json
 visuals/landb/10-pix.jpg
 visuals/landb/10.jpg
@@ -94,4 +95,4 @@ http://*
 https://*
 *
 
-# hash: 879951a3eb9432163c88d45c001eda2fbf06b8e157d54e6c7b07d7000107f81e
+# hash: 1ae410cb7c5042bd1d86d65e04774170b9accfcaefd17f8737a985a60be0efc7

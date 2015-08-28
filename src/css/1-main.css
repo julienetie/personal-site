@@ -274,3 +274,25 @@
         display: none;
     }
     
+#location{
+    display: inline-block;
+       -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+#location img{
+    display: inline-block;
+    height: 0.7em;
+    width: 0.7em;
+    padding: 0;
+    margin: 0;
+}
+#location a{
+    padding: 0;
+    margin: 0;
+}
+#location cite{
+    color: transparent;
+}

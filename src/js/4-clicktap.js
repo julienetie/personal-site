@@ -47,7 +47,7 @@ function clicktap(el, listener, capture) {
   function fn(eve) {
     if (pointerCanceled) { pointerCanceled = false; return; }
     listener.call(el, eve);
-    eve.preventDefault();
+  //  eve.preventDefault();
   }
 
   listener.fn = fn;
@@ -104,6 +104,6 @@ if (typeof window.define === 'function' && window.define.amd !== undefined) {
 // Browser
 } else {
   window.clicktap = clicktap;
-};
+}
 
 }(this));

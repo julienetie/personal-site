@@ -15,30 +15,31 @@ function equilateral(sideLength, centerPosition, parentNode) {
         polygon = document.createElementNS(ns, 'polygon'),
 
         // Inner innerHypotenuse angle = 120, hyp = half side. Cos 120 * adjacent 
-        innerHypotenuse = halfSide * (1 / Math.cos(30 * pi / 180));
+        innerHypotenuse = halfSide * (1 / Math.cos(30 * pi / 180)),
 
-    // SqRt(Hyp^2 - Adj^2) pythagoras
-    innerOpposite = halfSide * (1 / Math.tan(60 * pi / 180));
+        // SqRt(Hyp^2 - Adj^2) pythagoras
+        innerOpposite = halfSide * (1 / Math.tan(60 * pi / 180)),
 
-    this.leftVertex = [];
-    this.rightVertex = [];
-    this.topVertex = [];
+        leftVertex = [],
+        rightVertex = [],
+        topVertex = [];
 
-    this.leftVertex[0] = cen[0] - halfSide;
-    this.leftVertex[1] = cen[1] + innerOpposite;
+    leftVertex[0] = cen[0] - halfSide;
+    leftVertex[1] = cen[1] + innerOpposite;
 
-    this.rightVertex[0] = cen[0] + halfSide;
-    this.rightVertex[1] = cen[1] + innerOpposite;
+    rightVertex[0] = cen[0] + halfSide;
+    rightVertex[1] = cen[1] + innerOpposite;
 
-    this.topVertex[0] = cen[0];
-    this.topVertex[1] = cen[1] - innerHypotenuse;
+    topVertex[0] = cen[0];
+    topVertex[1] = cen[1] - innerHypotenuse;
 
-    points = this.topVertex[0] + ',' + this.topVertex[1] +
-        ' ' + this.rightVertex[0] + ',' + this.rightVertex[1] +
-        ' ' + this.leftVertex[0] + ',' + this.leftVertex[1];
+    points = topVertex[0] + ',' + topVertex[1] +
+        ' ' + rightVertex[0] + ',' + rightVertex[1] +
+        ' ' + leftVertex[0] + ',' + leftVertex[1];
+
     parentNode.appendChild(polygon);
     polygon.setAttribute('points', points);
-    polygon.setAttribute('id', 'equilateral');  
-    
+    polygon.setAttribute('id', 'equilateral');
+
     return polygon;
 }

@@ -19,8 +19,3 @@ function detectCSS(prop){
     return false; 
 }
 
-
-var transitionName = detectCSS('transition');
-var transformName = detectCSS('transform');
-var animationDuration = detectCSS('animationDuration');
-var animation = detectCSS('animation');

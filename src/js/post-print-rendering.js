@@ -24,7 +24,4 @@
       });
     }
 
-    window.onbeforeprint = beforePrint;
-    window.onafterprint = afterPrint;
-
   }

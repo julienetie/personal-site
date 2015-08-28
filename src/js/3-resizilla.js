@@ -15,15 +15,14 @@ Copyright (c) 2015 Julien Etienne. MIT License */
 
 (function(root) {
 
-    var previousTime = 0,
-        i;
+    var previousTime = 0, i;
 
     function dateNow() {
         return Date.now() || new Date().getTime();
     }
 
-    var request = requestAnimationFrame;
-    var cancel = cancelAnimationFrame;
+    var request = requestAnimationFrame,
+        cancel = cancelAnimationFrame;
 
     var requestTimeout = function(fn, delay) {
         var start = dateNow();

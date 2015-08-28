@@ -1,13 +1,15 @@
 /**
  * @copyright Julien Etienne 2015
  */
-function scrollNavigator(navigator, root) {
-    var arrow = navigator.childNodes[0],
+function scrollNavigator(navigator, root, prefix) {
+  var transformName = prefix('transform'),
+    arrow = navigator.children[0],
     corner = 'translate3d(0px, 0px, 0px)',
     midDimensions = [root.innerWidth / 2,
       root.innerHeight / 2
     ],
     vendors = ['webkit', 'moz'];
+  console.log(navigator);
 
   setInitArrow.apply(null, midDimensions);
 
@@ -19,7 +21,7 @@ function scrollNavigator(navigator, root) {
     }, 1000);
 
   function setInitArrow(middleWidth, middleHeight) {
-      arrow.style[transformName] = 'translate3d(-' + middleWidth + 'px, -' + middleHeight + 'px, 0)';
+    arrow.style[transformName] = 'translate3d(-' + middleWidth + 'px, -' + middleHeight + 'px, 0)';
   }
 
   function revertToCorner(event) {
@@ -42,7 +44,7 @@ function scrollNavigator(navigator, root) {
       navigator.style.opacity = 0.7;
       navigator.style.zIndex = '10';
 
-    arrow.style[transformName] =  corner;
+      arrow.style[transformName] = corner;
 
     }
 

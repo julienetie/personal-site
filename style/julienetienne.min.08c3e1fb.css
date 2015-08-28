@@ -169,10 +169,35 @@ footer small {
   margin: 0 8em 2em 0;
 }
 
+#location a,
+#location img {
+  padding: 0;
+  margin: 0;
+}
+
+#location {
+  display: inline-block;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#location img {
+  display: inline-block;
+  height: .7em;
+  width: .7em;
+}
+
 #logo-holder,
 #top-arrow a {
   display: block;
   cursor: pointer;
+}
+
+#location cite {
+  color: transparent;
 }
 
 #experiments ul li img {
