@@ -127,7 +127,7 @@
     clicktap(document, function(e) {
         var speed, eventTarget, isOpera = false,
             target;
-         alert(e.target);
+
 
         if (window.opera && opera.version() < 15) {
             target = 'logo-holder';
