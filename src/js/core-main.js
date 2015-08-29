@@ -38,9 +38,6 @@
     size = 100 / size;
     logoSize = realWidth < realHeight ? realWidth : realHeight;
 
-    element.style.color = 'yellow';
-    element.style.fontSize = logoSize / size + 'em';
-
     mgVal = (logoSize / 768) * 16 + 'px ';
     element.style.padding = '0';
   }
@@ -69,18 +66,14 @@
   }
 
 
-  /**
-   * SVG viewBox correction
-   */
 
-  // get SVG collection
-  // for each svg
 
   window.onload = function() {
     buildSVGSchematics(svgSchematics);
     setLogoSize(logo, opt.logoSize);
     setupExperiments();
-    if (screen.width > 736 || screen.width === undefined) {
+applicationCacheControl();
+    if (screen.width >= 1024 || screen.width === undefined) {
       caretToEndOfLine(get('#', 'editable'));
     } else {
       pageTop.removeAttribute("contenteditable");
@@ -103,3 +96,22 @@
   postPrintRendering();
 
 }(window, topArrow, header));
+
+
+function applicationCacheControl() {
+  // Check if a new cache is available on page load.
+window.addEventListener('load', function(e) {
+
+  window.applicationCache.addEventListener('updateready', function(e) {
+    if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+      // Browser downloaded a new app cache.
+      if (confirm('A new version of this site is available. Load it?')) {
+        window.location.reload();
+      }
+    } else {
+      // Manifest didn't changed. Nothing new to server.
+    }
+  }, false);
+
+}, false);
+}

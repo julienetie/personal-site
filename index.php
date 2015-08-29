@@ -1,4 +1,8 @@
-<?php //Expire cache header( "Cache-Control: no-store, no-cache, must-revalidate, max-age=0"); header( "Cache-Control: post-check=0, pre-check=0", false); header( "Pragma: no-cache"); ?>
+<?php 
+//header( 'Expires: Sun, 01 Jan 2015 00:00:00 GMT'); 
+//header( 'Cache-Control: no-store, no-cache, must-revalidate'); 
+//header( 'Cache-Control: post-check=0, pre-check=0', FALSE); 
+//header( 'Pragma: no-cache'); ?>
 <!DOCTYPE html>
 <html lang="en" manifest="julienetienne.co.uk.manifest">
 
@@ -18,7 +22,7 @@
     handful  of   small  libs   & 
     tools.
     
-    Supports IE8+ &  Safari  5.1+ 
+    Supports IE6+  ,  Safari  4+ 
     &   mobile   ofcourse.   some 
     enhancements    degrade   for
     legacy      browsers/devices.
@@ -114,7 +118,7 @@ body,html{background-color:#e6ebff}body,h1{font-weight:400;color:#222}a,html{cur
     <!-- I figured people may type "Julien Etienne is a ?????. Ha, either way inleast it's memorable. -->
     <header id="top" contenteditable="true" spellcheck="false">
         <!-- Just wanted to let the word know. -->
-        <h1 id="editable" data-print-header="Julien Etienne UI Developer">Julien Etienne can't speak French</h1>
+        <h1 id="editable" data-print-header="Julien Etienne UI Developer">Julien Etienne</h1>
         <!--[if gte IE 9]><!-->
         <div id="oldschool">
             <h1>Julien Etienne UI Developer</h1>
@@ -135,7 +139,7 @@ body,html{background-color:#e6ebff}body,h1{font-weight:400;color:#222}a,html{cur
             <li><a href="#apis">APIs</a></li>
             <li><a href="#core-technologies">Core technologies</a></li>
             <li><a href="#accounts">Accounts</a></li>
-            <li><a href="#bookmarked">Bookmarked</a></li>
+          <!--  <li><a href="#bookmarked">Bookmarked</a></li> -->
             <li><a href="#stats">Stats</a></li>
             <li><a href="#contact" id="bottom">Contact</a></li>
         </ul>
@@ -285,17 +289,19 @@ body,html{background-color:#e6ebff}body,h1{font-weight:400;color:#222}a,html{cur
         <ul>
             <li><a target="_blank" href="https://github.com/julienetie">GITHUB</a></li>
             <li><a target="_blank" href="https://github.com/julienetie">MDN</a></li>
-            <li><a target="_blank" href="http://www.modelmayhem.com/portfolio/1280324/viewall">Photography</a></li>
             <li><a target="_blank" href="http://codepen.io/undefined_">CodePen</a></li>
             <li><a target="_blank" href="https://twitter.com/julienetienne_">Twitter</a></li>
+            <li><a target="_blank" href="http://www.modelmayhem.com/portfolio/1280324/viewall">Photography</a>
+            </li>
         </ul>
         <hr>
     </article>
     <!-- #9 Bookmarked -->
-    <article id="bookmarked">
-        <svg class="cross">
-            <line x1="0" y1="0"/>
-            <line x1="0" y2="0"/>
+<!--
+    <article id='bookmarked'>
+        <svg class='cross'>
+            <line x1="0" y1="0" />
+            <line x1="0" y2='0' />
         </svg>
         <h2>Bookmarked</h2>
         <ul>
@@ -304,6 +310,7 @@ body,html{background-color:#e6ebff}body,h1{font-weight:400;color:#222}a,html{cur
         </ul>
         <hr>
     </article>
+-->
     <!--#10 Stats-->
     <article id="stats">
         <svg class="cross">
@@ -330,7 +337,6 @@ body,html{background-color:#e6ebff}body,h1{font-weight:400;color:#222}a,html{cur
             <li class="in-line">Setup: <a target="_blank" href="https://github.com/julienetie/personal-site/blob/master/gulpfile.js" title="A simple gulp setup that takes advantage of critical (above the fold) CSS and application caching.">gulpfile.js</a></li>
             <li>Technologies: JS, CSS, SVG, Canvas, HTML5</li>
             <li>Legacy support from: IE6+, Safari 4+ </li>
-            <li>Assistive technologies support: TBA</li>
         </ul>
         <hr>
     </article>
@@ -340,7 +346,7 @@ body,html{background-color:#e6ebff}body,h1{font-weight:400;color:#222}a,html{cur
         <ul>
             <li itemprop="name">Julien Etienne</li>
             <li itemprop="jobTitle">Web UI Developer</li>
-            <li>London/ UK</li>
+            <li>London | UK</li>
             <li>Twitter: <a href="https://twitter.com/julienetienne_">@julienetienne_</a></li>
             <li>Email:
                 <div id="location">{ Click / tap to reveal }</div>
