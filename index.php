@@ -69,13 +69,13 @@
           * The below is critical CSS, not me being lazy: http://addyosmani.com/blog/tag/critical-path-css/
           */ -->
     <style type="text/css">
-body,html{background-color:#e6ebff}body,h1{font-weight:400;color:#222}a,html{cursor:default}html{font-family:'Open Sans',sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{letter-spacing:.2em;position:absolute;margin:0}article,header,nav{display:block}h1{padding:.5em 1.4em}a{background-color:transparent;padding:0 .2em .1em .4em}a:link{outline:rgba(255,255,255,.01) solid 1px;text-decoration:none;color:inherit;-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-o-transition:all .3s linear;transition:all .3s linear}h1{font-size:2em;margin:.67em 0}img{border:0;opacity:1}svg:not(:root){overflow:hidden}article{width:100%;position:relative;float:left;transition:all .3s linear;overflow:hidden}article{-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-o-transition:all .3s linear}nav ul li:before{content:'#';position:relative;float:left;margin-right:.2em}.cross{position:absolute;top:0;z-index:0}ul{border:1px solid #CFCFFF;border-color:rgba(0,0,255,.05);border-top:none;list-style-type:none}ul li{color:#222;padding-bottom:.3em;border-left:1px solid #ACACFC;border-left-color:rgba(0,0,255,.1);padding-left:1em}ul li:nth-child(1){border-radius:1em}ul li:last-child{padding-bottom:1em}#oldschool{display:none}.cross line{stroke:rgba(150,20,80,1);stroke-dasharray:20 20 10;stroke-width:.08}.cross line:nth-child(2){stroke-dasharray:none}header[contenteditable]{outline:0}::selection{background:#f5da55;color:#C00}::-moz-selection{background:#f5da55;color:#C00}h1::-moz-selection{background:#0f0;color:lilac}img::-moz-selection{background:#ff0}@media only screen and (max-width:40em){ul li{padding-bottom:2.2em}}@media only screen and (min-width:40.063em) and (max-width:64em){html{background-color:#e6ebff}}body{width:100%}img{width:50%}
+article,svg:not(:root){overflow:hidden}body,html{background-color:#e6ebff}body,h1{font-weight:400;color:#222}a,html{cursor:default}html{font-family:'Open Sans',sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{letter-spacing:.2em;position:absolute;margin:0;width:100%}article,nav ul li:before{position:relative;float:left}article,header,nav{display:block}h1{padding:.5em 1.4em;font-size:2em;margin:.67em 0}a{background-color:transparent;padding:0 .2em .1em .4em}a:link{outline:solid rgba(255,255,255,.01);text-decoration:none;color:inherit;-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-o-transition:all .3s linear;transition:all .3s linear}img{border:0;opacity:1;width:50%}article{width:100%;transition:all .3s linear;-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-o-transition:all .3s linear}nav ul li:before{content:'#';margin-right:.2em}.cross{position:absolute;top:0;z-index:0}ul{border:1px solid #CFCFFF;border-color:rgba(0,0,255,.05);border-top:none;list-style-type:none}ul li{color:#222;padding-bottom:.3em;border-left:1px solid #ACACFC;border-left-color:rgba(0,0,255,.1);padding-left:1em}ul li:nth-child(1){border-radius:1em}ul li:last-child{padding-bottom:1em}#oldschool{display:none}.cross line{stroke:rgba(150,20,80,1);stroke-dasharray:20 20 10;stroke-width:.08}.cross line:nth-child(2){stroke-dasharray:none}header[contenteditable]{outline:0}::selection{background:#f5da55;color:#C00}::-moz-selection{background:#f5da55;color:#C00}h1::-moz-selection{background:#0f0;color:lilac}img::-moz-selection{background:#ff0}@media only screen and (max-width:40em){ul li{padding-bottom:2.2em}}@media only screen and (min-width:40.063em)and (max-width:64em){html{background-color:#e6ebff}}
 </style>
 <script>
-(function(u){function loadCSS(e,t,n){"use strict";function r(){for(var t,i=0;i<d.length;i++)d[i].href&&d[i].href.indexOf(e)>-1&&(t=!0);t?o.media=n||"all":setTimeout(r)}var o=window.document.createElement("link"),i=t||window.document.getElementsByTagName("script")[0],d=window.document.styleSheets;return o.rel="stylesheet",o.href=e,o.media="only x",i.parentNode.insertBefore(o,i),r(),o}for(var i in u){loadCSS(u[i]);}}(['style/julienetienne.min.08c3e1fb.css']));
+(function(u){function loadCSS(e,t,n){"use strict";function r(){for(var t,i=0;i<d.length;i++)d[i].href&&d[i].href.indexOf(e)>-1&&(t=!0);t?o.media=n||"all":setTimeout(r)}var o=window.document.createElement("link"),i=t||window.document.getElementsByTagName("script")[0],d=window.document.styleSheets;return o.rel="stylesheet",o.href=e,o.media="only x",i.parentNode.insertBefore(o,i),r(),o}for(var i in u){loadCSS(u[i]);}}(['style/julienetienne.min.a551f75f.css']));
 </script>
 <noscript>
-<link rel="stylesheet" href="style/julienetienne.min.08c3e1fb.css">
+<link rel="stylesheet" href="style/julienetienne.min.a551f75f.css">
 </noscript>
     <!--[if lt IE 9]>
         <link rel="stylesheet" type="text/css" href="style/ie.min.css" />
@@ -268,14 +268,16 @@ body,html{background-color:#e6ebff}body,h1{font-weight:400;color:#222}a,html{cur
         <h2>Core technologies</h2>
         <ul>
             <li itemprop="runtimePlatform">JavaScript</li>
+            <li>jQuery</li>
+            <li>AngularJS</li>
+            <li>React</li>
             <li itemprop="programmingLanguage">CSS</li>
+            <li>Sass</li>
             <li itemprop="programmingLanguage">HTML</li>
             <li itemprop="programmingLanguage">SVG</li>
             <li>Canvas</li>
-            <li itemprop="runtimePlatform">Python</li>
-            <li itemprop="runtimePlatform">node.js</li>
             <li>Illustrator</li>
-            <li>Inkscape</li>
+            <li>Photoshop</li>
         </ul>
         <hr>
     </article>
@@ -320,9 +322,9 @@ body,html{background-color:#e6ebff}body,h1{font-weight:400;color:#222}a,html{cur
         <h2>Stats</h2>
         <ul>
             <li><a target="_blank" href="https://developers.google.com/speed/pagespeed/insights/?url=julienetienne.co.uk">PageSpeed Insights - Mobile (This website doesn't use "PageSpeed" )</a></li>
-            <li><a target="_blank" href="http://tools.pingdom.com/fpt/#!/ddtebO/http://julienetienne.co.uk/">Pingdom Website Speed Test</a></li>
+            <li><a target="_blank" href="http://goo.gl/pGaaPn">Pingdom Website Speed Test</a></li>
             <li><a target="_blank" href="https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=http%3A%2F%2Fjulienetienne.co.uk%2F">W3  Validation</a></li>
-            <li><a target="_blank" href="http://wave.webaim.org/report#/http%3A%2F%2Fjulienetienne.co.uk%2F">WAVE Accessibility Check</a></li>
+            <li><a target="_blank" href="http://goo.gl/X8v9QK">WAVE Accessibility Check</a></li>
         </ul>
         <h2>About this site:</h2>
         <ul>

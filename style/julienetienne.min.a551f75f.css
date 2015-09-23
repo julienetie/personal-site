@@ -11,6 +11,12 @@ p {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+body {
+  letter-spacing: .2em;
+  position: absolute;
+  margin: 0;
+}
+
 figcaption,
 figure,
 footer,
@@ -30,9 +36,20 @@ audio:not([controls]) {
 }
 
 #ch,
+h1,
 h2,
 p {
   padding: .5em 1.4em;
+}
+
+a:link {
+  outline: rgba(255,255,255,.01) solid 1px;
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear;
 }
 
 a:visited {
@@ -71,6 +88,11 @@ strong {
   font-weight: 700;
 }
 
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
 #ch {
   font-style: normal;
   display: block;
@@ -83,6 +105,15 @@ strong {
 
 small {
   font-size: 80%;
+}
+
+img {
+  border: 0;
+  opacity: 1;
+}
+
+ {
+  overflow: hidden;
 }
 
 figure {
@@ -101,7 +132,8 @@ samp {
   font-size: 1em;
 }
 
-address {
+address,
+article {
   width: 100%;
   position: relative;
   float: left;
@@ -110,6 +142,7 @@ address {
 }
 
 address,
+article,
 article:hover {
   -webkit-transition: all .3s linear;
   -moz-transition: all .3s linear;
@@ -141,6 +174,13 @@ article:hover a:hover {
 
 .visual-portfolio ul li img {
   width: 100%;
+}
+
+nav ul li:before {
+  content: '#';
+  position: relative;
+  float: left;
+  margin-right: .2em;
 }
 
 .codepen {
@@ -386,6 +426,10 @@ h2::-moz-selection {
 }
 
 @media only screen and (min-width:40.063em) and (max-width:64em) {
+  html {
+    background-color: #e6ebff;
+  }
+
   #experiments ul li,
   #logos-and-branding ul li,
   #prototypes ul li,
@@ -529,4 +573,12 @@ h2::-moz-selection {
     font-weight: 400;
     color: #F0F;
   }
+}
+
+body {
+  width: 100%;
+}
+
+img {
+  width: 50%;
 }

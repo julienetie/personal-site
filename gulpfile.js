@@ -91,7 +91,7 @@ gulp.task('build-index-critical-css', ['build-css'], function() {
         extract: true,
         width: 1366,
         height: 4000,
-        minify: false
+        minify: true
     });
 });
 
@@ -125,7 +125,7 @@ gulp.task('build-404-critical-css', ['build-ie-css'], function() {
         exclude: true,
         width: 1366,
         height: 4000,
-        minify: true
+        minify: false
     });
 });
 
@@ -137,7 +137,7 @@ gulp.task('build-js', ['build-404-critical-css'], function() {
             '!./src/js/z-lazyload.js'
         ])
         .pipe(concat('julienetienne.min.js'))
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest('./scripts'));
 });
 
